@@ -1,0 +1,78 @@
+/* Footer */
+.footer
+{
+    background-color: var(--primary2-color);
+    padding: 20px;
+    padding-bottom: 5px;
+    
+}
+.footer__heading
+{
+    color: var(--primary1-color);
+    font-weight: 500;
+}
+.footer__list
+{
+    color: var(--primary1-color);
+    list-style:none ;
+    margin-top: 10px;
+    padding-left:0;
+}
+.footer__list-item
+{
+    margin: 4px 0 4px 0;
+}
+.footer__list-item_link
+{
+    text-decoration: none;
+    color: var(--primary1-color);
+    font-size: 14px;
+}
+.footer__list-icon
+{
+    font-size: 14px;
+    margin-right: 4px;
+}
+.footer__wrap
+{
+    color: var(--primary1-color);
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.transportation
+{
+    margin-right: 12px;
+}
+.transportation__heading,.payment__heading
+{
+    font-weight: 500;
+}
+.transportation__img
+{
+    margin-top: 5px;
+    background-image: url('../Assets/transportation.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 60px;
+    height: 25px;
+
+}
+.payment
+{
+    margin-left: 12px;
+}
+.payment__img
+{
+    margin-top: 5px;
+    background-image: url('../Assets/payment.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 70px;
+    height: 25px;
+}
+.footer__copy
+{
+    color: var(--primary1-color);
+    font-size: 12px;
+}

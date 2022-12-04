@@ -1,0 +1,62 @@
+/* HEADER */
+.wrapper-header{
+    height: var(--height--headerA);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #efefef;
+    position: fixed;
+    width: calc(100% - 70px);
+    top:0;
+    z-index: 998;
+}
+
+.header__category-icon
+{
+    margin-left: 15px;
+    font-size: 23px;
+}
+.header__account{
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+.header__account-notifi
+{
+    margin: 0 10px 0 15px;
+    font-size: 18px;
+
+}
+.header__account-mail
+{
+    margin: 0 15px 0 10px;
+    font-size: 18px;
+
+}
+.header__account-avatar
+{
+    margin: 0 5px 0 25px;
+    font-size: 18px;
+
+}
+.header__account-name
+{
+    margin: 0 30px 0 5px;
+    font-size: 16px;
+    font-weight: 800;
+
+}
+/* toggle in header*/
+.overlay
+{
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0,0.3);
+    display: none;
+}
+
+
+

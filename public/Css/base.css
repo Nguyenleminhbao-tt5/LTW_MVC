@@ -1,0 +1,137 @@
+:root {
+    /* size */
+    --height-header: 100px;
+    --height-navbar1:50px;
+    --height-footer:300px;
+    /* homepage*/
+    --height-content-main:350px;
+    --distance-part:100px;
+    --height-product:350px;
+    --color-product:#eee;
+    /* color */
+    --primary1-color: #fff;
+    --primary2-color:#111111;
+    --border-color:#dbdbdb;
+    --primary-color:#fd6032;
+    --text-color : #333;
+
+
+    /* ADMIN */
+
+    /* size */
+    --height--headerA:70px;
+    --height--footerA:60px;
+    /*color*/
+    --borderA-color:#efefef;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+}
+
+
+/* Grid */
+.grid
+{
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid__row
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+.grid__column-25
+{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 25%;
+}
+.grid__column-65
+{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 65%;
+}
+.grid__column-35
+{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 35%;
+}
+.grid__column-60
+{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 60%;
+}
+.grid__column-40
+{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 40%;
+}
+.grid__column-1667
+{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.67%;
+}
+.grid__column-8333
+{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.33%;
+}
+/*Button*/
+.BTN
+{
+    min-width: 124px;
+    height: 32px;
+    border-radius: 2px;
+    border: none;
+    background-color: var(--white-color);
+    cursor: pointer;
+    margin:0 5px;
+   
+}
+.BTN:hover{
+ background-color: rgba(0,0,0,0.04);
+}
+.BTN.btn--primary
+{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+/* content */
+
+.content
+{
+    margin-top: var(--height-header);
+    padding:0 30px 0 30px ;
+}
+
+
+
+/* LAYOUT ADMIN*/
+
+.container 
+{
+    width:calc(100% - 70px);
+    margin-left: 70px;
+}
+.wrapper-content
+{
+    background-color: var(--primary3-color);
+    margin-top: 80px;
+    
+}

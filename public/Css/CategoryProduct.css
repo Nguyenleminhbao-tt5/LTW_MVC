@@ -1,0 +1,227 @@
+.CategoryProduct{
+    margin-top: 10px;
+    background-color: #f5f5f5;
+}
+.category{
+    margin-top: 35px;
+}
+.CategoryProduct-row
+{
+    background-color: var(--primary1-color);
+    margin-top: 36px;
+}
+.category__heading
+{
+ border-bottom: 1px solid ;
+ border-color: var(--border-color);
+ margin-top: 15px;
+ margin-bottom: 0;
+ padding: 18px 0 20px 0;
+
+}
+.category__heading-icon{
+    font-size: 18px;
+    padding: 0;
+}
+.category__list{
+ list-style: none;
+ margin-bottom: 0;
+ margin-left: 0px;
+ 
+}
+.category__item{
+    display: block;
+    padding: 1px 5px 5px 8px;
+    margin: 15px 1px;
+  
+}
+.category__item.category__item--active
+{
+    color: var(--primary-color);
+}
+.category__item--active.category__item-link{
+ color: var(--primary-color);
+}
+.category__item-icon
+{
+    position: absolute;
+    margin-left: -15px;
+    color: var(--primary-color);
+}
+.category__item-link
+{
+    color: var(--primary2-color);
+    text-decoration: none;
+    position: relative;
+    right:0;
+    transition: right linear 0.1s;
+}
+.category__item-link:hover{
+    color:var(--primary-color);
+    right: -6px;
+}
+/* Home-filter */
+.home-filter
+{
+    height: 60px;
+    display: flex;
+    margin-top: 35px;
+    background-color: rgba(0, 0, 0, 0.04);
+    align-items: center;
+    
+}
+.home-filter__label{
+ margin-left: 15px;
+ margin-right: 5px;
+}
+.select-input{
+
+    width: 160px;
+    background-color: var(--primary1-color);
+    height: 32px;
+    padding-left: 10px;
+    margin-left: 5px;
+    border: 2px;
+    border: none;
+
+}
+
+.optionSelect{
+    margin: 10px 5px;
+}
+.home-filter__page{
+    margin-left:auto;
+    display: flex;
+}
+.home-filter__page-num{
+    margin-right: 6px;
+    padding: 7px;
+}
+.home-filter__page-cur{
+    color:var(--primary-color);
+}
+.home-filter__controls
+{
+ display: flex;
+}
+.home-filter__back{
+    width: 34px;
+    border: 1px solid;
+    padding: 6px;
+    padding-left: 13px;
+    background-color: var(--primary1-color);
+    margin-right: -1px;
+    text-decoration: none;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+.home-filter__back:hover{
+    color: var(--primary-color);
+}
+.home-filter__next{
+    width: 34px;
+    border: 1px solid;
+    margin-right: 9px;
+    padding: 6px;
+    padding-left: 13px;
+    background-color: var(--primary1-color);
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+.home-filter__next:hover{
+    color: var(--primary-color);
+}
+.home-filter__btn--disabled
+{
+    background-color: #f9f9f9;
+    cursor: default;
+}
+.home-filter__btn--disabled .icon-back
+{
+    color: #5555;
+}
+/*Home product*/
+.home-product
+{
+    
+    margin-top: 10px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.box-product__link
+{
+    text-decoration: none;
+    display: block;
+    text-decoration: none;
+   
+}
+/* Pagination */
+.pagination
+{
+    margin: 48px 0 32px 0;
+}
+.pagination__item-list
+{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.pagination__item
+{
+    margin: 0 17px 0 17px;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.pagination__item--active .pagination__item-link
+{
+    --height:30px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    min-width: 40px;
+    height: var(--height);
+    line-height: var(--height);
+    border-radius: 2px;
+
+}
+.pagination__item--active:hover .pagination__item-link
+{
+    filter: brightness(90%);
+}
+.pagination__item-icon
+{
+    display: block;
+    text-decoration: none;
+    color: #939393;
+}
+.pagination__item-link
+{
+    display: block;
+    text-decoration: none;
+    color: #939393;
+}
+.pagination__item-threedots .pagination__item-link
+{
+    cursor: default;
+}
+
+/**/
+
+.filter-form
+{
+    display: flex;
+}
+.filter-btn{
+    background-color: transparent;
+    border: none;
+    font-size: 17px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.Type
+{
+    display: none;
+}

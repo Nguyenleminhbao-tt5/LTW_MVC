@@ -1,0 +1,265 @@
+.ProfileProduct
+{
+    font-size: 15px;
+}
+.pathUrl
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.path1
+{
+    margin: 10px;
+    margin-left:30px;
+}
+.home-icon
+{
+    
+}
+.path2
+{
+    margin: 10px;
+}
+.path3{
+    margin: 10px;
+}
+.contentProduct
+{
+    height: 600px;
+    
+}
+.product__listImg
+{
+    padding: 0 20px 20px 20px; 
+}
+.product__listImg-item
+{
+    display: none;
+    position: relative;
+    
+}
+.product__listImg-item.active
+{
+    display: block;
+}
+.img{
+    width: 100%;
+    height: 600px;
+    border: 2px solid var(--primary2-color);
+    border-radius: 10px;
+    max-width: 700px;
+    display: none;
+}
+.img.img--active
+{
+    display: block;
+}
+.left-btn
+{
+    position: absolute;
+    top:250px;
+    left:20px;
+    font-size: 60px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgb(106, 104, 104);
+}
+.left-btn:hover{
+    color: black;
+}
+.right-btn
+{
+    position: absolute;
+    top:250px;
+    left:600px;
+    font-size: 60px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgb(106, 104, 104);
+}
+.right-btn:hover{
+    color: black;
+}
+.product__detail
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 0 20px;
+}
+.product__detail-name
+{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #cacdd1;
+}
+.title{
+    font-size: 20px;
+    font-weight: 600;
+}
+.product-code{
+    margin: 20px 0 20px 0;
+    font-size: 15px;
+}
+.code{
+
+}
+.id{
+    font-weight: 600;
+}
+.product__detail-price
+{
+    margin: 15px 0 15px 0;
+    font-size: 25px;
+    font-weight: 600;
+}
+.product__detail-size
+{
+   
+}
+.size-heading
+{
+    display: flex;
+}
+.size-heading__title1
+{
+    font-size: 16px;
+    margin-right: 20px;
+    font-weight: 700;
+    
+}
+.size-heading__title2
+{
+    font-size: 16px;
+    color: rgb(98, 98, 230);
+}
+.size-bottom
+{
+    margin: 20px 0 20px 0 ;
+}
+.size-bottom_list
+{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.size-bottom_list-item
+{
+    background-color: var(--primary2-color);
+    color: var(--primary1-color);
+    padding: 13px;
+    margin: 0 20px 10px 0;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+}
+.size-bottom_list-item:hover{
+
+    background-color: var(--primary1-color);
+    color: var(--primary2-color);
+}
+.product__detail-amount
+{
+
+}
+.amount-heading
+{
+    font-size: 16px;
+    margin-right: 20px;
+    font-weight: 700;
+}
+.amount-bottom
+{
+    display: flex;
+    margin: 10px 0 10px 0;
+}
+.minus
+{
+    border: 1px solid #eaeaea;
+    width: 40px;
+    cursor: pointer;
+    height: 40px;
+    background-color: transparent;
+    font-size: 30px;
+}
+.amount
+{
+    border: 1px solid #eaeaea;
+    width: 70px;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+.add
+{
+    border: 1px solid #eaeaea;
+    width: 40px;
+    cursor: pointer;
+    height: 40px;
+    background-color: transparent;
+    font-size: 30px;
+}
+.product__detail-addtional
+{
+    margin: 20px 0 20px 0;
+    border: 2px dashed #ff0000 ;
+    padding: 10px;
+    color: #3d5164;
+    font-size: 15px;
+}
+.addtional-text
+{
+    list-style: none;
+}
+.addtional-heading
+{
+    font-size: 17px;
+    color: black;
+    font-weight: 700;
+    margin: 5px 0 5px 0;
+}
+.product__detail-submit
+{
+    display: flex;
+    justify-content: space-between;
+}
+.cart-btn
+{
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    background-color: var(--primary2-color);
+    color: var(--primary1-color);
+    font-size: 16px;
+}
+.buy-btn
+{
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #ff0000;
+    color: var(--primary1-color);
+    border: none;
+    font-size: 16px;
+}
+.description
+{
+    margin: 60px 30px 20px 40px;
+}
+.description-heading
+{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    display: block;
+}
+.description-text
+{
+    list-style: none;
+    line-height: 30px;
+}
