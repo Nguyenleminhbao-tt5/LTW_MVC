@@ -17,7 +17,13 @@ class AdminProductController extends BaseController
         $data=['page'=>'AdminProduct'];
         $this->view($data);
     }
-    
+    public function add()
+    {
+
+        $data=['page'=>'AdminProductInsert'];
+        $this->view($data);
+    }
+
 
 }
 

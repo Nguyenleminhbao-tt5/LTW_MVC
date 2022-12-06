@@ -13,7 +13,7 @@ class BaseController
     {   
         if($data['page']=='Login') require $this->pathViewLayout1;
         else if($data['page']=='Register') require $this->pathViewLayout1;
-        else if (strpos($data['page'],'Admin')>=0) require $this->pathViewLayoutAdmin;
+        else if (substr($data['page'],0,5)=='Admin') require $this->pathViewLayoutAdmin;
         else require $this->pathViewDefault;
     }
     // khai báo class Models
