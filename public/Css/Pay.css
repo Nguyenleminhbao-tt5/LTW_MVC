@@ -1,4 +1,4 @@
-.Pay {
+.payment-wrapper {
     margin-top: 100px;
     padding-bottom: 100px;
     height: 100%;
@@ -46,6 +46,7 @@
     outline: 0;
     padding: 16px 0 10px;    
     width: 100%;
+    border: none;
 }
 .customer-pay-type {
     padding: 10px 0;
@@ -79,13 +80,14 @@
 }
 .col1 {
     width: 50%;
+    padding: 30px;
 }
 .col2 {
     width: 50%;
     box-shadow: 1px 0 0 #e1e1e1 inset;
     padding: 20px 10px 10px 30px;
 }
-.button {
+.orderbutton {
     font-family: 'Montserrat';
     display: inline-block;
     border-radius: 4px;
@@ -97,6 +99,10 @@
     background-color: #000000;
     color: #fff;
 }
+.orderbutton:hover {
+    background-color: #484848;
+    box-shadow: 5px 10px 8px #a4a2a2;
+}
 .ship-fee h2 {
     font-size: 30px;
 }
@@ -106,4 +112,81 @@
 }
 .total-fee h2 {
     font-size: 30px;
+}
+.ship-fee, .total-fee {
+    padding: 10px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.orderinfor-item-img>img{
+    max-width: 100px;
+}
+.pay-orderinfor {
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+.pay-orderinfor h2 {
+    padding: 20px;
+}
+.orderinfor-wrap {
+    padding: 10px 10px 20px 10px;
+}
+.orderinfor-item1 {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+.orderinfor-item1 h2 {
+    border-bottom: 1px solid #ccc;
+    font-size: 10px;
+}
+.orderinfor-item-img {
+    width: 30%;
+    padding: 10px;
+}
+.orderinfor-item-name {
+    width: 30%;
+    padding: 10px;
+    justify-content: center;
+}
+.orderinfor-item-size {
+    width: 10%;
+    padding: 10px;
+}
+.orderinfor-item-num {
+    width: 10%;
+    padding: 10px;
+}
+.orderinfor-item-price {
+    width: 20%;
+    padding: 10px;
+}
+.order-fee {
+    margin-top: 20px;
+}
+.orderinfor-header {
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+}
+.order-id, .order-state {
+   padding-left: 30px;
+}
+.cancelorder {
+    display: flex;
+    justify-content: right;
+}
+.cancelbutton {
+    margin-right: 20px;
+    padding: 10px;
+    background-color: rgb(246, 55, 55);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.cancelbutton:hover {
+    background-color: rgb(82, 64, 64);
 }

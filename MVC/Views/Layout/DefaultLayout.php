@@ -13,7 +13,8 @@
     <link rel='stylesheet' href="./public/Css/ProfileProduct.css">
     <link rel='stylesheet' href="./public/Css/Pay.css">
     <link rel='stylesheet' href='./public/Css/CategoryProduct.css'>
-
+    <link rel="stylesheet" href="./public/Css/Cart.css">
+    <link rel="stylesheet" href="./public/Css/StatusOrder.css">
     <style>
       #root {
         font-family: Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

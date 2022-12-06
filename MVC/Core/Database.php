@@ -8,7 +8,7 @@ class Database
 
     public function connect ()
     {
-     $data = new mysqli($this->servername, $this->username, $this->password,"shoes_store");
+     $data = new mysqli($this->servername, $this->username, $this->password,"ebook_store");
 
     if ($data->connect_error) {
      die("Connection failed: " . $data->connect_error);
