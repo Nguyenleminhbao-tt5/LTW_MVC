@@ -1,0 +1,127 @@
+.manageProduct
+{
+    padding: 10px 0;
+}
+.manageProduct__title
+{
+    height: 40px;
+ 
+    box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+    border-left: 6px solid #FFD43B;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: var(--primary1-color);
+    display: flex;
+    align-items: center;
+}
+.manageProduct__title-text
+{
+    margin-left: 30px;
+}
+.manageProduct__content
+{
+    min-height: 200px;
+    border-radius: 10px;
+    background-color: var(--primary1-color);
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%), 0 3px 1px -2px rgb(0 0 0 / 20%);
+    transition: all 0.3s ease-in-out;
+ 
+}
+.manageProduct__content-heading
+{
+    display: flex;
+    padding: 10px 0 20px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.btn-sm, .btn-group-sm > .btn {
+    padding: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+    padding-left: 10px;
+    border-radius: 5px;
+    padding-right: 10px;
+    
+}
+.btn{
+    cursor: pointer;
+    text-decoration: none;
+    margin: 10px 10px;
+
+}
+.btn-add {
+    background: #9df99d !important;
+    color: #003c00 !important;
+}
+.nhap-tu-file {
+    background: #e1ec86 !important;
+    color: #4b5400 !important;
+}
+.print-file {
+    background: #bfbeef!important;
+    color: #03009a!important;
+}
+.btn-copy {
+    color: #008c04 !important;
+    background: #a2ecb5 !important;
+}
+.btn-delete {
+    background: #efcaca !important;
+    color: #bf0000 !important;
+}
+.manageProduct__content-content
+{
+    padding: 20px 10px 20px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.content__display
+{
+
+}
+.content__display-select
+{
+    width: 55px;
+    margin: 0 5px;
+    background-color: whitesmoke;
+    height: 23px;
+}
+.content__display-search
+{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    white-space: nowrap;
+    text-align: left;
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-left: 100px;
+}
+.search-title
+{
+    width: 105px;
+    display: block;
+    margin-right: 5px;
+
+}
+.search-input
+{
+    
+}
+table
+table, th, td {
+    border:1px solid var(--border-color);
+}
+th{
+    text-align: left;
+    padding: 5px 20px 0 20px;
+    height: 30px;
+}

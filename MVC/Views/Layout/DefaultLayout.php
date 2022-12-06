@@ -75,7 +75,7 @@
         <div class="content">
             <?php 
             $page=$data['page'];
-            require "./MVC/Views/Pages/$page.php"?>
+            require "./MVC/Views/Pages/User/$page.php"?>
         </div>
         
         <footer class="footer">

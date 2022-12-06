@@ -10,9 +10,9 @@ class AdminPrimaryController extends BaseController
     {
         $this->loadModel('AdminPrimaryModel.php');
         $this->adminPrimary= new AdminPrimaryModel();
-        $this->listCategory=$this->adminPrimary->getCategory();
-        $this->listPublisher=$this->adminPrimary->getPublisher();
-        $this->listBook=$this->adminPrimary->getALL();
+      //  $this->listCategory=$this->adminPrimary->getCategory();
+      //  $this->listPublisher=$this->adminPrimary->getPublisher();
+      //  $this->listBook=$this->adminPrimary->getALL();
     }
     public function show()
     {

@@ -34,6 +34,8 @@
 .wrapper-sidebar:hover
 {
     width: 280px;
+    animation: fadeIn ease 1s;
+    
 }
 .wrapper-sidebar:hover .sb__menu-title,.sb__logo-title
 {
@@ -45,6 +47,10 @@
 }
 .sb__menu-item:hover{
     background-color: #efefef;
+   
+}
+.sb__menu-item:hover .sb__menu-title{
+    color: black;  
 }
 .sb__logo
 {
@@ -91,8 +97,39 @@
 {
     margin-left: 25px;
     display: none;
-    font-size: 16px;
-    
+    font-size: 18px;
+    color: #72777a;
 }
+.sb__menu-dashboard
+{
+    color: #2196f3 !important;
+}
+.sb__menu-user
+{
+    color: #795548 !important;
+}
+.sb__menu-category
+{
+    color: #2196f3 !important;
+}
+.sb__menu-product
+{
+    color: #ff5722 !important;
+}
+.sb__menu-news
+{
+    color: #673ab7 !important;
+}
+.sb__menu-cmt
+{
+    color: #e91e63 !important;
 
-
+}
+.sb__menu-company
+{
+    color: #009688 !important;
+}
+.sb__menu-resource
+{
+    color: #2196f3 !important;
+}

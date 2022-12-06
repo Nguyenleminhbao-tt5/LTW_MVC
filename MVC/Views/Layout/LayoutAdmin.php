@@ -7,16 +7,19 @@
     <link rel="stylesheet" href="./public/Library/fontawesome-free-6.1.1-web/css/all.min.css">
     
     <link rel='stylesheet' href="./public/Css/base.css">
+    <link rel='stylesheet' href="./public/Css/animation.css">
+    <link rel='stylesheet' href="./public/Css/grid.css">
     <link rel='stylesheet' href="./public/Css/headerA.css">
     <link rel='stylesheet' href="./public/Css/footerA.css">
     <link rel='stylesheet' href="./public/Css/sidebarA.css">
     <link rel='stylesheet' href="./public/Css/AdminPrimary.css">
+    <link rel='stylesheet' href="./public/Css/AdminProduct.css">
 
     <style>
-      #root {
+     /* #root {
         font-family: 'Montserrat';
-      }
-      /* table*/
+      }*/
+      /* table
         table, th, td {
             border:1px solid black;
         }
@@ -24,7 +27,7 @@
             text-align: left;
             padding: 5px 20px 0 20px;
             height: 30px;
-        }
+        }*/
         input
         {
             width: 100%;
@@ -68,28 +71,28 @@
   <body>
     <div id='root'>
       <div class="sidebar">
-        <div class="wrapper-sidebar">
+        <div class="wrapper-sidebar ">
                 <div class="sb__logo">
                     <!--<img class="sb__logo-img" src="./assets/img/logo.png">-->
-                    <span class="sb__logo-title">Adminator</span>
+                    <span class="sb__logo-title">LOGO</span>
                 </div>
                 <ul class="sb__menu">
                     <li class="sb__menu-item">
-                        <a class="sb__menu-link" href="index.php?action=dashboardM&query=insert">
+                        <a class="sb__menu-link" href="./index.php?url=AdminPrimary">
                             <i class="sb__menu-dashboard fa-solid fa-house"></i>
                             <span class="sb__menu-title">Dasboard</span>
                         </a>    
                     </li>
                     
                     <li class="sb__menu-item">
-                        <a class="sb__menu-link" href="index.php?action=userM&query=insert">
+                        <a class="sb__menu-link" href="#">
                             <i class="sb__menu-user fa-solid fa-user"></i>
                             <span class="sb__menu-title">Quản trị người dùng</span>
                         </a>
                     </li>
                 
                     <li class="sb__menu-item">
-                        <a class="sb__menu-link" href="index.php?action=categoryM&query=insert">
+                        <a class="sb__menu-link" href="#">
                             <i class="sb__menu-category fa-solid fa-tarp"></i>
                             <span class="sb__menu-title">Quản trị danh mục</span>
                         
@@ -97,35 +100,35 @@
                     </li>
                     
                     <li class="sb__menu-item">
-                        <a class="sb__menu-link" href="index.php?action=productM&query=insert">
+                        <a class="sb__menu-link" href="./index.php?url=AdminProduct">
                             <i class="sb__menu-product fa-solid fa-gift"></i>
                             <span class="sb__menu-title">Quản trị sản phẩm</span>
                         </a>
                     </li>
                     
                     <li class="sb__menu-item">
-                        <a class="sb__menu-link" href="index.php?action=newsM&query=insert">
+                        <a class="sb__menu-link" href="#">
                             <i class="sb__menu-news fa-solid fa-newspaper"></i>
                             <span class="sb__menu-title">Quản trị tin tức</span>
                         </a>
                     </li>
                 
                     <li class="sb__menu-item">
-                        <a class="sb__menu-link" href="index.php?action=commentM&query=insert">
+                        <a class="sb__menu-link" href="#">
                             <i class="sb__menu-cmt fa-solid fa-comment"></i>
                             <span class="sb__menu-title">Quản trị bình luận</span>
                         </a>
                     </li>
                 
                     <li class="sb__menu-item">
-                        <a class="sb__menu-link" href="index.php?action=infoCompanyM&query=insert">
+                        <a class="sb__menu-link" href="#">
                             <i class="sb__menu-company fa-solid fa-building"></i>
                             <span class="sb__menu-title">Quản trị thông tin công ty</span>
                         </a>
                     </li>
                     
                     <li class="sb__menu-item">
-                        <a class="sb__menu-link" href="index.php?action=resourceM&query=insert">
+                        <a class="sb__menu-link" href="#">
                             <i class="sb__menu-resource fa-solid fa-layer-group"></i>
                             <span class="sb__menu-title">Quản trị tài nguyên</span>
                         </a>
@@ -136,7 +139,7 @@
             <div class="wrapper-sidebar1">
                 <div class="sb__logo">
                     <img class="sb__logo-img" src="./assets/img/logo.png">
-                    <span class="sb__logo-title">Adminator</span>
+                    <span class="sb__logo-title">LOGO</span>
                 </div>
                 <ul class="sb__menu">
                     <li class="sb__menu-item">
@@ -223,7 +226,7 @@
                 <?php
                 //content
                 $page=$data['page'];
-                require "./MVC/Views/Pages/$page.php";
+                require "./MVC/Views/Pages/Admin/$page.php";
                 ?>
             </div>
             <!--Footer -->
