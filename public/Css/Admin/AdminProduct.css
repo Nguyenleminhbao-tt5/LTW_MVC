@@ -1,0 +1,429 @@
+.manageProduct
+{
+    padding: 10px 0;
+}
+.manageProduct__title
+{
+    height: 40px;
+ 
+    box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+    border-left: 6px solid #FFD43B;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: var(--primary1-color);
+    display: flex;
+    align-items: center;
+}
+.manageProduct__title-text
+{
+    margin-left: 30px;
+}
+.manageProduct__content
+{
+    min-height: 200px;
+    border-radius: 10px;
+    background-color: var(--primary1-color);
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%), 0 3px 1px -2px rgb(0 0 0 / 20%);
+    transition: all 0.3s ease-in-out;
+ 
+}
+.manageProduct__content-heading
+{
+    display: flex;
+    padding: 10px 0 20px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.btn-sm, .btn-group-sm > .btn {
+    padding: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+    padding-left: 10px;
+    border-radius: 5px;
+    padding-right: 10px;
+    
+}
+.btn{
+    cursor: pointer;
+    text-decoration: none;
+    margin: 10px 10px;
+
+}
+.btn-add {
+    background: #9df99d !important;
+    color: #003c00 !important;
+}
+.nhap-tu-file {
+    background: #e1ec86 !important;
+    color: #4b5400 !important;
+}
+.print-file {
+    background: #bfbeef!important;
+    color: #03009a!important;
+}
+.btn-copy {
+    color: #008c04 !important;
+    background: #a2ecb5 !important;
+}
+.btn-delete {
+    background: #efcaca !important;
+    color: #bf0000 !important;
+}
+.manageProduct__content-content
+{
+    padding: 20px 10px 20px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.content__display
+{
+
+}
+.content__display-select
+{
+    width: 55px;
+    margin: 0 5px;
+    background-color: whitesmoke;
+    height: 23px;
+}
+.content__display-search
+{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    white-space: nowrap;
+    text-align: left;
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-left: 100px;
+}
+.search-title
+{
+    width: 105px;
+    display: block;
+    margin-right: 5px;
+  
+
+}
+.search-input
+{
+    background-color: #eee;
+    border-radius: 5px;
+    height: 30px;
+}
+.product-form__table
+{
+    width: calc(100% - 20px);
+    margin: 10px;
+    transition: all 0.3s ease-in-out;
+}
+table, th, td {
+    border:1px solid var(--border-color);
+}
+thead
+{
+    background-color: #eee;
+}
+th{
+    text-align: left;
+    padding: 5px 20px 0 20px;
+    height: 50px;
+    max-width: 150px;
+    line-height: 23px;
+}
+.ID{
+    width: 10px;
+}
+.Name
+{
+    max-width: 80px;
+}
+.Img{
+    width: 150px;
+}
+.Amount{
+    width: 110px;
+}
+.Status{
+    width: 60px;
+}
+.Price{
+    width: 80px;
+}
+.Category{
+    max-width: 70px;
+}
+.Feature{
+    max-width: 100px;
+}
+.edit-icon
+{
+    color: #302dbb !important;
+    margin: 0 10px;
+}
+.edit-icon:hover{
+    filter: brightness(60%);
+}
+.delete-icon
+{
+    color: #d74545 !important;
+    margin: 0 10px;
+}
+.delete-icon:hover{
+    filter: brightness(80%);
+}
+.product-img
+{
+    width: 80px;
+    height: 80px;
+}
+tr:hover{
+    background-color: #eee;
+    cursor: pointer;
+}
+.bg-success {
+    background-color: #bfefc4 !important;
+    color: #02790c !important;
+}
+.badge {
+    display: inline-block;
+    padding: 7px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 5px;
+    color: white;
+}
+
+/*Modal*/
+.modal-modified
+{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index:2;
+    animation: show linear 0.1s;
+    display: flex;
+    justify-content: center;
+    display: none;
+ 
+}
+.modal-error
+{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index:2;
+    animation: show linear 0.1s;
+    display: flex;
+    justify-content: center;
+    display: none;
+    
+}
+.modal__overlay
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index:3;
+}
+.modal__body
+{
+    position: fixed;
+    max-width:600px;
+    border-radius: 5px;
+    border-color: rgb(88, 86, 86);
+    border-style: solid;
+    background-color: var(--primary1-color);
+    z-index:4;
+    animation: growth linear 0.1s;
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;   
+    padding: 2px 16px; 
+    overflow-y: scroll;
+    margin-top: 80px;
+    max-height: 500px;
+   
+}
+.modal__body-error
+{
+    position: fixed;
+    max-width:600px;
+    border-radius: 5px;
+    border-color: rgb(88, 86, 86);
+    border-style: solid;
+    background-color: var(--primary1-color);
+    z-index:4;
+    animation: growth linear 0.1s;
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;   
+    padding: 2px 16px; 
+    overflow-y: scroll;
+    margin-top: 80px;
+    height: 230px;
+   
+}
+.form-group {
+    margin:0 0px 20px 0;
+}
+.thong-tin-thanh-toan h5 {
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0 10px 10px;
+    font-size: 25px;
+    color: black;
+}
+.canhbao{
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0 10px 10px;
+    font-size: 25px;
+    color: black;
+}
+.canhbao h5 {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0 10px 10px;
+    font-size: 25px;
+    color: black;
+}
+.question
+{
+    display: block;
+    text-align: center;
+}
+.question h5
+{
+    display: block;
+    text-align: center;
+    font-size: 17px;
+}
+.control-label {
+    font-weight: 600;
+    color: black;
+}
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 15px;
+    line-height: 1.5;
+    color: black;
+    background-color: #f1f1f1;
+    background-clip: padding-box;
+    height: 40px;
+    border: 1px solid #dadada;
+    border-radius:5px;
+    max-width: 240px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+ input {
+    overflow: visible;
+}
+#exampleSelect1 {
+    margin-top: 5px;
+    height: 40px;
+}
+.edit{
+    padding: 0 10px 10px 10px;
+}
+.btn-save {
+    background-color: rgb(166 236 171);
+    color: rgb(1 123 10);
+    font-weight: 600;
+    letter-spacing: 1px;
+    float: right;
+}
+.btn-cancel {
+    background-color: rgb(255 197 197);
+    color: rgb(190, 40, 40);
+    font-weight: 600;
+    letter-spacing: 1px;
+    float: right;
+}
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 2px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 15px;
+    line-height: 1.5;
+    border-radius: 5px;
+    transition: box-shadow 0.3s cubic-bezier(0.35, 0, 0.25, 1), transform 0.2s cubic-bezier(0.35, 0, 0.25, 1), background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, -webkit-box-shadow 0.3s cubic-bezier(0.35, 0, 0.25, 1), -webkit-transform 0.2s cubic-bezier(0.35, 0, 0.25, 1);
+}
+.bottom{
+    height: 10px;
+    padding: 5px 16px;
+    background-color: white;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding: 1rem;
+    border-radius: 0.357rem;
+}
+.ACTIVE
+{
+    display: flex;
+    justify-content: center;
+}
+.product-delete {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;
+}
+.product-edit {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;
+}
+.cancel-delete-product {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.cancel-back-product
+{
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}

@@ -9,25 +9,18 @@
     <link rel='stylesheet' href="./public/Css/base.css">
     <link rel='stylesheet' href="./public/Css/animation.css">
     <link rel='stylesheet' href="./public/Css/grid.css">
-    <link rel='stylesheet' href="./public/Css/headerA.css">
-    <link rel='stylesheet' href="./public/Css/footerA.css">
-    <link rel='stylesheet' href="./public/Css/sidebarA.css">
-    <link rel='stylesheet' href="./public/Css/AdminPrimary.css">
-    <link rel='stylesheet' href="./public/Css/AdminProduct.css">
+    <link rel='stylesheet' href="./public/Css/Admin/headerA.css">
+    <link rel='stylesheet' href="./public/Css/Admin/footerA.css">
+    <link rel='stylesheet' href="./public/Css/Admin/sidebarA.css">
+    <link rel='stylesheet' href="./public/Css/Admin/AdminPrimary.css">
+    <link rel='stylesheet' href="./public/Css/Admin/AdminProduct.css">
+    <link rel='stylesheet' href="./public/Css/Admin/AdminProductInsert.css">
+    <link rel='stylesheet' href="./public/Css/Admin/AdminUser.css">
+    <link rel='stylesheet' href="./public/Css/Admin/AdminOrder.css">
+    <link rel='stylesheet' href="./public/Css/Admin/AdminOrderInsert.css">
+    
 
     <style>
-     /* #root {
-        font-family: 'Montserrat';
-      }*/
-      /* table
-        table, th, td {
-            border:1px solid black;
-        }
-        th{
-            text-align: left;
-            padding: 5px 20px 0 20px;
-            height: 30px;
-        }*/
         input
         {
             width: 100%;
@@ -46,24 +39,6 @@
             background-color: var(--primary2-color);
             color: var(--primary1-color);
             cursor: pointer;
-        }
-        .edit-icon
-        {
-            margin: 0 5px 0 5px;
-            color: var(--primary2-color);
-        
-        }
-        .edit-icon:hover 
-        {
-            color: blue;
-        }
-        .delete-icon
-        {
-            margin: 0 5px 0 5px;
-            color: var(--primary2-color);
-        }
-        .delete-icon:hover{
-            color: red;
         }
     </style>
     <title>E-BOOKSTORE</title>
@@ -85,16 +60,16 @@
                     </li>
                     
                     <li class="sb__menu-item">
-                        <a class="sb__menu-link" href="#">
+                        <a class="sb__menu-link" href="./index.php?url=AdminUser">
                             <i class="sb__menu-user fa-solid fa-user"></i>
-                            <span class="sb__menu-title">Quản trị người dùng</span>
+                            <span class="sb__menu-title">Quản trị khách hàng</span>
                         </a>
                     </li>
                 
                     <li class="sb__menu-item">
-                        <a class="sb__menu-link" href="#">
+                        <a class="sb__menu-link" href="./index.php?url=AdminOrder">
                             <i class="sb__menu-category fa-solid fa-tarp"></i>
-                            <span class="sb__menu-title">Quản trị danh mục</span>
+                            <span class="sb__menu-title">Quản trị đơn hàng</span>
                         
                         </a>
                     </li>
@@ -152,7 +127,7 @@
                     <li class="sb__menu-item">
                         <a class="sb__menu-link" href="index.php?action=userM&query=insert">
                             <i class="sb__menu-user fa-solid fa-user"></i>
-                            <span class="sb__menu-title">Quản trị người dùng</span>
+                            <span class="sb__menu-title">Quản trị khách hàng</span>
                         </a>
                     </li>
                 
@@ -237,4 +212,5 @@
         </div> 
     </div>
   </body>
+  <script src='./public/Js/Admin.js'></script>
 </html>

@@ -6,14 +6,14 @@ class HomePageController extends BaseController
     public function __construct()
     {
         $this->loadModel('HomepageModel.php');
-        $this->homepage= new HomePageModel();
+        //$this->homepage= new HomePageModel();
       
     }
     public function show()
     {
     
-        $listProduct=$this->homepage->getALL();
-        $data=['page'=>'HomePage','listProduct'=>$listProduct];
+        //$listProduct=$this->homepage->getALL();
+        $data=['page'=>'HomePage'];
         $this->view($data);
     }
 
