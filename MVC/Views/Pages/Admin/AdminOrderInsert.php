@@ -26,10 +26,11 @@
                     <div class="form-group l-3 m-6 c-12 ">
                         <label for="exampleSelect1" class="control-label">Tình trạng</label>
                         <select class="form-control" id="exampleSelect1">
-                        <option>-- Chọn tình trạng --</option>
-                        <option>Chưa hoàn thành</option>
-                        <option>Hoàn thành</option>
-                        <option>Hủy đơn</option>
+                            <option>-- Chọn tình trạng --</option>
+                            <option>Chờ xử lý</option>
+                            <option>Đang vận chuyển</option>
+                            <option>Hoàn thành</option>
+                            <option>Đã hủy</option>
                         </select>
                     </div>
                     <div class="form-group l-3 m-6 c-12">

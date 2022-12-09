@@ -6,13 +6,14 @@
     <link rel="stylesheet" href="./public/Library/fontawesome-free-6.1.1-web/css/all.min.css">
     
     <link rel='stylesheet' href="./public/Css/base.css">
-    <link rel='stylesheet' href="./public/Css/header.css">
-    <link rel='stylesheet' href="./public/Css/footer.css">
-    <link rel='stylesheet' href="./public/Css/HomePage.css">
+    <link rel='stylesheet' href="./public/Css/User/header.css">
+    <link rel='stylesheet' href="./public/Css/User/footer.css">
+    <link rel='stylesheet' href="./public/Css/User/HomePage.css">
     <link rel='stylesheet' href="./public/Css/Product.css">
-    <link rel='stylesheet' href="./public/Css/ProfileProduct.css">
-    <link rel='stylesheet' href="./public/Css/Pay.css">
-    <link rel='stylesheet' href='./public/Css/CategoryProduct.css'>
+    <link rel='stylesheet' href="./public/Css/User/ProfileProduct.css">
+    <link rel='stylesheet' href="./public/Css/User/Pay.css">
+    <link rel='stylesheet' href='./public/Css/User/CategoryProduct.css'>
+    <link rel='stylesheet' href='./public/Css/User/Introduce.css'>
 
     <style>
       #root {

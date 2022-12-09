@@ -1,8 +1,8 @@
-.manageOrder
+.manageNews
 {
     padding: 10px 0;
 }
-.manageOrder__title
+.manageNews__title
 {
     height: 40px;
  
@@ -14,11 +14,11 @@
     display: flex;
     align-items: center;
 }
-.manageOrder__title-text
+.manageNews__title-text
 {
     margin-left: 30px;
 }
-.manageOrder__content
+.manageNews__content
 {
     min-height: 200px;
     border-radius: 10px;
@@ -31,7 +31,7 @@
     transition: all 0.3s ease-in-out;
  
 }
-.manageOrder__content-heading
+.manageNews__content-heading
 {
     display: flex;
     padding: 10px 0 20px 20px;
@@ -73,7 +73,7 @@
     background: #efcaca !important;
     color: #bf0000 !important;
 }
-.manageOrder__content-content
+.manageNews__content-content
 {
     padding: 20px 10px 20px 10px;
     display: flex;
@@ -119,7 +119,7 @@
     border-radius: 5px;
     height: 30px;
 }
-.order-form__table
+.News-form__table
 {
     width: calc(100% - 20px);
     margin: 10px;
@@ -146,14 +146,14 @@ th{
 {
     max-width: 80px;
 }
-.Avatar{
+.Img{
     width: 150px;
 }
-.DoB{
-    width: 120px;
+.Amount{
+    width: 110px;
 }
-.Email{
-    width: 130px;
+.Status{
+    width: 60px;
 }
 .Price{
     width: 80px;
@@ -399,13 +399,18 @@ label {
     padding: 1rem;
     border-radius: 0.357rem;
 }
-.order-delete {
+.ACTIVE
+{
+    display: flex;
+    justify-content: center;
+}
+.product-delete {
     border: none;
     cursor: pointer;
     font-size: 16px;
     background-color: transparent;
 }
-.order-edit {
+.product-edit {
     border: none;
     cursor: pointer;
     font-size: 16px;
@@ -422,6 +427,7 @@ label {
     cursor: pointer;
     font-size: 16px;
 }
-.email{
-    overflow:hidden;
+.description
+{
+    overflow: scroll;
 }

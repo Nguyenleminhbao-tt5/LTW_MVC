@@ -138,7 +138,13 @@ th{
     height: 50px;
     max-width: 150px;
     line-height: 23px;
+    
 }
+.description
+{
+    overflow: scroll;
+}
+
 .ID{
     width: 10px;
 }

@@ -119,12 +119,20 @@
     border-radius: 5px;
     height: 30px;
 }
+.product-form__table-content
+{
+    overflow: scroll;
+    height: 80vh;
+ 
+}
 .product-form__table
 {
     width: calc(100% - 20px);
     margin: 10px;
     transition: all 0.3s ease-in-out;
+    
 }
+
 table, th, td {
     border:1px solid var(--border-color);
 }
@@ -380,6 +388,7 @@ label {
     font-size: 15px;
     line-height: 1.5;
     border-radius: 5px;
+    max-height: 50px !important;
     transition: box-shadow 0.3s cubic-bezier(0.35, 0, 0.25, 1), transform 0.2s cubic-bezier(0.35, 0, 0.25, 1), background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, -webkit-box-shadow 0.3s cubic-bezier(0.35, 0, 0.25, 1), -webkit-transform 0.2s cubic-bezier(0.35, 0, 0.25, 1);
 }
 .bottom{

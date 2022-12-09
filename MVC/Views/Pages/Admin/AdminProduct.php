@@ -57,7 +57,7 @@
                     <div class="product-form">
                         <table class="product-form__table" >
                         
-                            <thead>
+                            <thead >
                                 <th class="ID">ID</th>
                                 <th class="Name">Tên sản phẩm</th>
                                 <th class="Img">Ảnh</th>
@@ -67,30 +67,46 @@
                                 <th class="Category">Danh mục</th>      
                                 <th class="Feature">Tính năng</th>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <th>01</th>
-                                    <th>Giày Nike đẹp đẽ </th>
-                                    <th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwz3U3SMJFRRdRlJFehOEEFueSNZC5qnl4n_ZDzeGeSPpPxpT2pMC8vu_uBaxlgW1up1o&usqp=CAU" class="product-img"></th>
-                                    <th>100</th>
-                                    <th>
-                                        <span class="badge bg-success">Còn hàng</span>
-                                    </th>
-                                    <th>100.000đ</th>
-                                    <th>Nike</th>
-                                    <th>
-                                        <button style=' text-decoration: none;' class="product-edit" href='#'>
-                                            <i class='edit-icon fa-solid fa-pen'></i>
-                                        </button>
-                                        <button style=' text-decoration: none;' class='product-delete' href='#'>
-                                            <i class='delete-icon fa-solid fa-trash'></i>
-                                        </button>                           
-                                    </th>
-                                </tr>
-                          
+                            <tbody class="product-form__table-content">
+                                <?php
                                 
+                                    $listShoes=$data['listShoes'];
 
-                                   
+                                    for($i=0; $i< count($listShoes);$i++)
+                                    {
+                                        $id=$listShoes[$i]['ProductID'];
+                                        $Type=$listShoes[$i]['Type'];
+                                        $ProductName=$listShoes[$i]['ProductName'];
+                                        $Price=$listShoes[$i]['Price']/1000;
+                                        $PrimaryImg=$listShoes[$i]['PrimaryImg'];
+                                       
+                                        echo"
+                                        <tr>
+                                        <th class='ProductID'>$id</th>
+                                        <th>$ProductName</th>
+                                        <th><img src='$PrimaryImg' class='product-img'></th>
+                                        <th>100</th>
+                                        <th>
+                                            <span class='badge bg-success'>Còn hàng</span>
+                                        </th>
+                                        <th>$Price.000đ</th>
+                                        <th>$Type</th>
+                                        <th>
+                                            
+                                            <button style=' text-decoration: none;' class='product-edit' >
+                                                <i class='edit-icon fa-solid fa-pen'></i>
+                                            </button>
+                                            <button style=' text-decoration: none;' class='product-delete' >
+                                                <i class='delete-icon fa-solid fa-trash'></i>
+                                            </button>
+                                                               
+                                        </th>
+                                    </tr>
+                                                                     
+                                        ";
+                                    }
+                                ?>
+                                
                             </tbody>  
                             </table>
                         </div>
@@ -103,28 +119,38 @@
 </div>
 <div class="modal-modified">
     <div class="modal__overlay"></div>
+    <?php
+   
+                $listShoes=$data['listShoes'];
+                
+                echo $_GET['ProductID'];
+
+              
+
+    ?>
                 
     <div class="modal__body">
         <div class="grid">                    
             <div class="row">
                 <div class="form-group  l-12">
                 <span class="thong-tin-thanh-toan">
-                    <h5>Chỉnh sửa thông tin sản phẩm cơ bản</h5>
+                    <h5>Chỉnh sửa thông tin sản phẩm</h5>
                 </span>
                 </div>
             </div>
+            <form method="POST" action="./index.php?url=AdminProduct/update/<?php echo $id ?>">
             <div class="row edit">
                 <div class="form-group l-6">
                     <label class="control-label">Mã sản phẩm </label>
-                    <input class="form-control" type="text" value="01" readonly>
+                    <input class="form-control" type="text" name='ProductID' value=<?php echo $shoes['ProductID'] ?> readonly>
                 </div>
                 <div class="form-group l-6">
                     <label class="control-label">Tên sản phẩm</label>
-                <input class="form-control" type="text" required="" value="Bàn ăn gỗ Theresa">
+                    <input class="form-control" type="text" name='ProductName' required="" value=<?php echo $shoes['ProductName'] ?>>
                 </div>
                 <div class="form-group  l-6">
                     <label class="control-label">Số lượng</label>
-                <input class="form-control" type="number" required="" value="20">
+                    <input class="form-control" type="number" required="" value="20">
                 </div>
                 <div class="form-group l-6 ">
                     <label for="exampleSelect1" class="control-label">Tình trạng sản phẩm</label>
@@ -135,38 +161,42 @@
                     </select>
                 </div>
                 <div class="form-group l-6">
-                    <label class="control-label">Giá bán</label>
-                    <input class="form-control" type="text" value="5.600.000">
+                    <label class="control-label" >Giá bán</label>
+                    <input class="form-control" name='Price' type="text" value=<?php echo $shoes['Price'] ?>>
                 </div>
                 <div class="form-group l-6">
                     <label class="control-label">Ảnh chính</label>
-                    <input class="form-control" type="text" value="">
+                    <input class="form-control" name='PrimaryImg' type="text" value=<?php echo $shoes['PrimaryImg'] ?>>
                 </div>
                 <div class="form-group l-6">
                     <label class="control-label">Ảnh 1</label>
-                    <input class="form-control" type="text" value="">
+                    <input class="form-control" type="text" name='Img1' value=<?php echo $shoes['Img1'] ?>>
                 </div>
                 <div class="form-group l-6">
                     <label class="control-label">Ảnh 2</label>
-                    <input class="form-control" type="text" value="">
+                    <input class="form-control" type="text" name='Img2' value=<?php echo $shoes['Img2'] ?>>
                 </div>
                 <div class="form-group l-6">
                     <label for="exampleSelect1" class="control-label">Danh mục</label>
-                    <select class="form-control" id="exampleSelect1">
-                    <option>Bàn ăn</option>
-                    <option>Bàn thông minh</option>
-                    <option>Tủ</option>
-                    <option>Ghế gỗ</option>
-                    <option>Ghế sắt</option>
-                    <option>Giường người lớn</option>
-                    <option>Giường trẻ em</option>
-                    <option>Bàn trang điểm</option>
-                    <option>Giá đỡ</option>
+                    <select class="form-control" name='Type' id="exampleSelect1">
+                    <?php
+                    
+                        $listCategory=$data['listCategory'];
+                        for($i=0;$i<count($listCategory);$i++)
+                        {
+                            $Type=$listCategory[$i]['Type'];
+                            echo "
+                                <option>$Type</option>
+                            ";
+                        }
+                     
+                    ?>
                     </select>
                 </div>
             </div>
             <br>
-            <button class="btn btn-save" type="button">Lưu lại</button>
+            <button class="btn btn-save" >Lưu lại</button>
+            </form>
             <button class="btn btn-cancel cancel-back-product" data-dismiss="modal" href="#">Hủy bỏ</button>
             <br>
         </div>
@@ -194,8 +224,17 @@
                 </span>
             </div>
             <br>
-            <button class="btn btn-save" type="button">Xác nhận</button>
-            <btton class="btn btn-cancel cancel-delete-product" data-dismiss="modal" href="#">Hủy bỏ</button>
+            <?php  $ProductID='';
+
+
+                if(!empty($_GET['id']))
+                {
+                    $ProductID=$_GET['id'];
+             
+                }
+            ?>
+            <a class="btn btn-save" href="./index.php?url=AdminProduct/delete/<?php echo $ProductID ?>">Xác nhận</a>
+            <btton class="btn btn-cancel cancel-delete-product" data-dismiss="modal" >Hủy bỏ</button>
             <br>
         </div>
         <br>

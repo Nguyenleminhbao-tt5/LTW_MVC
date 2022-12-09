@@ -41,9 +41,19 @@
 }
 .header__account-name
 {
-    margin: 0 30px 0 5px;
+    margin: 0 10px 0 5px;
     font-size: 16px;
     font-weight: 800;
+
+}
+.header__account-leave
+{
+    margin: 0 10px 0 5px;
+    font-size: 22px;
+    font-weight: 800;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
 
 }
 /* toggle in header*/
