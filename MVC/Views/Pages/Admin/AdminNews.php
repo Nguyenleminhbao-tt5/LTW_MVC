@@ -66,27 +66,45 @@
                                 <th class="Feature">Tính năng</th>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th>01</th>
-                                    <th>Giày Nike ra mắt sản phẩm mới</th>
-                                    <th><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwz3U3SMJFRRdRlJFehOEEFueSNZC5qnl4n_ZDzeGeSPpPxpT2pMC8vu_uBaxlgW1up1o&usqp=CAU" class="product-img"></th>
-                                    <th>Nike</th>
-                                    <th class="description">
-                                       jssssssssssssssssssssssssssssssssssssssssssssss
-                            
-                                    </th>
-                                    <th >
-                                        <button style=' text-decoration: none;' class="product-edit" href='#'>
-                                            <i class='edit-icon fa-solid fa-pen'></i>
-                                        </button>
-                                        <button style=' text-decoration: none;' class='product-delete' href='#'>
-                                            <i class='delete-icon fa-solid fa-trash'></i>
-                                        </button>                           
-                                    </th>
-                                </tr>
-                          
+                                <?php 
                                 
+                                $listNews=$data['listNews'];
 
+                                for($i=0;$i<count($listNews);$i++)
+                                {
+                                    $NewsID=$listNews[$i]['NewsID'];
+                                    $NewsName=$listNews[$i]['NewsName'];
+                                    $NewsImg=$listNews[$i]['NewsImg'];
+                                    $Type=$listNews[$i]['Type'];
+                                    $Description=$listNews[$i]['Description'];
+                                    
+                                    echo "
+                                        <tr>
+                                            <th>$NewsID</th>
+                                            <th>$NewsName</th>
+                                            <th><img src='$NewsImg' class='product-img'></th>
+                                            <th>$Type</th>
+                                            <th class='description'>
+                                                $Description
+                                            </th>
+                                            <th >
+                                                <a style=' text-decoration: none;' class='product-edit' href='./index.php?url=AdminNews/edit/$NewsID'>
+                                                    <i class='edit-icon fa-solid fa-pen'></i>
+                                                </a>
+                                                <a style=' text-decoration: none;' class='product-delete' href='./index.php?url=AdminNews/delete/$NewsID'>
+                                                    <i class='delete-icon fa-solid fa-trash'></i>
+                                                </a>                           
+                                            </th>
+                                        </tr>
+                                    
+                                    ";
+
+
+                                }
+                                
+                                ?>
+                               
+                          
                                    
                             </tbody>  
                             </table>
@@ -98,6 +116,9 @@
         </div>
     </div>
 </div>
+
+
+<?php /*
 <div class="modal-modified">
     <div class="modal__overlay"></div>
                 
@@ -176,3 +197,4 @@
   
    
 </div>
+*/ ?>

@@ -1,3 +1,4 @@
+/*
 // click sự kiện hủy sản phẩm
 if(document.querySelector('.product-delete'))
 {
@@ -36,10 +37,13 @@ if(document.querySelector('.product-edit'))
         {
             item.addEventListener('click',()=>
             {
+                
                 document.querySelector('.modal-modified').setAttribute('style','display:flex');
-               
+                
                 let ID=listID[index].innerHTML;
-                window.history.pushState('new','title',`./index.php?url=AdminProduct&ProductID=${ID}`);
+                //window. history.replaceState(null,'',`./index.php?url=AdminProduct&id=${ID}`);
+               // setTimeout(()=>window.location.assign(`./index.php?url=AdminProduct&id=${ID}`),3000);
+                 
             })
            
         })
@@ -115,3 +119,4 @@ if(document.querySelector('.cancel-back-product'))
     })
 }
 
+*/

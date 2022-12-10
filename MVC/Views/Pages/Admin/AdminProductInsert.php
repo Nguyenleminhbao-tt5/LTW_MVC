@@ -6,14 +6,14 @@
         <h3 class="insertProduct__content-heading">Tạo mới sản phẩm</h3>
         <div class="insertProduct__content-table">
             <div class="grid">
-                    <form class="row" method='POST' action="./index.php?url=AdminProduct/insert">
+                <form class="row" method='POST' action="./index.php?url=AdminProduct/insert">
                     <div class="form-group l-3 m-6 c-12">
                         <label class="control-label">Mã sản phẩm </label>
-                        <input class="form-control" type="text" name='ProductID' placeholder="01">
+                        <input class="form-control" type="text" name='ProductID' value='<?php echo $data['error1'] ?>'>
                     </div>
                     <div class="form-group l-3 m-6 c-12">
                         <label class="control-label">Tên sản phẩm</label>
-                        <input class="form-control" type="text" name='ProductName'>
+                        <input class="form-control" type="text" name='ProductName' value='<?php echo $data['error2'] ?>'>
                     </div>
 
 

@@ -26,6 +26,10 @@ class AdminProductModel extends BaseModel
     {
         return $this->UPDATE(self::TABLE,$ProductData,'ProductID',$id);
     }
+    public function getProductByID($ID)
+    {
+        return $this->FIND(self::TABLE,'ProductID',$ID);
+    }
 }
 
 ?>

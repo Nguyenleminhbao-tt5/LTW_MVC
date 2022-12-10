@@ -9,7 +9,6 @@ $des = str_replace('-', '<br>', $des);
 
 $listImg=[$product['BookFile'],$product['image1'],$product['image2']];
 
-
 ?>
 
 <div class="ProfileProduct">
@@ -111,5 +110,7 @@ $listImg=[$product['BookFile'],$product['image1'],$product['image2']];
             <?php echo $des ?>
         </ul>
     </div>
+    <div class="comment">
+    </div> 
 </div>
 

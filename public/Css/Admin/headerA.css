@@ -9,6 +9,9 @@
     width: calc(100% - 70px);
     top:0;
     z-index: 998;
+    background-color: white;
+    
+    /* #242526*/
 }
 
 .header__category-icon

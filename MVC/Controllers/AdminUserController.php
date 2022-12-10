@@ -2,17 +2,24 @@
 
 class AdminUserController extends BaseController
 {
-    private $adminProduct;
+    private $adminUser;
+    private $listUser;
     public function __construct()
     {
-       // $this->loadModel('AdminProductModel.php');
-       // $this->adminProduct= new AdminProductModel();
+        $this->loadModel('AdminUserModel.php');
+        $this->adminUser= new AdminUserModel();
+        $this->listUser= $this->adminUser->getALL();
     }
     public function show()
     {
-
-        $data=['page'=>'AdminUser'];
+        $data=['page'=>'AdminUser','listUser'=>$this->listUser];
         $this->view($data);
+    }
+    public function delete($ID)
+    {
+        
+        if($ID !=1) $this->adminUser->deleteUser($ID);
+        header('Location:./index.php?url=AdminUser');
     }
 
 

@@ -118,26 +118,26 @@
                     <tbody>
                       <tr>
                         <td>#183</td>
-                        <td>Hột vịt muối</td>
+                        <td>Nguyễn Văn Tú</td>
                         <td>21/7/1992</td>
                         <td><span class="tag tag-success">0921387221</span></td>
                       </tr>
                       <tr>
                         <td>#219</td>
-                        <td>Bánh tráng trộn</td>
+                        <td>Lê Thị Loan</td>
                         <td>30/4/1975</td>
                         <td><span class="tag tag-warning">0912376352</span></td>
                       </tr>
                       <tr>
                         <td>#627</td>
-                        <td>Cút rang bơ</td>
+                        <td>Nguyễn Lê Minh Thịnh</td>
                         <td>12/3/1999</td>
                         <td><span class="tag tag-primary">01287326654</span></td>
                       </tr>
                       <tr>
                         <td>#175</td>
-                        <td>Hủ tiếu nam vang</td>
-                        <td>4/12/20000</td>
+                        <td>Nguyễn Lê Minh Bảo</td>
+                        <td>4/12/2000</td>
                         <td><span class="tag tag-danger">0912376763</span></td>
                       </tr>
                     </tbody>

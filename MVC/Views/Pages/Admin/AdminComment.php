@@ -97,6 +97,8 @@
         </div>
     </div>
 </div>
+
+<?php /*
 <div class="modal-modified">
     <div class="modal__overlay"></div>
                 
@@ -164,3 +166,4 @@
   
    
 </div>
+*/ ?>

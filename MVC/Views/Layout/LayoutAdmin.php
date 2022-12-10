@@ -52,7 +52,8 @@
         <div class="wrapper-sidebar ">
                 <div class="sb__logo">
                     <!--<img class="sb__logo-img" src="./assets/img/logo.png">-->
-                    <span class="sb__logo-title">LOGO</span>
+                    <span class="sb__logo-title">AD</span>
+                    <span class="sb__logo-title1">LOGO</span>
                 </div>
                 <ul class="sb__menu">
                     <li class="sb__menu-item">
@@ -213,7 +214,7 @@
             <!--Footer -->
             
             <footer class="wrapper-footer">
-                Copyright © 2021 Designed by Colorlib. All rights reserved.
+                Copyright © 2022 Designed by Colorlib. All rights reserved.
             </footer>
         </div> 
     </div>

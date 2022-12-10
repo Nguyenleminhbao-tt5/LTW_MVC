@@ -218,8 +218,7 @@ tr:hover{
     animation: show linear 0.1s;
     display: flex;
     justify-content: center;
-    display: none;
- 
+   
 }
 .modal-error
 {

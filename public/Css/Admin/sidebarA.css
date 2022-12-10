@@ -17,6 +17,7 @@
     border: 1px solid #efefef;
     width: 70px;
     z-index: 999;
+   
 }
 /* <PC*/
 .wrapper-sidebar1
@@ -45,6 +46,14 @@
 {
     border-bottom: 1.3px solid  #efefef;
 }
+.wrapper-sidebar:hover .sb__logo-title
+{
+    display: none;
+}
+.wrapper-sidebar:hover .sb__logo-title1
+{
+    display: block;
+}
 .sb__menu-item:hover{
     background-color: #efefef;
    
@@ -68,6 +77,12 @@
     font-size: 27px;
     font-weight: 600;
     margin-left: 16px;
+}
+.sb__logo-title1{
+    font-size: 27px;
+    font-weight: 600;
+    margin-left: 16px;
+    display: none;
 }
 
 .sb__menu
@@ -103,33 +118,49 @@
 .sb__menu-dashboard
 {
     color: #2196f3 !important;
+    display: block;
+    width: 23px;
 }
 .sb__menu-user
 {
     color: #795548 !important;
+    display: block;
+    width: 23px;
 }
 .sb__menu-category
 {
-    color: #2196f3 !important;
+    color: #2396f3 !important;
+    display: block;
+    width: 23px;
 }
 .sb__menu-product
 {
     color: #ff5722 !important;
+    display: block;
+    width: 23px;
 }
 .sb__menu-news
 {
     color: #673ab7 !important;
+    display: block;
+    width: 23px;
 }
 .sb__menu-cmt
 {
     color: #e91e63 !important;
+    display: block;
+    width: 23px;
 
 }
 .sb__menu-company
 {
     color: #009688 !important;
+    display: block;
+    width: 23px;
 }
 .sb__menu-resource
 {
     color: #2196f3 !important;
+    display: block;
+    width: 23px;
 }

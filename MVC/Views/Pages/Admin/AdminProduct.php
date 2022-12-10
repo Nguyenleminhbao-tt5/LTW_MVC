@@ -93,12 +93,12 @@
                                         <th>$Type</th>
                                         <th>
                                             
-                                            <button style=' text-decoration: none;' class='product-edit' >
+                                            <a style=' text-decoration: none;' class='product-edit' href='./index.php?url=AdminProduct/edit/$id' >
                                                 <i class='edit-icon fa-solid fa-pen'></i>
-                                            </button>
-                                            <button style=' text-decoration: none;' class='product-delete' >
+                                            </a>
+                                            <a style=' text-decoration: none;' class='product-delete' href='./index.php?url=AdminProduct/delete/$id'>
                                                 <i class='delete-icon fa-solid fa-trash'></i>
-                                            </button>
+                                            </a>
                                                                
                                         </th>
                                     </tr>
@@ -117,13 +117,22 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+<?php /*
 <div class="modal-modified">
     <div class="modal__overlay"></div>
     <?php
    
                 $listShoes=$data['listShoes'];
                 
-                echo $_GET['ProductID'];
+                echo $_GET['id'];
 
               
 
@@ -243,3 +252,4 @@
   
    
 </div>
+*/?>

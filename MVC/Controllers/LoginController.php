@@ -18,7 +18,7 @@ class LoginController extends BaseController
     {
         $data=['page'=>'Login'];
         
-        $listCustomer=$this->login->getCustomer();
+        $listUser=$this->login->getUser();
 
         if($_POST['EmailLogin']=='admin@gmail.com' && $_POST['PasswordLogin']=='31201021080')
         {
@@ -26,16 +26,22 @@ class LoginController extends BaseController
         }
         else
         {  
-            for($i=0;$i<count($listCustomer);$i++)
+            for($i=0;$i<count($listUser);$i++)
             {
-                if($listCustomer[$i]['AccountName']==$_POST['EmailLogin']
-                && $listCustomer[$i]['Password']==$_POST['PasswordLogin'])
+                if($i==0) continue;
+                if($listUser[$i]['AccountName']==$_POST['EmailLogin']
+                && $listUser[$i]['Password']==$_POST['PasswordLogin'])
                 {
-                    header('Location: ./index.php');
+                    //header('Location: ./index.php');
+                    $data=['page'=>'HomePage','accountName'=>$listUser[$i]['LastName'],'accountAvatar'=>$listUser[$i]['Avatar']];
+                    $this->view($data);
                 }
             }
             $this->view($data);
+
+            
         }
+        
     }
 
 }
