@@ -22,7 +22,6 @@ $listImg=[$product['BookFile'],$product['image1'],$product['image2']];
         <span class="path2">
             <?php echo $type ?>
         </span>
-
     </div>
     <div class="contentProduct">
         <div class="grid">

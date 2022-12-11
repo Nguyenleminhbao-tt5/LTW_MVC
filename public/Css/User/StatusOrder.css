@@ -1,0 +1,62 @@
+.statusProduct-wrapper {
+    padding: 20px;
+}
+.statusProduct-order {
+    margin-bottom: 30px;
+}
+/* Điện thoại thông minh */
+@media (max-width: 768px) {
+    .orderinfor-item-img>img{
+        width: 100%;
+    }
+    .orderinfor-header {
+        height: 70px;
+    }
+    .orderinfor-header div{
+        font-size: 8px;
+    }
+    .orderinfor-item-img {
+        width: 30%;
+    }
+    .orderinfor-item-name {
+        font-size: 8px !important;
+        width: 20% !important;
+    }
+    .orderinfor-item-price {
+        font-size: 8px;
+        width: 10%;
+    }
+    .orderinfor-item-size {
+        font-size: 8px;
+        width: 10%;
+    }
+    .orderinfor-item-num {
+        font-size: 8px;
+        width: 20%;
+    }
+    .ship-fee h2,.total-fee h2 {
+        font-size: 16px;
+    }
+    .cancelorder form button {
+        font-size: 10px;
+    }
+ }
+ /* Các thiết bị nhỏ, máy tính bảng */
+ @media (min-width: 768px) and (max-width:992px) {
+    .ship-fee h2,.total-fee h2 {
+        font-size: 18px;
+    }
+    .cancelorder form button {
+        font-size: 12px;
+    }
+ }
+ 
+ /* Các thiết bị trung bình */
+ @media (min-width: 992px) and (max-width:1200px) {
+    .ship-fee h2,.total-fee h2 {
+        font-size: 20px;
+    }
+    .cancelorder form button {
+        font-size: 13px;
+    }
+ }
