@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./public/Library/fontawesome-free-6.1.1-web/css/all.min.css">
     
     <link rel='stylesheet' href="./public/Css/base.css">
+    <link rel='stylesheet' href="./public/Css/grid.css">
     <link rel='stylesheet' href="./public/Css/User/header.css">
     <link rel='stylesheet' href="./public/Css/User/footer.css">
     <link rel='stylesheet' href="./public/Css/User/HomePage.css">

@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="./public/Library/fontawesome-free-6.1.1-web/css/all.min.css">
     
     <link rel='stylesheet' href="./public/Css/base.css">
+    <link rel='stylesheet' href="./public/Css/grid.css">
     <link rel='stylesheet' href="./public/Css/Login.css">
+    <link rel='stylesheet' href="./public/Css/Register.css">
     <link rel="stylesheet" href="./public/Css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
     
  

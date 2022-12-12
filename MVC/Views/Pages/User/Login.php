@@ -31,14 +31,14 @@ if(!empty($_POST['LastName']))
 
 <!--header-->
         <div class="header-w3l">
-			<h1> E-BOOKSTORE</h1>
+			<h1> LOGO SHOES</h1>
 		</div>
 		<!--//header-->
 		<!--main-->
 		<div class="main-w3layouts-agileinfo">
 	           <!--form-stars-here-->
 						<div class="wthree-form">
-							<h2>Chào mừng bạn đến với <br>E-BOOKSTORE</h2>
+							<h2>Chào mừng bạn đến với <br>LOGO</h2>
 							<form action="./index.php?url=Login/check" method="post">
 								<div class="form-sub-w3">
 									<input type="text" name="EmailLogin" placeholder="Email " required="" >

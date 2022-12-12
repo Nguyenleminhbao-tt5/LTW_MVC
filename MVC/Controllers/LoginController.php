@@ -32,7 +32,7 @@ class LoginController extends BaseController
                 if($listUser[$i]['AccountName']==$_POST['EmailLogin']
                 && $listUser[$i]['Password']==$_POST['PasswordLogin'])
                 {
-                    //header('Location: ./index.php');
+      
                     $data=['page'=>'HomePage','accountName'=>$listUser[$i]['LastName'],'accountAvatar'=>$listUser[$i]['Avatar']];
                     $this->view($data);
                 }
