@@ -6,38 +6,36 @@ class LoginController extends BaseController
     public function __construct()
     {
         $this->loadModel('LoginModel.php');
-        $this->login= new LoginModel();
-      
+        $this->login = new LoginModel();
+
     }
     public function show()
     {
-        $data=['page'=>'Login'];
+        $data = ['page' => 'Login', 'Type' => "", 'ID' => ""];
         $this->view($data);
     }
     public function check()
     {
         $accountname = $_POST['AccountName'];
         $password = $_POST['Password'];
-        $user=$this->login->getUser($accountname);
-        if ($user[0]['Password']==$password) {
-            $data=['page'=>'Login', 'user'=>$user];
+        $user = $this->login->getUser($accountname, $password);
+        if (count($user) == 1) {
+            $typeuser = $user[0]['Type'];
+            $userid = $user[0]['ID'];
+            $username = $user[0]['FirstName'];
+            $avatar = $user[0]['Avatar'];
+            if ($typeuser == 'Customer') {
+                $listProduct = $this->login->getProduct();
+                $data = ['Type' => $typeuser, 'listProduct' => $listProduct];
+                $_SESSION['Avatar'] = $user[0]['Avatar'];
+                $_SESSION['Name'] = $user[0]['LastName'];
+            } else if ($typeuser == 'Admin') {
+                $data = ['Type' => $typeuser];
+            }
+            $this->view($data);
+        } else {
+            echo "<script language='javascript'>window.location = 'index.php?url=Login&error=1';</script>";
         }
-        // if($_POST['EmailLogin']=='admin@gmail.com' && $_POST['PasswordLogin']=='31201021080')
-        // {
-        //     header('Location: ./index.php?url=AdminPrimary');
-        // }
-        // else
-        // {  
-        //     for($i=0;$i<count($listCustomer);$i++)
-        //     {
-        //         if($listCustomer[$i]['AccountName']==$_POST['EmailLogin']
-        //         && $listCustomer[$i]['Password']==$_POST['PasswordLogin'])
-        //         {
-        //             header('Location: ./index.php');
-        //         }
-        //     }
-        //     $this->view($data);
-        // }
     }
 
 }

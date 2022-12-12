@@ -1,7 +1,7 @@
 <?php 
 
 $listImg=[
-    'https://cdn0.fahasa.com/media/magentothem/banner7/FahasaT1222_Banner_840x320.jpg',
+    'https://bucket.nhanh.vn/04f7ff-92233/bn/20221207_Kqn2WzHQ2ZmxpIuw.jpg',
     'https://cdn0.fahasa.com/media/magentothem/banner7/Giangsinh_T11_840x320.jpg',
     'https://cdn0.fahasa.com/media/magentothem/banner7/FAHASA-ONT12_840x320.jpg',
     'https://cdn0.fahasa.com/media/magentothem/banner7/VPP_Main_banner_T10_840x320.jpg'
@@ -44,7 +44,6 @@ $listImg=[
                         for ($i=0;$i<4;$i++)
                           { 
                             $props=$listProduct[$i];
-        
                             echo "<div class='grid__column-25'>";
                             Product($props);  
                             echo "</div>";

@@ -4,8 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./public/Library/fontawesome-free-6.1.1-web/css/all.min.css">
-    
     <link rel='stylesheet' href="./public/Css/base.css">
+    <link rel='stylesheet' href="./public/Css/User/header.css">
+    <link rel='stylesheet' href="./public/Css/User/footer.css">
+    <link rel='stylesheet' href="./public/Css/User/HomePage.css">
     <link rel='stylesheet' href="./public/Css/User/header.css">
     <link rel='stylesheet' href="./public/Css/User/footer.css">
     <link rel='stylesheet' href="./public/Css/User/HomePage.css">
@@ -13,8 +15,12 @@
     <link rel='stylesheet' href="./public/Css/User/ProfileProduct.css">
     <link rel='stylesheet' href="./public/Css/User/Pay.css">
     <link rel='stylesheet' href='./public/Css/User/CategoryProduct.css'>
-    <link rel='stylesheet' href='./public/Css/User/Introduce.css'>
-
+    <link rel="stylesheet" href="./public/Css/User/Cart.css">
+    <link rel="stylesheet" href="./public/Css/User/StatusOrder.css">
+    <link rel="stylesheet" href="./public/Css/Order.css">
+    <link rel="stylesheet" href="./public/Css/User/News.css">
+    <link rel="stylesheet" href="./public/Css/ProductInCart.css">
+    <link rel="stylesheet" href="./public/Css/User/ProfileUser.css">
     <style>
       #root {
         font-family: Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -38,11 +44,11 @@
                 <div class="navbar1__wrap">
                     <div class="navbar1__cart">
                         <i class="navbar1__cart-icon fa-solid fa-cart-shopping"></i>
-                        <a href="" class="navbar1__cart-link">Giỏ hàng</a>
+                        <a href="./index.php?url=Cart" class="navbar1__cart-link">Giỏ hàng</a>
                     </div>
                     <a href="#" class="navbar1__account">
-                        <img src="<?php echo $data['accountAvatar'] ?>" class="navbar1__account-avatar">
-                        <span class="navbar1__account-name"><?php echo $data['accountName'] ?></span>
+                        <img src="<?php echo $_SESSION['Avatar'] ?>" class="navbar1__account-avatar">
+                        <span class="navbar1__account-name"><?php echo $_SESSION['Name'] ?></span>
                     </a>
                     <div class="navbar1__social">
                         <a href="" class="navbar1__social-item">
@@ -63,7 +69,7 @@
                 <div class="navbar2__wrap">
                     <div class="navbar2__searchProduct">
                         <i class="navbar2__searchProduct-icon fa-solid fa-truck-fast"></i>
-                        <a href="" class="navbar2__searchProduct-text">Tra cứu đơn hàng</a>
+                        <a href="./index.php?url=StatusOrder" class="navbar2__searchProduct-text">Tra cứu đơn hàng</a>
                     </div>
                     <a href="" class="navbar2__intro">Giới thiệu</a>
                     <div class="navbar2__contact">
