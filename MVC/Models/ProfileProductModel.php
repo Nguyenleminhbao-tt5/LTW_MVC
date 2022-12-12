@@ -2,7 +2,7 @@
 
 class ProfileProductModel extends BaseModel
 {
-    const TABLE ='book';
+    const TABLE ='product';
 
     public function getFind($id_table,$id)
     {

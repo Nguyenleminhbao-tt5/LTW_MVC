@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./public/Css/Order.css">
     <link rel="stylesheet" href="./public/Css/User/News.css">
     <link rel="stylesheet" href="./public/Css/ProductInCart.css">
+    <link rel="stylesheet" href="./public/Css/User/ProfileUser.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <style>
         #root {

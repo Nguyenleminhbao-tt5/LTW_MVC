@@ -10,8 +10,9 @@ class ProfileProductController extends BaseController
     }
     public function show(/*$id*/)
     {
-        // $detailProduct = $this->profileProduct->getFind('BookID', $id);
-        // $data = ['page' => 'ProfileProduct', 'detailProduct' => $detailProduct];
+        // $detailProduct = $this->profileProduct->getFind('product', $id);
+        //$detailProduct = $this->profileProduct->getFind('ProductID', 1);
+        //$data = ['page' => 'ProfileProduct', 'detailProduct' => $detailProduct];
         $data = ['page' => 'ProfileProduct'];
         $this->view($data);
     }

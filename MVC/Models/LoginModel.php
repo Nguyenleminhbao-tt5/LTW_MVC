@@ -2,14 +2,13 @@
 
 class LoginModel extends BaseModel
 {
-    const TABLE ='users';
-
-
-    public function getCustomer()
+    const TABLE = 'users';
+    public function getUser($accountname)
     {
-        $sql="SELECT * FROM users,customer WHERE users.ID=customer.ID";
+        $sql = "SELECT * FROM user WHERE user.AccountName=$accountname";
         return $this->QUERYOTHER($sql);
     }
+
 }
 
 ?>

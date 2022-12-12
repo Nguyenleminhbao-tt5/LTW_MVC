@@ -4,27 +4,10 @@ unset($_SESSION['Email']);
 unset($_SESSION['Password']);
 unset($_SESSION['FirstName']);
 unset($_SESSION['LastName']);
-/*
-if(!empty($_POST['Email']))
-{
-	$_SESSION['Email']=$_POST['Email'];
-
+unset($_SESSION['AccountName']);
+if (isset($_SESSION['AccountName'])){
+	$_SESSION['AccountName'];
 }
-if(!empty($_POST['Password']))
-{
-	$_SESSION['Password']=$_POST['Password'];
-}
-if(!empty($_POST['FirstName']))
-{
-	$_SESSION['FirstName']=$_POST['FirstName'];
-
-}
-if(!empty($_POST['LastName']))
-{
-	$_SESSION['LastName']=$_POST['LastName'];
-}
-*/
-
 ?>
 
 
@@ -41,13 +24,13 @@ if(!empty($_POST['LastName']))
 							<h2>Chào mừng bạn đến với <br>E-BOOKSTORE</h2>
 							<form action="./index.php?url=Login/check" method="post">
 								<div class="form-sub-w3">
-									<input type="text" name="EmailLogin" placeholder="Email " required="" >
+									<input type="text" name="AccountName" placeholder="Email " required="" >
 								<div class="icon-w3">
 									<i class="fa fa-user" aria-hidden="true"></i>
 								</div>
 								</div>
 								<div class="form-sub-w3">
-									<input type="password" name="PasswordLogin" placeholder="Password" required="" >
+									<input type="password" name="Password" placeholder="Password" required="" >
 								<div class="icon-w3">
 									<i class="fa fa-unlock-alt" aria-hidden="true"></i>
 								</div>

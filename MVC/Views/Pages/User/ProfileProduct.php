@@ -1,13 +1,13 @@
 <?php 
-$product=$data['detailProduct'][0];
-$name=$product['BookName'];
-$type=$product['Type'];
-$price=$product['Price'];
-$code=$product['BookID'];
-$des=$product['Description'];
-$des = str_replace('-', '<br>', $des);
+// $product=$data['detailProduct'][0];
+// $name=$product['ProductName'];
+// $type=$product['Type'];
+// $price=$product['Price'];
+// $code=$product['ProductID'];
+// $des=$product['Description'];
+// $des = str_replace('-', '<br>', $des);
 
-$listImg=[$product['BookFile'],$product['image1'],$product['image2']];
+// $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
 
 
 ?>
@@ -20,7 +20,7 @@ $listImg=[$product['BookFile'],$product['image1'],$product['image2']];
         </span>
         <span>|</span>
         <span class="path2">
-            <?php echo $type ?>
+            <?php //echo $type ?>
         </span>
     </div>
     <div class="contentProduct">
@@ -32,34 +32,34 @@ $listImg=[$product['BookFile'],$product['image1'],$product['image2']];
                             <button class="left-btn">
                                 <i class="left-icon fa-solid fa-angle-left"></i>
                             </button>
-                            <img class="img img--active" src=" <?php echo $listImg[0] ?>">
-                            <img class="img" src=" <?php echo $listImg[1] ?>">
-                            <img class="img" src=" <?php echo $listImg[2] ?>">
+                            <img class="img img--active" src=" <?php //echo $listImg[0] ?>">
+                            <img class="img" src=" <?php //echo $listImg[1] ?>">
+                            <img class="img" src=" <?php //echo $listImg[2] ?>">
                             <button class="right-btn">
                                 <i class="right-icon fa-solid fa-angle-right"></i>
                             </button>
                         </li>
                         <li class="product__listImg-item">
-                            <img class="img" src=" <?php echo $img1 ?>">
+                            <img class="img" src=" <?php //echo $img1 ?>">
                         </li>
                         <li class="product__listImg-item">
-                            <img class="img" src=" <?php echo $img2 ?>">
+                            <img class="img" src=" <?php //echo $img2 ?>">
                         </li>
                         <li class="product__listImg-item">
-                            <img class="img" src=" <?php echo $img3 ?>">
+                            <img class="img" src=" <?php //echo $img3 ?>">
                         </li>
                     </ul>
                 </div>
                 <div class="grid__column-40">
                     <div class="product__detail">
                         <div class="product__detail-name">
-                            <span class="title"> <?php echo $name ?></span>
+                            <span class="title"> <?php //echo $name ?></span>
                             <div class="product-code">
                                 <span class="code">Mã sản phẩm:</span>
-                                <span class="id"> <?php echo $code ?></span>
+                                <span class="id"> <?php //echo $code ?></span>
                             </div>
                         </div>
-                        <div class="product__detail-price"> <?php echo $price/1000 ?>.000đ</div>
+                        <div class="product__detail-price"> <?php //echo $price/1000 ?>.000đ</div>
                         <div class="product__detail-size">
                             <div class="size-heading">
                                 <span class="size-heading__title1">KÍCH THƯỚC</span>
@@ -107,7 +107,7 @@ $listImg=[$product['BookFile'],$product['image1'],$product['image2']];
     <div class="description">
         <span class="description-heading">Mô tả chi tiết</span>
         <ul class="description-text">
-            <?php echo $des ?>
+            <?php //echo $des ?>
         </ul>
     </div>
 </div>
