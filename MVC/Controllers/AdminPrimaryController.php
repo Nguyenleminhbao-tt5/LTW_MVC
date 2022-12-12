@@ -53,6 +53,7 @@ class AdminPrimaryController extends BaseController
         $this->adminPrimary->deleteBook($BookID);
         header('Location:./index.php?url=AdminPrimary');
     }
+    
 
 }
 

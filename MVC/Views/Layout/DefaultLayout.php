@@ -9,6 +9,9 @@
     <link rel='stylesheet' href="./public/Css/User/header.css">
     <link rel='stylesheet' href="./public/Css/User/footer.css">
     <link rel='stylesheet' href="./public/Css/User/HomePage.css">
+    <link rel='stylesheet' href="./public/Css/User/header.css">
+    <link rel='stylesheet' href="./public/Css/User/footer.css">
+    <link rel='stylesheet' href="./public/Css/User/HomePage.css">
     <link rel='stylesheet' href="./public/Css/Product.css">
     <link rel='stylesheet' href="./public/Css/User/ProfileProduct.css">
     <link rel='stylesheet' href="./public/Css/User/Pay.css">

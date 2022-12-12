@@ -85,6 +85,26 @@
     font-size: 18px;
     margin-left: 40px;
 }
+.navbar1__account
+{
+    text-decoration: none;
+    color: var(--primary2-color);
+    font-weight: 500;
+    font-size: 18px;
+    margin-left: 40px;
+    display: flex;
+    min-width: 100px;
+    max-height: 120px;
+    display: flex;
+    align-items: center;
+}
+.navbar1__account-avatar
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin: 0 10px;
+}
 .navbar1__social
 {
     margin-left: 20px;

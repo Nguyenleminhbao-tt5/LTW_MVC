@@ -9,7 +9,6 @@
 
 // $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
 
-
 ?>
 
 <div class="ProfileProduct">
@@ -110,5 +109,7 @@
             <?php //echo $des ?>
         </ul>
     </div>
+    <div class="comment">
+    </div> 
 </div>
 

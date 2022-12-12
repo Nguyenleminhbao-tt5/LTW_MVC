@@ -56,5 +56,5 @@
 .right
 {
     
-   max-width: 70px;
+    float: right !important;
 }

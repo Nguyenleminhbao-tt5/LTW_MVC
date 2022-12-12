@@ -1,6 +1,6 @@
 <div class="manageOrder">
     <div class="manageOrder__title">
-        <h4 class="manageOrder__title-text"> Quản Lý Đơn Hàng</h4>
+        <h4 class="manageOrder__title-text"> Quản Lý Bình Luận</h4>
     </div>
     <div class="manageOrder__content">
         <div class="manageOrder__content-heading">
@@ -9,7 +9,7 @@
             <div class="l-2 m-3 c-6">
                 <a class="btn btn-add btn-sm" href="./index.php?url=AdminOrder/add" title="Thêm">
                     <i class="fas fa-plus"></i>
-                 Tạo mới đơn hàng</a>
+                 Tạo mới bình luận</a>
             </div>
             <div class="l-2 m-3 c-6">
                 <a class="btn  btn-sm nhap-tu-file" type="button" title="Nhập" onclick=""><i class="fas fa-file-upload"></i> Tải từ file</a>
@@ -38,13 +38,13 @@
                                 <option>50</option>
                                 <option>100</option>
                             </select>
-                            <span>Đơn Hàng</span>
+                            <span>Bình luận</span>
                         </div>
                     </div>
                     <div class="l-o-4">
                        <div class="content__display-search">
                             <span class="search-title">Tìm Kiếm : </span>
-                            <input class="search-input" placeholder="Nhập đơn hàng">
+                            <input class="search-input" placeholder="Nhập tên khách hàng bình luận">
                         </div>
                     </div>
                 </div>
@@ -60,22 +60,20 @@
                             <thead>
                                 <th class="ID">ID</th>
                                 <th class="User">Khách hàng</th>
-                                <th class="Order">Đơn hàng</th>
-                                <th class="Amount">Số lượng</th>
-                                <th class="Price">Tổng tiền</th>
-                                <th class="Status">Tình Trạng</th>      
+                                <th class="Order">Bình Luận</th>
+                                <th class="Time">Thời điểm</th>    
                                 <th class="Feature">Tính năng</th>
                             </thead>
                             <tbody>
                                 <tr>
                                     <th>01</th>
                                     <th>Nguyễn Lê Minh Bảo</th>
-                                    <th>Giày Nike, giày thượng đình</th>
-                                    <th>2</th>
-                                    <th>100.000đ</th>
-                                    <th>
-                                        <span class="badge bg-success">Hoàn thành</span>
+                                    <th class="description">Giày Nike, giày thượng đình
+                                    Giày Nike, giày thượng đình
+                                    Giày Nike, giày thượng đình
+                                    Giày Nike, giày thượng đình
                                     </th>
+                                    <th>2</th>
                                     <th>
                                         <button style=' text-decoration: none;' class="order-edit" href='#'>
                                             <i class='edit-icon fa-solid fa-pen'></i>
@@ -100,7 +98,6 @@
     </div>
 </div>
 
-
 <?php /*
 <div class="modal-modified">
     <div class="modal__overlay"></div>
@@ -110,40 +107,25 @@
             <div class="row">
                 <div class="form-group  l-12">
                 <span class="thong-tin-thanh-toan">
-                    <h5>Chỉnh sửa thông tin đơn hàng</h5>
+                    <h5>Chỉnh sửa thông tin bình luận</h5>
                 </span>
                 </div>
             </div>
             <div class="row edit">
                 <div class="form-group l-6">
-                    <label class="control-label">Mã đơn hàng </label>
+                    <label class="control-label">Mã bình luận </label>
                     <input class="form-control" type="text" value="01" readonly>
                 </div>
                 <div class="form-group l-6">
                     <label class="control-label">Tên khách hàng</label>
                 <input class="form-control" type="text" required="" value="Nguyễn Lê Minh Bảo">
                 </div>
-                <div class="form-group l-6">
-                    <label class="control-label">Đơn hàng</label>
-                <input class="form-control" type="text" required="" value="Giày Nike">
+                <div class="form-group l-12">
+                    <label class="control-label">Nội dung bình luận</label>
+                    <textarea class="form-control" >
+                    </textarea>
                 </div>
-                <div class="form-group  l-6">
-                    <label class="control-label">Số lượng</label>
-                    <input class="form-control" type="number" required="" value="20">
-                </div>
-                <div class="form-group l-6">
-                    <label class="control-label">Tổng tiền</label>
-                    <input class="form-control" type="text" value="5.600.000">
-                </div>
-                <div class="form-group l-6 ">
-                    <label for="exampleSelect1" class="control-label">Tình trạng sản phẩm</label>
-                    <select class="form-control" id="exampleSelect1">
-                    <option>Chờ xử lý</option>
-                    <option>Đang vận chuyển</option>
-                    <option>Hoàn thành</option>
-                    <option>Đã hủy</option>
-                    </select>
-                </div>
+                
             </div>
             <br>
             <button class="btn btn-save" type="button">Lưu lại</button>
@@ -170,7 +152,7 @@
             </div>
             <div class="row edit">
                 <span class="question">
-                    <h5 class="question1">Bạn có chắc muốn xóa đơn hàng này không ?</h5>
+                    <h5 class="question1">Bạn có chắc muốn xóa bình luận này không ?</h5>
                 </span>
             </div>
             <br>
@@ -184,5 +166,4 @@
   
    
 </div>
-*/
-?>
+*/ ?>

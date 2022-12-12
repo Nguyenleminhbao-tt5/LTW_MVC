@@ -18,6 +18,9 @@
     <link rel='stylesheet' href="./public/Css/Admin/AdminUser.css">
     <link rel='stylesheet' href="./public/Css/Admin/AdminOrder.css">
     <link rel='stylesheet' href="./public/Css/Admin/AdminOrderInsert.css">
+    <link rel='stylesheet' href="./public/Css/Admin/AdminNews.css">
+    <link rel='stylesheet' href="./public/Css/Admin/AdminNewsInsert.css">
+    <link rel='stylesheet' href="./public/Css/Admin/AdminComment.css">
     
 
     <style>
@@ -49,7 +52,8 @@
         <div class="wrapper-sidebar ">
                 <div class="sb__logo">
                     <!--<img class="sb__logo-img" src="./assets/img/logo.png">-->
-                    <span class="sb__logo-title">LOGO</span>
+                    <span class="sb__logo-title">AD</span>
+                    <span class="sb__logo-title1">LOGO</span>
                 </div>
                 <ul class="sb__menu">
                     <li class="sb__menu-item">
@@ -82,14 +86,14 @@
                     </li>
                     
                     <li class="sb__menu-item">
-                        <a class="sb__menu-link" href="#">
+                        <a class="sb__menu-link" href="./index.php?url=AdminNews">
                             <i class="sb__menu-news fa-solid fa-newspaper"></i>
                             <span class="sb__menu-title">Quản trị tin tức</span>
                         </a>
                     </li>
                 
                     <li class="sb__menu-item">
-                        <a class="sb__menu-link" href="#">
+                        <a class="sb__menu-link" href="./index.php?url=AdminComment">
                             <i class="sb__menu-cmt fa-solid fa-comment"></i>
                             <span class="sb__menu-title">Quản trị bình luận</span>
                         </a>
@@ -190,10 +194,13 @@
                 <label for="toggle" class="overlay"></label>
                 </div>
                 <div class="header__account">
-                <i class="header__account-notifi fa-regular fa-bell"></i>
-                <i class="header__account-mail fa-regular fa-envelope"></i>
-                <i class="header__account-avatar fa-regular fa-user"></i>
-                <span class="header__account-name">Minh Bảo</span>
+                    <i class="header__account-notifi fa-regular fa-bell"></i>
+                    <i class="header__account-mail fa-regular fa-envelope"></i>
+                    <i class="header__account-avatar fa-regular fa-user"></i>
+                    <span class="header__account-name">Minh Bảo</span>
+                    <a href="./index.php?url=Login" class="header__account-leave">
+                        <i class="header__account-leaveIcon fa-solid fa-arrow-right-from-bracket"></i>
+                    </a>
                 </div>
             </header>
             
@@ -207,7 +214,7 @@
             <!--Footer -->
             
             <footer class="wrapper-footer">
-                Copyright © 2021 Designed by Colorlib. All rights reserved.
+                Copyright © 2022 Designed by Colorlib. All rights reserved.
             </footer>
         </div> 
     </div>

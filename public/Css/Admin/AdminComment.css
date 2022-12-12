@@ -1,8 +1,8 @@
-.manageProduct
+.manageOrder
 {
     padding: 10px 0;
 }
-.manageProduct__title
+.manageOrder__title
 {
     height: 40px;
  
@@ -14,11 +14,11 @@
     display: flex;
     align-items: center;
 }
-.manageProduct__title-text
+.manageOrder__title-text
 {
     margin-left: 30px;
 }
-.manageProduct__content
+.manageOrder__content
 {
     min-height: 200px;
     border-radius: 10px;
@@ -31,7 +31,7 @@
     transition: all 0.3s ease-in-out;
  
 }
-.manageProduct__content-heading
+.manageOrder__content-heading
 {
     display: flex;
     padding: 10px 0 20px 20px;
@@ -73,7 +73,7 @@
     background: #efcaca !important;
     color: #bf0000 !important;
 }
-.manageProduct__content-content
+.manageOrder__content-content
 {
     padding: 20px 10px 20px 10px;
     display: flex;
@@ -119,20 +119,12 @@
     border-radius: 5px;
     height: 30px;
 }
-.product-form__table-content
-{
-    overflow: scroll;
-    height: 80vh;
- 
-}
-.product-form__table
+.order-form__table
 {
     width: calc(100% - 20px);
     margin: 10px;
     transition: all 0.3s ease-in-out;
-    
 }
-
 table, th, td {
     border:1px solid var(--border-color);
 }
@@ -146,7 +138,13 @@ th{
     height: 50px;
     max-width: 150px;
     line-height: 23px;
+    
 }
+.description
+{
+    overflow: scroll;
+}
+
 .ID{
     width: 10px;
 }
@@ -154,14 +152,14 @@ th{
 {
     max-width: 80px;
 }
-.Img{
+.Avatar{
     width: 150px;
 }
-.Amount{
-    width: 110px;
+.DoB{
+    width: 120px;
 }
-.Status{
-    width: 60px;
+.Email{
+    width: 130px;
 }
 .Price{
     width: 80px;
@@ -226,8 +224,7 @@ tr:hover{
     animation: show linear 0.1s;
     display: flex;
     justify-content: center;
- 
- 
+   
 }
 .modal-error
 {
@@ -388,7 +385,6 @@ label {
     font-size: 15px;
     line-height: 1.5;
     border-radius: 5px;
-    max-height: 50px !important;
     transition: box-shadow 0.3s cubic-bezier(0.35, 0, 0.25, 1), transform 0.2s cubic-bezier(0.35, 0, 0.25, 1), background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, -webkit-box-shadow 0.3s cubic-bezier(0.35, 0, 0.25, 1), -webkit-transform 0.2s cubic-bezier(0.35, 0, 0.25, 1);
 }
 .bottom{
@@ -408,18 +404,13 @@ label {
     padding: 1rem;
     border-radius: 0.357rem;
 }
-.ACTIVE
-{
-    display: flex;
-    justify-content: center;
-}
-.product-delete {
+.order-delete {
     border: none;
     cursor: pointer;
     font-size: 16px;
     background-color: transparent;
 }
-.product-edit {
+.order-edit {
     border: none;
     cursor: pointer;
     font-size: 16px;
@@ -435,4 +426,7 @@ label {
     border: none;
     cursor: pointer;
     font-size: 16px;
+}
+.email{
+    overflow:hidden;
 }
