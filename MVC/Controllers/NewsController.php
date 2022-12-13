@@ -2,17 +2,16 @@
 
 class NewsController extends BaseController
 {
-    private $homepage;
+    private $news;
     public function __construct()
     {
-        // $this->loadModel('NewsModel.php');
-        // $this->homepage= new NewsModel();
-
+        $this->loadModel('NewsModel.php');
+        $this->news= new NewsModel();
     }
     public function show()
     {
-
-        $data = ['page' => 'News'];
+        $listnews = $this->news->getnews();
+        $data = ['page' => 'News', 'News'=>$listnews];
         $this->view($data);
     }
 

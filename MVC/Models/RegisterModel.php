@@ -12,6 +12,11 @@ class RegisterModel extends BaseModel
         $values = ['FirstName' => $fname, 'LastName' => $lname, 'AccountName' => $AccountName, 'Password' => $Password, 'Avatar' => $avatar, 'Type' => 'Customer'];
         $this->INSERT('user', $values);
     }
+    public function getAccount($accountname)
+    {
+        $sql = "SELECT * FROM `user` WHERE AccountName='$accountname'";
+        return $this->QUERYOTHER($sql);
+    }
 }
 
 ?>
