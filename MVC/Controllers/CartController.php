@@ -19,9 +19,15 @@ class CartController extends BaseController
     }
     public function insert()
     {
-        $dataCart=['CartID'=>$_SESSION['CustomerID'],'CustomerID'=>$_SESSION['CustomerID'],'ProductID'=>$_POST['ProductID'],'Size'=>'40','Amount'=>$_POST['Amount']];
+        $dataCart = ['CartID' => $_SESSION['CustomerID'], 'CustomerID' => $_SESSION['CustomerID'], 'ProductID' => $_POST['ProductID'], 'Size' => '40', 'Amount' => $_POST['Amount']];
         $this->cart->insertdata($dataCart);
         header('Location: ./index.php?url=Cart');
+    }
+    public function delete($cartid, $productid)
+    {
+        $data = ['CartID' => $cartid, 'CustomerID' => $this->customer_id, 'ProductID' => $productid];
+        $this->cart->deleteproduct($data);
+        header('Location:./index.php?url=Cart');
     }
 }
 
