@@ -51,7 +51,7 @@
 .transportation__img
 {
     margin-top: 5px;
-    background-image: url('../Assets/transportation.PNG');
+    background-image: url('../../Assets/transportation.PNG');
     background-repeat: no-repeat;
     background-size: cover;
     width: 60px;
@@ -65,7 +65,7 @@
 .payment__img
 {
     margin-top: 5px;
-    background-image: url('../Assets/payment.PNG');
+    background-image: url('../../Assets/payment.PNG');
     background-repeat: no-repeat;
     background-size: cover;
     width: 70px;

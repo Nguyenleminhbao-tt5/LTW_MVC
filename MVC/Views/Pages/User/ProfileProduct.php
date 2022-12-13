@@ -1,13 +1,15 @@
 <?php 
 $product=$data['detailProduct'][0];
-$name=$product['BookName'];
+$name=$product['ProductName'];
 $type=$product['Type'];
 $price=$product['Price'];
-$code=$product['BookID'];
+$code=$product['ProductID'];
+
+
 $des=$product['Description'];
 $des = str_replace('-', '<br>', $des);
 
-$listImg=[$product['BookFile'],$product['image1'],$product['image2']];
+$listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
 
 ?>
 
@@ -21,34 +23,23 @@ $listImg=[$product['BookFile'],$product['image1'],$product['image2']];
         <span class="path2">
             <?php echo $type ?>
         </span>
-
     </div>
     <div class="contentProduct">
         <div class="grid">
             <div class="grid__row">
                 <div class="grid__column-60">
-                    <ul class="product__listImg">
-                        <li class="product__listImg-item active">
+                    <div class="product__listImg">  
                             <button class="left-btn">
                                 <i class="left-icon fa-solid fa-angle-left"></i>
                             </button>
-                            <img class="img img--active" src=" <?php echo $listImg[0] ?>">
-                            <img class="img" src=" <?php echo $listImg[1] ?>">
-                            <img class="img" src=" <?php echo $listImg[2] ?>">
+                            <img class="img img--active" src=" <?php echo $product['PrimaryImg'] ?>">
+                            <img class="img " src=" <?php echo $product['Img1'] ?>">
+                            <img class="img " src=" <?php echo $product['Img2'] ?>">
                             <button class="right-btn">
                                 <i class="right-icon fa-solid fa-angle-right"></i>
                             </button>
-                        </li>
-                        <li class="product__listImg-item">
-                            <img class="img" src=" <?php echo $img1 ?>">
-                        </li>
-                        <li class="product__listImg-item">
-                            <img class="img" src=" <?php echo $img2 ?>">
-                        </li>
-                        <li class="product__listImg-item">
-                            <img class="img" src=" <?php echo $img3 ?>">
-                        </li>
-                    </ul>
+                       
+                    </div>
                 </div>
                 <div class="grid__column-40">
                     <div class="product__detail">
@@ -59,7 +50,11 @@ $listImg=[$product['BookFile'],$product['image1'],$product['image2']];
                                 <span class="id"> <?php echo $code ?></span>
                             </div>
                         </div>
-                        <div class="product__detail-price"> <?php echo $price/1000 ?>.000đ</div>
+                        <div class="product__detail-price"> <?php if($price/1000000>=1) {
+                        $a=$price/1000000;
+                        echo $a;   
+                    }
+                    else echo $price/1000 ?>.000đ</div>
                         <div class="product__detail-size">
                             <div class="size-heading">
                                 <span class="size-heading__title1">KÍCH THƯỚC</span>

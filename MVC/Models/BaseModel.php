@@ -72,7 +72,6 @@ class BaseModel extends Database
             array_push($data,$row);
         }
         return $data;
-
     }
     private function query($sql)
     {

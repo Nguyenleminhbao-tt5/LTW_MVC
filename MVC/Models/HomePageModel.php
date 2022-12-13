@@ -2,7 +2,7 @@
 
 class HomePageModel extends BaseModel
 {
-    const TABLE ='book';
+    const TABLE ='product';
     public function getALL($select=['*'],$limit=100)
     {
       return $this->ALL(self::TABLE,$select,$limit);

@@ -1,10 +1,10 @@
 <?php 
 
 $listImg=[
-    'https://cdn0.fahasa.com/media/magentothem/banner7/FahasaT1222_Banner_840x320.jpg',
-    'https://cdn0.fahasa.com/media/magentothem/banner7/Giangsinh_T11_840x320.jpg',
-    'https://cdn0.fahasa.com/media/magentothem/banner7/FAHASA-ONT12_840x320.jpg',
-    'https://cdn0.fahasa.com/media/magentothem/banner7/VPP_Main_banner_T10_840x320.jpg'
+    'https://bucket.nhanh.vn/04f7ff-92233/bn/20221117_DhsyxB9AnDmC0zvuV8gY9gXs.jpg',
+    'https://bucket.nhanh.vn/04f7ff-92233/bn/20221207_Kqn2WzHQ2ZmxpIuw.jpg',
+    'https://bucket.nhanh.vn/04f7ff-92233/bn/20221110_Qk9cp0UBpawQBpCUt0aScKyz.jpg',
+    'https://bucket.nhanh.vn/04f7ff-92233/bn/20221024_kActgMi0qrzceMWAOfrbwkTo.jpg'
 ]
 
 ?>
@@ -24,10 +24,10 @@ $listImg=[
                         <div class="grid__column-35">
                             <div class="main__beside">
                                 <div class="main__beside-1">
-                                    <img class="beside-1-img" src='https://cdn0.fahasa.com/media/wysiwyg/Thang-11-2022/FahasaT1222_B%E1%BB%991_392x156PNG.png'>
+                                    <img class="beside-1-img" src='https://bucket.nhanh.vn/04f7ff-92233/bn/20221208_LSyzLXiH2IqpYJJY.jpg'>
                                 </div>
                                 <div class="main__beside-2">
-                                    <img class="beside-2-img" src='https://cdn0.fahasa.com/media/wysiwyg/Duy-VHDT/HOA-CU/HoaCuQuy4_banner_392x156PNG_T11.png'>
+                                    <img class="beside-2-img" src='https://bucket.nhanh.vn/04f7ff-92233/bn/20221117_DhsyxB9AnDmC0zvuV8gY9gXs.jpg'>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +44,6 @@ $listImg=[
                         for ($i=0;$i<4;$i++)
                           { 
                             $props=$listProduct[$i];
-        
                             echo "<div class='grid__column-25'>";
                             Product($props);  
                             echo "</div>";

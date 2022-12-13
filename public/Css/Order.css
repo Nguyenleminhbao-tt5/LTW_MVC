@@ -1,0 +1,42 @@
+.orderinfor-wrap {
+    padding: 10px 10px 20px 10px;
+}
+.orderinfor-item {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+.orderinfor-header {
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+}
+.orderinfor-item-img {
+    width: 30%;
+    padding: 10px;
+}
+.orderinfor-item-img>img{
+    max-width: 100px;
+}
+.orderinfor-item-name {
+    width: 30%;
+    padding: 10px;
+    justify-content: center;
+}
+.orderinfor-item-size {
+    width: 10%;
+    padding: 10px;
+}
+.orderinfor-item-num {
+    width: 10%;
+    padding: 10px;
+}
+.orderinfor-item-price {
+    width: 20%;
+    padding: 10px;
+}
+.orderinfor-item h2 {
+    border-bottom: 1px solid #ccc;
+    font-size: 10px;
+}
