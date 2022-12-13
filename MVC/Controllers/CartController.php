@@ -17,7 +17,12 @@ class CartController extends BaseController
         $data = ['page' => 'Cart', 'products' => $this->products];
         $this->view($data);
     }
-   
+    public function insert()
+    {
+        $dataCart=['CartID'=>$_SESSION['CustomerID'],'CustomerID'=>$_SESSION['CustomerID'],'ProductID'=>$_POST['ProductID'],'Size'=>'40','Amount'=>$_POST['Amount']];
+        $this->cart->insertdata($dataCart);
+        header('Location: ./index.php?url=Cart');
+    }
 }
 
 

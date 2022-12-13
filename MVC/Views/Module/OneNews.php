@@ -17,8 +17,9 @@ function ProductInCart($props)
         <span>
             <?php echo $props['size'] ?>
         </span>
-        <form method='post' action='./index.php?url=Cart/delete/<?php echo $props['cartid'].'/'.$props['id']?>'>
-            <button type="submit" class="cart-delete" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm')">Xóa</button>
+        <form method='post' action='./index.php?url=Cart/delete/<?php echo $props['cartid'] . '/' . $props['id'] ?>'>
+            <button type="submit" class="cart-delete"
+                onclick="return confirm('Bạn có chắc muốn xóa sản phẩm')">Xóa</button>
         </form>
     </div>
     <div class="cart-row-col3">

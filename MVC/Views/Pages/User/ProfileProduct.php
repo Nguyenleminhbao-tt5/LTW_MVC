@@ -26,7 +26,7 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
     </div>
     <div class="contentProduct">
         <div class="grid">
-            <div class="grid__row">
+            <form class="grid__row" action='./index.php?url=Cart/insert' method='POST'>
                 <div class="grid__column-60">
                     <div class="product__listImg">  
                             <button class="left-btn">
@@ -47,7 +47,7 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
                             <span class="title"> <?php echo $name ?></span>
                             <div class="product-code">
                                 <span class="code">Mã sản phẩm:</span>
-                                <span class="id"> <?php echo $code ?></span>
+                                <input class="id"  name='ProductID' value=' <?php echo $code ?>' readonly>
                             </div>
                         </div>
                         <div class="product__detail-price"> <?php if($price/1000000>=1) {
@@ -62,21 +62,19 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
                             </div>
                             <div class="size-bottom">
                                 <div class="size-bottom_list">
-                                    <button class="size-bottom_list-item">37</button>
-                                    <button class="size-bottom_list-item">38</button>
-                                    <button class="size-bottom_list-item">39</button>
-                                    <button class="size-bottom_list-item">40</button>
-                                    <button class="size-bottom_list-item">41</button>
-                                    <button class="size-bottom_list-item">42</button>
-                                    <button class="size-bottom_list-item">43</button>
+                                    <div class="size-bottom_list-item">37</div>
+                                    <div class="size-bottom_list-item">38</div>
+                                    <div class="size-bottom_list-item">39</div>
+                                    <div class="size-bottom_list-item">40</div>
+                                    <div class="size-bottom_list-item">41</div>
+                                    <div class="size-bottom_list-item">42</div>
+                                    <div class="size-bottom_list-item">43</div>
                                 </div>
                             </div>
                             <div class="product__detail-amount">
                                 <span class="amount-heading">SỐ LƯỢNG</span>
                                 <div class="amount-bottom">
-                                    <button class="minus">-</button>
-                                    <span class="amount">1</span>
-                                    <button class="add">+</button>
+                                    <input type="number" class="amount" name="Amount" min="1" max="10" value='1'>
                                 </div>
                             </div>
                             <div class="product__detail-addtional">
@@ -95,7 +93,7 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
                         
                     </div>
                 </div>
-            </div>
+             </form>
         </div>
 
     </div>

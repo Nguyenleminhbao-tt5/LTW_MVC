@@ -2,22 +2,15 @@
 
 class RegisterModel extends BaseModel
 {
-    
     public function upAccount($data)
     {
-        $id=$data['LastName'];
-        $AccountName=$data['Email'];
-        $Password=$data['Password'];
-        $FirstName=$data['FirstName'];
-        $LastName=$data['LastName'];
-        $LoginTime=date("Y/m/d");
-        
-    
-        $values1=['ID'=>$id,'Gender'=>'M','DoB'=>'2002/09/06','FirstName'=>$FirstName,'LastName'=>$LastName,'Email'=>$AccountName,'AccountName'=>$AccountName,'Password'=>$Password,'PhoneNumber'=>'0123456789','Address'=>'Quảng Ngãi'];
-        $values2=['ID'=>$id,'LoginTime'=>$LoginTime];
-        $this->INSERT('users',$values1);
-        $this->INSERT('customer',$values2);
-
+        $fname = $data['FirstName'];
+        $lname = $data['LastName'];
+        $avatar = 'https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=';
+        $AccountName = $data['AccountName'];
+        $Password = $data['Password'];
+        $values = ['FirstName' => $fname, 'LastName' => $lname, 'AccountName' => $AccountName, 'Password' => $Password, 'Avatar' => $avatar, 'Type' => 'Customer'];
+        $this->INSERT('user', $values);
     }
 }
 

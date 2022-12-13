@@ -2,9 +2,6 @@
     <?php
     $order = $data['order'];
     require "./MVC/Views/Module/Order.php";
-    if (!isset($_SESSION)) {
-        session_start();
-    }
     if (isset($_GET['error'])) {
         $error = $_GET['error'];
         if ($error == "1")
@@ -33,6 +30,9 @@
             echo "<script> alert('Địa chỉ không hợp lệ')</script>";
         if ($error == "13")
             echo "<script> alert('Ghi chú quá dài, không hợp lệ')</script>";
+    }
+    if (!isset($_SESSION)){
+        session_start();
     }
     $_SESSION['products'] = $order;
     ?>

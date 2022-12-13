@@ -8,29 +8,9 @@ class CartModel extends BaseModel
         $sql = "SELECT * FROM `cart`, `product`,`user` WHERE cart.ProductID=product.ProductID AND CartID=ID AND CustomerID=$customerid;";
         return $this->QUERYOTHER($sql);
     }
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
     public function insertdata($data)
     {
-        $data = $data['data'];
         return $this->INSERT(self::TABLE, $data);
     }
     public function up($data)
