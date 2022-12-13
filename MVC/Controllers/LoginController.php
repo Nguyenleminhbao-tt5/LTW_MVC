@@ -11,7 +11,7 @@ class LoginController extends BaseController
     }
     public function show()
     {
-        $data = ['page' => 'Login', 'Type' => "", 'ID' => ""];
+        $data = ['page' => 'Login'];
         $this->view($data);
     }
     public function check()
@@ -19,16 +19,14 @@ class LoginController extends BaseController
         $accountname = $_POST['AccountName'];
         $password = $_POST['Password'];
         $user = $this->login->getUser($accountname, $password);
-        if (count($user) == 1) {
+        if (!empty($user)) {
             $typeuser = $user[0]['Type'];
-            $userid = $user[0]['ID'];
-            $username = $user[0]['FirstName'];
-            $avatar = $user[0]['Avatar'];
             if ($typeuser == 'Customer') {
                 $listProduct = $this->login->getProduct();
                 $data = ['Type' => $typeuser, 'listProduct' => $listProduct];
                 $_SESSION['Avatar'] = $user[0]['Avatar'];
-                $_SESSION['Name'] = $user[0]['LastName'];
+                $_SESSION['Name'] = $user[0]['FirstName'];
+                $_SESSION['CustomerID'] = $user[0]['ID'];
             } else if ($typeuser == 'Admin') {
                 $data = ['Type' => $typeuser];
             }

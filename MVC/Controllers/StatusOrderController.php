@@ -10,7 +10,7 @@ class StatusOrderController extends BaseController
     {
         $this->loadModel('StatusOrderModel.php');
         $this->statusorder = new StatusOrderModel();
-        $this->customerid = 1;
+        $this->customerid = $_SESSION['CustomerID'];
         $this->listorder = $this->statusorder->joinOrder($this->customerid);
         $this->numorder = $this->statusorder->numOrder($this->customerid);
     }

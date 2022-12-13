@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./public/Css/User/News.css">
     <link rel="stylesheet" href="./public/Css/ProductInCart.css">
     <link rel="stylesheet" href="./public/Css/User/ProfileUser.css">
+    <link rel="stylesheet" href="./public/Css/User/AboutUs.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <style>
         #root {
@@ -46,7 +47,7 @@
                 <div class="navbar1__wrap">
                     <div class="navbar1__cart">
                         <i class="navbar1__cart-icon fa-solid fa-cart-shopping"></i>
-                        <a href="./index.php?url=Cart" class="navbar1__cart-link">Giỏ hàng</a>
+                        <a href="./index.php?url=Login" class="navbar1__cart-link">Giỏ hàng</a>
                     </div>
                     <a href="./index.php?url=Login" class="navbar1__login">Đăng nhập</a>
                     <div class="navbar1__social">
@@ -68,12 +69,12 @@
                 <div class="navbar2__wrap">
                     <div class="navbar2__searchProduct">
                         <i class="navbar2__searchProduct-icon fa-solid fa-truck-fast"></i>
-                        <a href="./index.php?url=StatusOrder" class="navbar2__searchProduct-text">Tra cứu đơn hàng</a>
+                        <a href="./index.php?url=Login" class="navbar2__searchProduct-text">Tra cứu đơn hàng</a>
                     </div>
-                    <a href="" class="navbar2__intro">Giới thiệu</a>
+                    <a href="./index.php?url=AboutUs" class="navbar2__intro">Giới thiệu</a>
                     <div class="navbar2__contact">
                         <i class="navbar2__contact-icon fa-solid fa-phone"></i>
-                        <span class="navbar2__contact-text">Liên hệ</span>
+                        <a style='text-decoration:none' href="./index.php?url=News"><span class="navbar2__contact-text">Tin tức</span></a>
                     </div>
                 </div>
 

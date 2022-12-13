@@ -17,9 +17,9 @@ class BaseController
                 require $this->pathViewLayout1;
             } else if ($data['page'] == 'Register') {
                 require $this->pathViewLayout1;
-            } else if ($_SESSION['Type'] == 'Customer') {
+            } else if (!empty($_SESSION['Type']) && $_SESSION['Type'] == 'Customer') {
                 require $this->pathViewLayoutAccount;
-            } else if ($_SESSION['Type'] == 'Admin') {
+            } else if (!empty($_SESSION['Type']) && $_SESSION['Type'] == 'Admin') {
                 require $this->pathViewLayoutAdmin;
             } else {
                 require $this->pathViewDefault;

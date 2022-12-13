@@ -11,7 +11,7 @@ class PayController extends BaseController
     {
         $this->loadModel('PayModel.php');
         $this->pay = new PayModel();
-        $this->customerid = 1;
+        $this->customerid = $_SESSION['CustomerID'];
         $this->order = $this->pay->order($this->customerid);
     }
     public function show()

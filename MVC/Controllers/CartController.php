@@ -9,7 +9,7 @@ class CartController extends BaseController
     {
         $this->loadModel('CartModel.php');
         $this->cart = new CartModel();
-        $this->customer_id = 1;
+        $this->customer_id = $_SESSION['CustomerID'];
         $this->products = $this->cart->getproduct($this->customer_id);
     }
     public function show()
