@@ -1,4 +1,12 @@
 <?php
+
+// unset($_SESSION['Email']);
+// unset($_SESSION['Password']);
+// unset($_SESSION['FirstName']);
+// unset($_SESSION['LastName']);
+// unset($_SESSION['AccountName']);
+// if (isset($_SESSION['AccountName'])){
+// 	$_SESSION['AccountName'];
 if (isset($_GET['error'])) {
 	$error = $_GET['error'];
 	if ($error == '1')
@@ -18,7 +26,7 @@ if (isset($_GET['error'])) {
 <div class="main-w3layouts-agileinfo">
 	<!--form-stars-here-->
 	<div class="wthree-form">
-		<h2>Chào mừng bạn đến với <br>LOGO SHOES STORE</h2>
+		<h2>Chào mừng bạn đến với <br>E-BOOKSTORE</h2>
 		<form action="./index.php?url=Login/check" method="post">
 			<div class="form-sub-w3">
 				<input type="text" name="AccountName" placeholder="Email " required="">

@@ -35,11 +35,8 @@
     margin: 15px 1px;
   
 }
-.category__item.category__item--active
-{
-    color: var(--primary-color);
-}
-.category__item--active.category__item-link{
+
+.category__item--active .category__item-link{
  color: var(--primary-color);
 }
 .category__item-icon
@@ -59,6 +56,10 @@
 .category__item-link:hover{
     color:var(--primary-color);
     right: -6px;
+}
+.category__item.category__item--active
+{
+    color: var(--primary-color);
 }
 /* Home-filter */
 .home-filter

@@ -42,7 +42,7 @@ body {
 
 
 /* Header */
-.main-w3layouts-agileinfo {
+.main-w3layouts-agileinfo-1-1 {
     width: 30%;
     margin: 0 auto;
 	margin-bottom: 500px;
@@ -99,6 +99,7 @@ form {
 .form-sub-w3{
 	position:relative;
     margin-bottom: 20px;
+	margin: 0 20px 20px 20px ;
 }
 .form-sub-w3 input[type="text"], input[type="password"] {
     width: 85%;
@@ -299,6 +300,21 @@ input.checkbox:checked:after {
 :-ms-input-placeholder {  
    color: #fff;  
 }
+.flex-btn
+{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.main-w3layouts-agileinfo-1 {
+    width: 30%;
+    margin: 0 auto;
+    padding: 4em 2em;
+    background: rgba(255, 255, 255, 0.07);
+    -webkit-box-shadow: 0 6px 12px 0 rgb(37, 37, 37);
+    -moz-box-shadow: 0 6px 12px 0 rgb(37, 37, 37);
+    box-shadow: 0 6px 43px 0 rgba(0, 0, 0, 0.4);
+}
 /*--//placeholder-color--*/
 /*--- Responsive Code ---*/
 @media screen and (max-width: 1920px) {
@@ -342,7 +358,7 @@ input.checkbox:checked:after {
 	}
 }
 @media screen and (max-width: 1440px) {
-	.main-w3layouts-agileinfo {
+	.main-w3layouts-agileinfo-1 {
 		width: 33%;
 	}
 	.form-sub-w3 input[type="text"], input[type="password"] {
@@ -359,15 +375,15 @@ input.checkbox:checked:after {
 	}
 }
 @media screen and (max-width: 1280px) {
-	.main-w3layouts-agileinfo {
-		width: 36%;
+	.main-w3layouts-agileinfo-1 {
+		width: 75%;
 	}
 	.footer p {
 		margin: 5em 0em;
 	}
 }
 @media screen and (max-width: 1080px) {
-	.main-w3layouts-agileinfo {
+	.main-w3layouts-agileinfo-1 {
 		width: 42%;
 	}
 	h1 {
@@ -383,7 +399,7 @@ input.checkbox:checked:after {
 	}
 }
 @media screen and (max-width: 1024px) {
-	.main-w3layouts-agileinfo {
+	.main-w3layouts-agileinfo-1 {
 		width: 45%;
 	}
 	.footer p {
@@ -407,7 +423,7 @@ input.checkbox:checked:after {
 	.footer p {
 		margin: 3em 0em;
 	}
-	.main-w3layouts-agileinfo {
+	.main-w3layouts-agileinfo-1 {
 		padding: 3em 2em;
 	}
 	.wthree-form h2 {
@@ -418,12 +434,12 @@ input.checkbox:checked:after {
 	}
 }
 @media screen and (max-width: 900px) {
-	.main-w3layouts-agileinfo {
+	.main-w3layouts-agileinfo-1 {
 		width: 50%;
 	}
 }
 @media screen and (max-width: 800px) {
-	.main-w3layouts-agileinfo {
+	.main-w3layouts-agileinfo-1 {
 		width: 55%;
 	}
 	.form-sub-w3 input[type="text"], input[type="password"] {
@@ -431,7 +447,7 @@ input.checkbox:checked:after {
 	}
 }
 @media screen and (max-width: 768px) {
-	.main-w3layouts-agileinfo {
+	.main-w3layouts-agileinfo-1 {
 		width: 58%;
 	}
 	h1 {
@@ -453,7 +469,7 @@ input.checkbox:checked:after {
 	}
 }
 @media screen and (max-width: 736px) {
-	.main-w3layouts-agileinfo {
+	.main-w3layouts-agileinfo-1 {
 		width: 60%;
 	}
 	h1 {
@@ -467,7 +483,7 @@ input.checkbox:checked:after {
 	}
 }
 @media screen and (max-width: 667px) {
-	.main-w3layouts-agileinfo {
+	.main-w3layouts-agileinfo-1 {
 		width: 68%;
 	}
 	.form-sub-w3 input[type="text"], input[type="password"] {
@@ -488,7 +504,7 @@ input.checkbox:checked:after {
 	}
 }
 @media screen and (max-width: 640px) {
-	.main-w3layouts-agileinfo {
+	.main-w3layouts-agileinfo-1 {
 		width: 70%;
 	}
 	.form-sub-w3 input[type="text"], input[type="password"] {
@@ -496,7 +512,7 @@ input.checkbox:checked:after {
 	}
 }
 @media screen and (max-width: 600px) {
-	.main-w3layouts-agileinfo {
+	.main-w3layouts-agileinfo-1 {
 		width: 73%;
 	}
 	.form-sub-w3 input[type="text"], input[type="password"] {
@@ -508,7 +524,7 @@ input.checkbox:checked:after {
 	}
 }
 @media screen and (max-width: 568px) {
-	.main-w3layouts-agileinfo {
+	.main-w3layouts-agileinfo-1 {
 		width: 80%;
 	}
 	h1 {
@@ -524,7 +540,7 @@ input.checkbox:checked:after {
 	}
 }
 @media screen and (max-width: 480px) {
-	.main-w3layouts-agileinfo {
+	.main-w3layouts-agileinfo-1 {
 		width: 80%;
 	}
 	.form-sub-w3 input[type="text"], input[type="password"] {
@@ -549,7 +565,7 @@ input.checkbox:checked:after {
 	.form-sub-w3 input[type="text"], input[type="password"] {
 		width: 78%;
 	}
-	.main-w3layouts-agileinfo {
+	.main-w3layouts-agileinfo-1 {
 		padding: 2.5em 2em;
 	}
 }
@@ -576,7 +592,7 @@ input.checkbox:checked:after {
 	}
 }
 @media screen and (max-width: 320px) {
-	.main-w3layouts-agileinfo {
+	.main-w3layouts-agileinfo-1 {
 		padding: 1.5em 1.3em;
 		width: 80%;
 	}

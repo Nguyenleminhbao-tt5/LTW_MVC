@@ -20,7 +20,11 @@ function Product($props=[])
                     <?php echo $props['ProductName'] ?>
                 </div>
                 <div class="product__bot-price">
-                    <button class="price-new"><?php echo $props['Price']/1000 ?>.000đ</button>
+                    <button class="price-new"><?php if($props['Price']/1000000>=1) {
+                        $a=$props['Price']/1000000;
+                        echo $a;   
+                    }
+                    else echo $props['Price']/1000 ?>.000đ</button>
                     <button class="price-old">200.000đ</button>
                 </div>
                 <!-- <div class="product__bot-detail">
