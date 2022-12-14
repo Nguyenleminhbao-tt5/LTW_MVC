@@ -23,7 +23,9 @@
     <link rel="stylesheet" href="./public/Css/ProductInCart.css">
     <link rel="stylesheet" href="./public/Css/User/ProfileUser.css">
     <link rel="stylesheet" href="./public/Css/User/AboutUs.css">
+    <link rel="stylesheet" href="./public/Css/User/FeedBack.css">
     <link rel="stylesheet" href="./public/Css/OneNews.css">
+    <link rel="stylesheet" href="./public/Css/UserFeedBack.css">
     <style>
         #root {
             font-family: Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -73,8 +75,8 @@
                 </div>
                 <div class="navbar2__wrap">
                     <div class="navbar2__searchProduct">
-                    <i class="fa-solid fa-comments" style="padding-right: 4px;"></i>
-                        <a href="./index.php?url=StatusOrder" class="navbar2__searchProduct-text">Góp ý</a>
+                        <i class="fa-solid fa-comments" style="padding-right: 4px;"></i>
+                        <a href="./index.php?url=FeedBack" class="navbar2__searchProduct-text">Góp ý</a>
                     </div>
                     <div class="navbar2__searchProduct">
                         <i class="navbar2__searchProduct-icon fa-solid fa-truck-fast"></i>

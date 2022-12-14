@@ -58,10 +58,10 @@ $listImg = [$product['PrimaryImg'], $product['PrimaryImg'], $product['PrimaryImg
                         </div>
                         <div class="product__detail-price">
                             <?php if ($price / 1000000 >= 1) {
-                            $a = $price / 1000000;
-                            echo $a;
-                        } else
-                            echo $price / 1000 ?>.000đ
+                                $a = $price / 1000000;
+                                echo $a;
+                            } else
+                                echo $price / 1000 ?>.000đ
                         </div>
                         <div class="product__detail-size">
                             <div class="size-heading">
@@ -115,33 +115,19 @@ $listImg = [$product['PrimaryImg'], $product['PrimaryImg'], $product['PrimaryImg
     <div class="comment">
         <span class="comment-heading">Bình luận</span>
         <div class="comment-add">
-            <button class="comment-btn">Bình luận</button>
+            <form id="formcomment" method='POST' action="./index.php?url=ProfileProduct/comment">
+                <input type="text" name="ProductID" style="display:none;" value="<?php echo " " . $code; ?>">
+                <textarea style="width:100%; padding:20px;" name="Comment" id="" cols="30" rows="10"></textarea>
+                <button form="formcomment" class="comment-btn" type="submit">Bình luận</button>
+            </form>
         </div>
-        <div class="comment_detail">
-            <div class="comment_detail-user-info">
-                <div class="user-avatar">
-                    <img src="/LTW_MVC/public/Assets/atm_logo.PNG" alt="user-avatar">
-                </div>
-                <div class="user-info">
-                    <p class="user-info-name">NguyenLeMinhBao</p>
-                    <p class="user-info-day-comment">Dec 13 2022</p>
-                </div>
-            </div>
-            <div class="comment_detai-user-comment">
-                <div class="comment-text">
-                    Mặt hàng này tốt quá, xin cảm ơn
-                </div>
-                <div class="comment-image">
-                    <img class="comment-image-child" src="/LTW_MVC/public/Assets/cash_logo.JPG"
-                        alt="comment-image-child">
-                    <img class="comment-image-child" src="/LTW_MVC/public/Assets/cash_logo.JPG"
-                        alt="comment-image-child">
-                    <img class="comment-image-child" src="/LTW_MVC/public/Assets/cash_logo.JPG"
-                        alt="comment-image-child">
-                    <img class="comment-image-child" src="/LTW_MVC/public/Assets/cash_logo.JPG"
-                        alt="comment-image-child">
-                </div>
-            </div>
-        </div>
+        <?php
+        $comments = $data['Comments'];
+        require "./MVC/Views/Module/Comment.php";
+        for ($i = 0; $i < count($comments); $i++) {
+            $comment = $comments[$i];
+            Comment($comment);
+        }
+        ?>
     </div>
 </div>

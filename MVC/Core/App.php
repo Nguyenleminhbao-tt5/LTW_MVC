@@ -24,7 +24,7 @@ class App
         if (isset($arr[0])) {
             if (file_exists("./MVC/Controllers/" . $arr[0] . "Controller.php")) {
                 $this->controller = $arr[0] . 'Controller';
-                unset($arr[0]);git
+                unset($arr[0]);
             }
         }
         require_once "./MVC/Controllers/" . $this->controller . ".php";
