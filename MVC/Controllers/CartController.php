@@ -32,16 +32,27 @@ class CartController extends BaseController
     }
     public function insert()
     {
-        $dataCart = ['CartID' => $_SESSION['CustomerID'], 'CustomerID' => $_SESSION['CustomerID'], 'ProductID' => $_POST['ProductID'], 'Size' => '40', 'Amount' => $_POST['Amount']];
-        $this->cart->insertdata($dataCart);
+        $product=$this->cart->getProductByCart($_SESSION['CustomerID'],$_POST['ProductID']);
+        if(empty($product))   
+        {
+            $dataCart=['CartID'=>$_SESSION['CustomerID'],'CustomerID'=>$_SESSION['CustomerID'],'ProductID'=>$_POST['ProductID'],'Size'=>$_POST['Size'],'Amount'=>$_POST['Amount']];
+
+          
+            $this->cart->insertdata($dataCart);
+        }
         header('Location: ./index.php?url=Cart');
     }
-    public function delete($cartid, $productid)
-    {
-        $data = ['CartID' => $cartid, 'CustomerID' => $this->customer_id, 'ProductID' => $productid];
-        $this->cart->deleteproduct($data);
-        header('Location:./index.php?url=Cart');
-    }
+    // public function delete($CartID,$ProductID)
+    // {
+    //     $this->cart->deleteproduct($CartID,$ProductID);
+    //     header('Location: ./index.php?url=Cart');
+    // }
+    // public function delete($cartid, $productid)
+    // {
+    //     $data = ['CartID' => $cartid, 'CustomerID' => $this->customer_id, 'ProductID' => $productid];
+    //     $this->cart->deleteproduct($data);
+    //     header('Location:./index.php?url=Cart');
+    // }
 }
 
 

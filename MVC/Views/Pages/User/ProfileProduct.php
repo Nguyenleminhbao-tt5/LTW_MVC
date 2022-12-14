@@ -29,13 +29,13 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
             <form class="grid__row" action='./index.php?url=Cart/insert' method='POST'>
                 <div class="grid__column-60">
                     <div class="product__listImg">  
-                            <button class="left-btn">
+                            <button class="left-btn" type='button'>
                                 <i class="left-icon fa-solid fa-angle-left"></i>
                             </button>
                             <img class="img img--active" src=" <?php echo $product['PrimaryImg'] ?>">
                             <img class="img " src=" <?php echo $product['Img1'] ?>">
                             <img class="img " src=" <?php echo $product['Img2'] ?>">
-                            <button class="right-btn">
+                            <button class="right-btn" type='button'>
                                 <i class="right-icon fa-solid fa-angle-right"></i>
                             </button>
                        
@@ -63,14 +63,15 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
                             </div>
                             <div class="size-bottom">
                                 <div class="size-bottom_list">
-                                    <div class="size-bottom_list-item">37</div>
-                                    <div class="size-bottom_list-item">38</div>
-                                    <div class="size-bottom_list-item">39</div>
-                                    <div class="size-bottom_list-item">40</div>
-                                    <div class="size-bottom_list-item">41</div>
-                                    <div class="size-bottom_list-item">42</div>
-                                    <div class="size-bottom_list-item">43</div>
+                                    <button type='button' class="size-bottom_list-item size--active">37</button>
+                                    <button type='button' class="size-bottom_list-item">38</button>
+                                    <button type='button' class="size-bottom_list-item">39</button>
+                                    <button type='button' class="size-bottom_list-item">40</button>
+                                    <button type='button' class="size-bottom_list-item">41</button>
+                                    <button type='button' class="size-bottom_list-item">42</button>
+                                    <button type='button' class="size-bottom_list-item">43</button>
                                 </div>
+                                <input   class="size" value="37" name='Size'>
                             </div>
                             <div class="product__detail-amount">
                                 <span class="amount-heading">SỐ LƯỢNG</span>
@@ -105,6 +106,32 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
         </ul>
     </div>
     <div class="comment">
+        <span class="comment-heading">Bình luận</span>
+        <div class="comment-add">
+            <button class="comment-btn">Bình luận</button>
+        </div>
+        <div class="comment_detail">
+            <div class="comment_detail-user-info">
+                <div class="user-avatar">
+                    <img src="/LTW_MVC/public/Assets/atm_logo.PNG" alt="user-avatar"> 
+                </div>
+                <div class="user-info">
+                    <p class="user-info-name">NguyenLeMinhBao</p>
+                    <p class="user-info-day-comment">Dec 13 2022</p>
+                </div>
+            </div>
+            <div class="comment_detai-user-comment">
+                <div class="comment-text">
+                    Mặt hàng này tốt quá, xin cảm ơn
+                </div>
+                <div class="comment-image">
+                    <img class="comment-image-child" src="/LTW_MVC/public/Assets/cash_logo.JPG" alt="comment-image-child">
+                    <img class="comment-image-child" src="/LTW_MVC/public/Assets/cash_logo.JPG" alt="comment-image-child">
+                    <img class="comment-image-child" src="/LTW_MVC/public/Assets/cash_logo.JPG" alt="comment-image-child">
+                    <img class="comment-image-child" src="/LTW_MVC/public/Assets/cash_logo.JPG" alt="comment-image-child">
+                </div>
+            </div>
+        </div>
     </div> 
 </div>
 
