@@ -1,20 +1,20 @@
-<?php 
-$product=$data['detailProduct'][0];
-$name=$product['ProductName'];
-$type=$product['Type'];
-$price=$product['Price'];
-$code=$product['ProductID'];
+<?php
+$product = $data['detailProduct'][0];
+$name = $product['ProductName'];
+$type = $product['Type'];
+$price = $product['Price'];
+$code = $product['ProductID'];
 
 
-$des=$product['Description'];
+$des = $product['Description'];
 $des = str_replace('-', '<br>', $des);
 
-$listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
+$listImg = [$product['PrimaryImg'], $product['PrimaryImg'], $product['PrimaryImg']];
 
 ?>
 
 <div class="ProfileProduct">
-    <div class="pathUrl"> 
+    <div class="pathUrl">
         <span class="path1">
             <i class=" home-icon fa-solid fa-house-chimney"></i>
             Trang chủ
@@ -28,34 +28,41 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
         <div class="grid">
             <form class="grid__row" action='./index.php?url=Cart/insert' method='POST'>
                 <div class="grid__column-60">
-                    <div class="product__listImg">  
-                            <button class="left-btn" type='button'>
-                                <i class="left-icon fa-solid fa-angle-left"></i>
-                            </button>
-                            <img class="img img--active" src=" <?php echo $product['PrimaryImg'] ?>">
-                            <img class="img " src=" <?php echo $product['Img1'] ?>">
-                            <img class="img " src=" <?php echo $product['Img2'] ?>">
-                            <button class="right-btn" type='button'>
-                                <i class="right-icon fa-solid fa-angle-right"></i>
-                            </button>
-                       
+                    <div class="product__listImg">
+                        <button class="left-btn" type='button'>
+                            <i class="left-icon fa-solid fa-angle-left"></i>
+                        </button>
+                        <img class="img img--active" src=" <?php echo $product['PrimaryImg'] ?>">
+                        <img class="img " src=" <?php echo $product['Img1'] ?>">
+                        <img class="img " src=" <?php echo $product['Img2'] ?>">
+                        <button class="right-btn" type='button'>
+                            <i class="right-icon fa-solid fa-angle-right"></i>
+                        </button>
+
                     </div>
                 </div>
                 <div class="grid__column-40">
                     <div class="product__detail">
                         <div class="product__detail-name">
-                            <span class="title"> <?php echo $name ?></span>
+                            <span class="title">
+                                <?php echo $name ?>
+                            </span>
                             <div class="product-code">
                                 <span class="code">Mã sản phẩm:</span>
-                                <span><?php echo " ".$code;?></span>
-                                <input type="text" name="ProductID" style="display:none;" value="<?php echo " ".$code;?>">
+                                <span>
+                                    <?php echo " " . $code; ?>
+                                </span>
+                                <input type="text" name="ProductID" style="display:none;"
+                                    value="<?php echo " " . $code; ?>">
                             </div>
                         </div>
-                        <div class="product__detail-price"> <?php if($price/1000000>=1) {
-                        $a=$price/1000000;
-                        echo $a;   
-                    }
-                    else echo $price/1000 ?>.000đ</div>
+                        <div class="product__detail-price">
+                            <?php if ($price / 1000000 >= 1) {
+                            $a = $price / 1000000;
+                            echo $a;
+                        } else
+                            echo $price / 1000 ?>.000đ
+                        </div>
                         <div class="product__detail-size">
                             <div class="size-heading">
                                 <span class="size-heading__title1">KÍCH THƯỚC</span>
@@ -71,7 +78,7 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
                                     <button type='button' class="size-bottom_list-item">42</button>
                                     <button type='button' class="size-bottom_list-item">43</button>
                                 </div>
-                                <input   class="size" value="37" name='Size'>
+                                <input style="display:none" class="size" value="37" name='Size'>
                             </div>
                             <div class="product__detail-amount">
                                 <span class="amount-heading">SỐ LƯỢNG</span>
@@ -88,14 +95,14 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
                                 </ul>
                             </div>
                             <div class="product__detail-submit">
-                                <button  class="cart-btn">Thêm vào giỏ hàng</button>
+                                <button class="cart-btn">Thêm vào giỏ hàng</button>
                                 <!-- <button class="buy-btn">Mua ngay</button> -->
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
-             </form>
+            </form>
         </div>
 
     </div>
@@ -113,7 +120,7 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
         <div class="comment_detail">
             <div class="comment_detail-user-info">
                 <div class="user-avatar">
-                    <img src="/LTW_MVC/public/Assets/atm_logo.PNG" alt="user-avatar"> 
+                    <img src="/LTW_MVC/public/Assets/atm_logo.PNG" alt="user-avatar">
                 </div>
                 <div class="user-info">
                     <p class="user-info-name">NguyenLeMinhBao</p>
@@ -125,13 +132,16 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
                     Mặt hàng này tốt quá, xin cảm ơn
                 </div>
                 <div class="comment-image">
-                    <img class="comment-image-child" src="/LTW_MVC/public/Assets/cash_logo.JPG" alt="comment-image-child">
-                    <img class="comment-image-child" src="/LTW_MVC/public/Assets/cash_logo.JPG" alt="comment-image-child">
-                    <img class="comment-image-child" src="/LTW_MVC/public/Assets/cash_logo.JPG" alt="comment-image-child">
-                    <img class="comment-image-child" src="/LTW_MVC/public/Assets/cash_logo.JPG" alt="comment-image-child">
+                    <img class="comment-image-child" src="/LTW_MVC/public/Assets/cash_logo.JPG"
+                        alt="comment-image-child">
+                    <img class="comment-image-child" src="/LTW_MVC/public/Assets/cash_logo.JPG"
+                        alt="comment-image-child">
+                    <img class="comment-image-child" src="/LTW_MVC/public/Assets/cash_logo.JPG"
+                        alt="comment-image-child">
+                    <img class="comment-image-child" src="/LTW_MVC/public/Assets/cash_logo.JPG"
+                        alt="comment-image-child">
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 </div>
-
