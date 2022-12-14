@@ -31,9 +31,9 @@ if(document.querySelectorAll('.category__item'))
     })
 }
 
- // profile product
+ // profile product-img
 
- if(document.querySelectorAll('.img'))
+if(document.querySelectorAll('.img'))
  {
     let listImg = document.querySelectorAll('.img');
     let index = 0;
@@ -53,6 +53,21 @@ if(document.querySelectorAll('.category__item'))
     })
 }
 
-
+ // profile product-size
+ {
+    if(document.querySelectorAll('.size-bottom_list-item'))
+    {
+        let listSize=document.querySelectorAll('.size-bottom_list-item');
+        listSize.forEach((item,index)=>
+            {
+                item.addEventListener('click',()=>
+                {
+                    document.querySelector('.size-bottom_list-item.size--active').classList.remove('size--active');
+                    item.classList.add('size--active')
+                    document.querySelector('.size').value=index+37;
+                })
+            })
+    }
+ }
 
 

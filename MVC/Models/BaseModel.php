@@ -73,6 +73,10 @@ class BaseModel extends Database
         }
         return $data;
     }
+    public function QUERYVOID($sql)
+    {
+        $this->query($sql);
+    }
     private function query($sql)
     {
         return mysqli_query($this->connect,$sql);
