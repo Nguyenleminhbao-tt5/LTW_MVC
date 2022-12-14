@@ -17,21 +17,20 @@ function ProductInCart($props)
         <span>
             <?php echo $props['size'] ?>
         </span>
-        <form method='post' action='./index.php?url=Cart/delete/<?php echo $props['cartid'].'/'.$props['id']?>'>
-            <button type="submit" class="cart-delete" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm')">Xóa</button>
+        <form method='post' action='./index.php?url=Cart/delete/<?php echo $props['cartid'] . '/' . $props['id'] ?>'>
+            <button type="submit" class="cart-delete"
+                onclick="return confirm('Bạn có chắc muốn xóa sản phẩm')">Xóa</button>
         </form>
     </div>
     <div class="cart-row-col3">
-        <form id=<?php echo $props['id'] . 'd' ?> method="post"
-            action="./index.php?url=Cart/down/
-            <?php echo $props['cartid'] . '/' . $props['id'] ?>">
+        <form id="<?php echo $props['id'] . 'd' ?>" method="post"
+            action="./index.php?url=Cart/down/<?php echo $props['cartid'] . '/' . $props['id'] ?>">
             <span class="add-down-item" onclick=item_down(<?php echo $props['id'] ?>)>-</span>
         </form>
         <input class="cart-item-number" type="text" name="" id="<?php echo $props['id'] ?>"
             value="<?php echo ($props['number']) ?>">
-        <form id=<?php echo $props['id'] . 'u' ?> method="post"
-            action="./index.php?url=Cart/up/
-            <?php echo $props['cartid'] . '/' . $props['id'] ?>">
+        <form id="<?php echo $props['id'] . 'u' ?>" method="post"
+         action="./index.php?url=Cart/up/<?php echo $props['cartid'] . '/' . $props['id'] ?>">
             <span class="add-up-item" onclick=item_up(<?php echo $props['id'] ?>)>+</span>
         </form>
     </div>

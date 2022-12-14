@@ -17,6 +17,19 @@ class CartController extends BaseController
         $data = ['page' => 'Cart', 'products' => $this->products];
         $this->view($data);
     }
+    public function up($cartid, $productid)
+    {
+
+        $data = ['CartID' => $cartid, 'CustomerID' => $this->customer_id, 'ProductID' => $productid];
+        $this->cart->up($data);
+        header('Location:./index.php?url=Cart');
+    }
+    public function down($cartid, $productid)
+    {
+        $data = ['CartID' => $cartid, 'CustomerID' => $this->customer_id, 'ProductID' => $productid];
+        $this->cart->down($data);
+        header('Location:./index.php?url=Cart');
+    }
     public function insert()
     {
         $dataCart = ['CartID' => $_SESSION['CustomerID'], 'CustomerID' => $_SESSION['CustomerID'], 'ProductID' => $_POST['ProductID'], 'Size' => '40', 'Amount' => $_POST['Amount']];

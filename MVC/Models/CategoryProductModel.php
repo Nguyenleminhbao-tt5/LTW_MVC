@@ -24,9 +24,9 @@ class CategoryProductModel extends BaseModel
     public function filter($selectPrice,$Type)
     {
       $sql='';
-      if($selectPrice=='1') $sql="SELECT * FROM `product` WHERE Type='$Type' AND Price >=100000 AND PRICE <=200000";
-      else if($selectPrice=='2') $sql="SELECT * FROM `product` WHERE Type='$Type' AND Price >200000 AND PRICE <=400000";
-      else if($selectPrice=='3') $sql="SELECT * FROM `product` WHERE Type='$Type' AND Price >400000 AND PRICE <=1000000";
+      if($selectPrice=='1') $sql="SELECT * FROM `product` WHERE Type='$Type' AND Price >=100000 AND Price <=200000";
+      else if($selectPrice=='2') $sql="SELECT * FROM `product` WHERE Type='$Type' AND Price >200000 AND Price <=400000";
+      else if($selectPrice=='3') $sql="SELECT * FROM `product` WHERE Type='$Type' AND Price >400000 AND Price <=1000000";
       else if($selectPrice=='4') $sql="SELECT * FROM `product` WHERE Type='$Type' AND Price >1000000 ";
       return $this->QUERYOTHER($sql);
     }

@@ -47,7 +47,8 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
                             <span class="title"> <?php echo $name ?></span>
                             <div class="product-code">
                                 <span class="code">Mã sản phẩm:</span>
-                                <input class="id"  name='ProductID' value=' <?php echo $code ?>' readonly>
+                                <span><?php echo " ".$code;?></span>
+                                <input type="text" name="ProductID" style="display:none;" value="<?php echo " ".$code;?>">
                             </div>
                         </div>
                         <div class="product__detail-price"> <?php if($price/1000000>=1) {
@@ -58,7 +59,7 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
                         <div class="product__detail-size">
                             <div class="size-heading">
                                 <span class="size-heading__title1">KÍCH THƯỚC</span>
-                                <a href="" class="size-heading__title2">HƯỚNG DẪN CHỌN KÍCH THƯỚC</a>
+                                <!-- <a href="" class="size-heading__title2">HƯỚNG DẪN CHỌN KÍCH THƯỚC</a> -->
                             </div>
                             <div class="size-bottom">
                                 <div class="size-bottom_list">
@@ -87,7 +88,7 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
                             </div>
                             <div class="product__detail-submit">
                                 <button  class="cart-btn">Thêm vào giỏ hàng</button>
-                                <button class="buy-btn">Mua ngay</button>
+                                <!-- <button class="buy-btn">Mua ngay</button> -->
                             </div>
                         </div>
                         
