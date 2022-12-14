@@ -29,11 +29,17 @@ class CartController extends BaseController
         }
         header('Location: ./index.php?url=Cart');
     }
-    public function delete($CartID,$ProductID)
-    {
-        $this->cart->deleteproduct($CartID,$ProductID);
-        header('Location: ./index.php?url=Cart');
-    }
+    // public function delete($CartID,$ProductID)
+    // {
+    //     $this->cart->deleteproduct($CartID,$ProductID);
+    //     header('Location: ./index.php?url=Cart');
+    // }
+    // public function delete($cartid, $productid)
+    // {
+    //     $data = ['CartID' => $cartid, 'CustomerID' => $this->customer_id, 'ProductID' => $productid];
+    //     $this->cart->deleteproduct($data);
+    //     header('Location:./index.php?url=Cart');
+    // }
 }
 
 

@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="./public/Css/ProductInCart.css">
     <link rel="stylesheet" href="./public/Css/User/ProfileUser.css">
     <link rel="stylesheet" href="./public/Css/User/AboutUs.css">
+    <link rel="stylesheet" href="./public/Css/OneNews.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <style>
         #root {
@@ -69,13 +70,18 @@
                 </div>
                 <div class="navbar2__wrap">
                     <div class="navbar2__searchProduct">
+                        <i class="fa-solid fa-comments" style="padding-right: 4px;"></i>
+                        <a href="./index.php?url=Login" class="navbar2__searchProduct-text">Góp ý</a>
+                    </div>
+                    <div class="navbar2__searchProduct">
                         <i class="navbar2__searchProduct-icon fa-solid fa-truck-fast"></i>
                         <a href="./index.php?url=Login" class="navbar2__searchProduct-text">Tra cứu đơn hàng</a>
                     </div>
                     <a href="./index.php?url=AboutUs" class="navbar2__intro">Giới thiệu</a>
                     <div class="navbar2__contact">
-                        <i class="navbar2__contact-icon fa-solid fa-phone"></i>
-                        <a style='text-decoration:none' href="./index.php?url=News"><span class="navbar2__contact-text">Tin tức</span></a>
+                        <!-- <i class="navbar2__contact-icon fa-solid fa-phone"></i> -->
+                        <a style='text-decoration:none' href="./index.php?url=News"><span
+                                class="navbar2__contact-text">Tin tức</span></a>
                     </div>
                 </div>
 

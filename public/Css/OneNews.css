@@ -1,0 +1,24 @@
+.onenews {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding: 20px;
+    position: relative;
+    background: white;
+    border: 5px solid #e8e9e1;
+    border-radius: 5px;
+    box-shadow: 20px 20px rgba(0,0,0,.15);
+    transition: all .4s ease;
+}
+.onenews:hover {
+    box-shadow: 10px 10px rgba(0,0,0,.25);
+}
+.news-title {
+    font-weight: 600;
+    font-size: 30px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.news-img>img {
+    width: 100%;
+    object-fit: cover;
+}
