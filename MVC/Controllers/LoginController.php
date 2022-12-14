@@ -25,8 +25,8 @@ class LoginController extends BaseController
                 $listProduct = $this->login->getProduct();
                 $data = ['Type' => $typeuser, 'listProduct' => $listProduct];
                 $_SESSION['Avatar'] = $user[0]['Avatar'];
-                $_SESSION['Name'] = $user[0]['LastName'];
-                $_SESSION['CustomerID']=$user[0]['ID'];
+                $_SESSION['Name'] = $user[0]['FirstName'];
+                $_SESSION['CustomerID'] = $user[0]['ID'];
             } else if ($typeuser == 'Admin') {
                 $data = ['Type' => $typeuser];
             }

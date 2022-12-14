@@ -4,13 +4,17 @@ $name = $product['ProductName'];
 $type = $product['Type'];
 $price = $product['Price'];
 $code = $product['ProductID'];
-
-
 $des = $product['Description'];
 $des = str_replace('-', '<br>', $des);
 
 $listImg = [$product['PrimaryImg'], $product['PrimaryImg'], $product['PrimaryImg']];
-
+if (isset($_SESSION['error'])) {
+    $error = $_SESSION['error'];
+    if ($error == "1") {
+        unset($_SESSION['error']);
+        echo "<script> alert('Comment không được quá 100 ký tự')</script>";
+    }
+}
 ?>
 
 <div class="ProfileProduct">
@@ -115,7 +119,7 @@ $listImg = [$product['PrimaryImg'], $product['PrimaryImg'], $product['PrimaryImg
     <div class="comment">
         <span class="comment-heading">Bình luận</span>
         <div class="comment-add">
-            <form id="formcomment" method='POST' action="./index.php?url=ProfileProduct/comment">
+            <form id="formcomment" method='POST' action="./index.php?url=ProfileProduct/comment" style="margin-bottom: 20px;">
                 <input type="text" name="ProductID" style="display:none;" value="<?php echo " " . $code; ?>">
                 <textarea style="width:100%; padding:20px;" name="Comment" id="" cols="30" rows="10"></textarea>
                 <button form="formcomment" class="comment-btn" type="submit">Bình luận</button>

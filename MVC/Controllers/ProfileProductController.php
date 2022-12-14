@@ -24,9 +24,16 @@ class ProfileProductController extends BaseController
         $customerid = $_SESSION['CustomerID'];
         $content = $_POST['Comment'];
         $productid = $_POST['ProductID'];
-        $data = ['ProductID' => $productid, 'CustomerID' => $customerid, 'Time' => $time, 'Content' => $content];
-        $this->profileProduct->insertcomment($data);
-        $this->show($productid);
+        $check = true;
+        if (strlen($content) > 100) {
+            $_SESSION['error'] = "1";
+            $check = false;
+            $this->show($productid);        }
+        if ($check) {
+            $data = ['ProductID' => $productid, 'CustomerID' => $customerid, 'Time' => $time, 'Content' => $content];
+            $this->profileProduct->insertcomment($data);
+            $this->show($productid);
+        }
     }
 }
 

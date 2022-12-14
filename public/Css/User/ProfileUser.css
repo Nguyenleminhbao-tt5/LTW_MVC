@@ -23,9 +23,8 @@
     align-items: center;
 }
 #imgshow {
-    border-radius: 100%;
-    width: 60vh;
-    height: 60vh;
+    object-fit: cover;
+    width: 90%;
     margin-bottom: 20px;
 }
 .profile-infor-wrap {
@@ -102,3 +101,29 @@
     background-color: #283e5b;
     cursor: pointer;
 }
+
+/* Điện thoại thông minh */
+@media (max-width: 768px) {
+    .profileform {
+        display: flex;
+        flex-direction: column;
+    }
+    .avatar-wrap {
+        width: 100%;
+    }
+    .profile-infor-wrap {
+        width: 95%;
+    }
+    .profile-infor {
+        width: 100%;
+    }
+ }
+ /* Các thiết bị nhỏ, máy tính bảng */
+ @media (min-width: 768px) and (max-width:992px) {
+
+ }
+ 
+ /* Các thiết bị trung bình */
+ @media (min-width: 992px) and (max-width:1200px) {
+
+ }

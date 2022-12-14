@@ -1,4 +1,13 @@
 <div class="form-box">
+    <?php
+    if (isset($_GET['error'])) {
+        $error = $_GET['error'];
+        if ($error == "1")
+            echo "<script> alert('Tên tiêu đề không được quá 50 ký tự')</script>";
+        if ($error == "2")
+            echo "<script> alert('Nội dung không được quá 300 ký tự')</script>";
+    }
+    ?>
     <form action="./index.php?url=FeedBack/insert" method="POST" class="form-feedback">
         <h3 class="form-feedback-header">FORM ĐIỀN GÓP Ý CHO CÔNG TY</h3>
         <p class="form-feedback-note">Công ty đánh giá cao những góp ý của bạn</p>
