@@ -29,7 +29,7 @@
         <div class="manageUser__content-content">
             <div class="grid">
                 <div class="row">
-                    <div class="l-3">
+                    <div class="l-3 m-3 c-12">
                         <div class="content__display">
                             <span>Hiện</span>
                             <select class="content__display-select">
@@ -41,7 +41,7 @@
                             <span>Khách hàng</span>
                         </div>
                     </div>
-                    <div class="l-o-4">
+                    <div class="l-o-4 m-o-2 ">
                        <div class="content__display-search">
                             <span class="search-title">Tìm Kiếm : </span>
                             <input class="search-input" placeholder="Nhập tên khách hàng">
@@ -94,13 +94,16 @@
                                                 <button style=' text-decoration: none;' class='user-edit' href='#'>
                                                     <i class='edit-icon fa-solid fa-pen'></i>
                                                 </button>
-                                                <a style=' text-decoration: none;' class='user-delete' href='./index.php?url=AdminUser/delete/$id'>
+                                            "?>
+
+                                                <a style=' text-decoration: none;' class='user-delete' href='./index.php?url=AdminUser/delete/ <?php echo $id?>'
+                                                onclick="return confirm('Bạn có chắc muốn xóa khách hàng này không')">
                                                     <i class='delete-icon fa-solid fa-trash'></i>
                                                 </a>                           
                                             </th>
                                         </tr>
-                                        ";
-                                    }
+                                        
+                                    <?php }
                                
                                ?>
 

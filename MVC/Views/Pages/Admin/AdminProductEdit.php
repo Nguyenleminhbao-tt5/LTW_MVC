@@ -2,6 +2,26 @@
 
 $shoes=$data['Product'];
 $id=$shoes[0]['ProductID'];
+
+
+ if (isset($_GET['error'])) {
+    $error = $_GET['error'];
+    if ($error == "3")
+        echo "<script> alert('Số lượng phải là số lơn hơn 0')</script>";
+    if ($error == "4")
+        echo "<script> alert('Giá tiền phải là số lơn hơn 0')</script>";
+    if ($error == "5" || $error == "6" || $error == "7")
+        echo "<script> alert('Bạn cần phải chèn ảnh')</script>";
+    if ($error == "8")
+    echo "<script> alert('Bạn chưa nhập ID')</script>";
+    if ($error == "9")
+    echo "<script> alert('Bạn chưa nhập tên sản phẩm')</script>";
+    if ($error == "10")
+    echo "<script> alert('Bạn chưa nhập số lượng')</script>";
+    if ($error == "11")
+    echo "<script> alert('Bạn chưa nhập giá')</script>";
+    
+}
 ?>
 <div class="modal-modified">
     <div class="modal__overlay"></div>           
@@ -26,11 +46,11 @@ $id=$shoes[0]['ProductID'];
                 </div>
                 <div class="form-group  l-6">
                     <label class="control-label">Số lượng</label>
-                    <input class="form-control" type="number" required="" value="20">
+                    <input class="form-control" type="number" name='Amount' required="" value="20">
                 </div>
                 <div class="form-group l-6 ">
                     <label for="exampleSelect1" class="control-label">Tình trạng sản phẩm</label>
-                    <select class="form-control" id="exampleSelect1">
+                    <select class="form-control" id="exampleSelect1"> 
                     <option>Còn hàng</option>
                     <option>Hết hàng</option>
                     <option>Đang nhập hàng</option>

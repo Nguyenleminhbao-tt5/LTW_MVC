@@ -37,14 +37,14 @@ $listImg=[
             <div class="content-product">
                 <div class="grid">
                     <div class="product__heading">SẢN PHẨM NỔI BẬT</div>
-                    <div class="grid__row">
+                    <div class="grid__row ">
                         <?php
                         require "./MVC/Views/Module/Product.php";
                         $listProduct=$data['listProduct'];
                         for ($i=0;$i<4;$i++)
                           { 
                             $props=$listProduct[$i];
-                            echo "<div class='grid__column-25'>";
+                            echo "<div class='l-3 m-6 c-12 center'>";
                             Product($props);  
                             echo "</div>";
                           } 
@@ -64,7 +64,7 @@ $listImg=[
                          { 
                            $props=$listProduct[$i];
        
-                           echo "<div class='grid__column-25'>";
+                           echo "<div class='l-3 m-6 c-12 center'>";
                            Product($props);  
                            echo "</div>";
                          } 
@@ -83,7 +83,7 @@ $listImg=[
                          { 
                            $props=$listProduct[$i];
        
-                           echo "<div class='grid__column-25'>";
+                           echo "<div class='l-3 m-6 c-12 center'>";
                            Product($props);  
                            echo "</div>";
                          } 

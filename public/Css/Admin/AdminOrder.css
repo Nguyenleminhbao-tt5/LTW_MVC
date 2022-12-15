@@ -135,9 +135,13 @@ thead
 th{
     text-align: left;
     padding: 5px 20px 0 20px;
-    height: 50px;
+    height: 100px;
     max-width: 150px;
     line-height: 23px;
+}
+.order{
+    min-height: 100px !important;
+    height: 100px;
 }
 .ID{
     width: 10px;
@@ -424,4 +428,13 @@ label {
 }
 .email{
     overflow:hidden;
+}
+.status-order
+{
+    border: none;
+    font-size: 14px !important;
+    cursor: pointer;
+}
+.status-order:hover{
+    filter:brightness(90%);
 }

@@ -1,3 +1,23 @@
+<?php
+
+if (isset($_GET['error'])) {
+    $error = $_GET['error'];
+    if ($error == "1")
+        echo "<script> alert('ID này đã tồn tại')</script>";
+    if ($error == "2")
+        echo "<script> alert('Tin tức này đã tồn tại')</script>";
+    if ($error == "3")
+        echo "<script> alert('Bạn cần phải nhập ID')</script>";
+    if ($error == "4")
+        echo "<script> alert('Bạn cần phải nhập tên')</script>";
+    if ($error == "5")
+    echo "<script> alert('Bạn chưa chèn ảnh')</script>";
+    if ($error == "6")
+    echo "<script> alert('Bạn chưa nhập nội dung tên tức')</script>";
+  
+    
+}
+?>
 <div class="insertProduct">
     <div class="insertProduct__title">
         <h4 class="insertProduct__title-text"> Quản Lý Tin Tức / Thêm Tin Tức</h4>
@@ -9,11 +29,11 @@
                 <form class="row" method="POST" action="./index.php?url=AdminNews/insert">
                     <div class="form-group l-3 m-6 c-12">
                         <label class="control-label">Mã sản phẩm </label>
-                        <input class="form-control" type="text" value='<?php echo $data['error1'] ?>' name='NewsID'>
+                        <input class="form-control" type="text"  name='NewsID'>
                     </div>
                     <div class="form-group l-3 m-6 c-12">
                         <label class="control-label">Tiêu đề</label>
-                        <input class="form-control" type="text" value='<?php echo $data['error2'] ?>' name='NewsName'>
+                        <input class="form-control" type="text"  name='NewsName'>
                     </div>
 
 

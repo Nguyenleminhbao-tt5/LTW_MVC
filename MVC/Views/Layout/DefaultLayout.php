@@ -69,9 +69,9 @@
                     <i class="navbar2__category-icon_second fa-solid fa-angle-down"></i>
                 </div>
                 <div class="navbar2__wrap">
-                    <div class="navbar2__searchProduct">
-                        <i class="fa-solid fa-comments" style="padding-right: 4px;"></i>
-                        <a href="./index.php?url=Login" class="navbar2__searchProduct-text">Góp ý</a>
+                    <div class="navbar2__feedback">
+                        <i class="navbar2__feedback-icon fa-solid fa-comments" style="padding-right: 4px;"></i>
+                        <a href="./index.php?url=Login" class="navbar2__feedback-text">Góp ý</a>
                     </div>
                     <div class="navbar2__searchProduct">
                         <i class="navbar2__searchProduct-icon fa-solid fa-truck-fast"></i>

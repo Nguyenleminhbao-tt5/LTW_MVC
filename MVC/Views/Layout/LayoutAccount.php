@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./public/Library/fontawesome-free-6.1.1-web/css/all.min.css">
     <link rel='stylesheet' href="./public/Css/base.css">
+    <link rel='stylesheet' href="./public/Css/grid.css">
     <link rel='stylesheet' href="./public/Css/User/header.css">
     <link rel='stylesheet' href="./public/Css/User/footer.css">
     <link rel='stylesheet' href="./public/Css/User/HomePage.css">
@@ -72,9 +73,9 @@
                     <i class="navbar2__category-icon_second fa-solid fa-angle-down"></i>
                 </div>
                 <div class="navbar2__wrap">
-                    <div class="navbar2__searchProduct">
+                    <div class="navbar2__feedback">
                     <i class="fa-solid fa-comments" style="padding-right: 4px;"></i>
-                        <a href="./index.php?url=StatusOrder" class="navbar2__searchProduct-text">Góp ý</a>
+                        <a href="./index.php?url=StatusOrder" class="navbar2__feedback-text">Góp ý</a>
                     </div>
                     <div class="navbar2__searchProduct">
                         <i class="navbar2__searchProduct-icon fa-solid fa-truck-fast"></i>

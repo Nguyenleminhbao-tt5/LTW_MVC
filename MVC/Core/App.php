@@ -20,7 +20,7 @@ class App
         $arr = $this->UrlProcess();
 
         // Controller !empty($arr[0]) &&
-        if(  file_exists("./MVC/Controllers/".$arr[0]."Controller.php") ){
+        if( !empty($arr[0]) && file_exists("./MVC/Controllers/".$arr[0]."Controller.php") ){
             $this->controller = $arr[0].'Controller';
             unset($arr[0]);
         }

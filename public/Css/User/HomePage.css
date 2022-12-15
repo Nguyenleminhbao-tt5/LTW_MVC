@@ -89,3 +89,24 @@
     padding-top:30px;
 
 }
+
+@media only screen and (max-width: 740px){
+   .center{
+        display: flex;
+        justify-content: center;
+   }
+   .main__beside{
+    display: none;
+   }
+   .grid__column-65 {
+    width: 100%;
+}
+   
+}
+
+@media only screen and (min-width: 740px) and (max-width: 1030px){
+    .center{
+        display: flex;
+        justify-content: center;
+    }
+}

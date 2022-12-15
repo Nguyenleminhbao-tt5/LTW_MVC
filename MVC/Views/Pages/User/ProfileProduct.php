@@ -27,7 +27,7 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
     <div class="contentProduct">
         <div class="grid">
             <form class="grid__row" action='./index.php?url=Cart/insert' method='POST'>
-                <div class="grid__column-60">
+                <div class="grid__column-60 m-7 c-12">
                     <div class="product__listImg">  
                             <button class="left-btn" type='button'>
                                 <i class="left-icon fa-solid fa-angle-left"></i>
@@ -41,7 +41,7 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
                        
                     </div>
                 </div>
-                <div class="grid__column-40">
+                <div class="grid__column-40 m-5 c-12">
                     <div class="product__detail">
                         <div class="product__detail-name">
                             <span class="title"> <?php echo $name ?></span>
@@ -70,7 +70,7 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
                                     <button type='button' class="size-bottom_list-item">42</button>
                                     <button type='button' class="size-bottom_list-item">43</button>
                                 </div>
-                                <input   class="size" value="37" name='Size'>
+                                <input style='display:none'   class="size" value="37" name='Size'>
                             </div>
                             <div class="product__detail-amount">
                                 <span class="amount-heading">SỐ LƯỢNG</span>

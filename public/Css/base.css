@@ -6,7 +6,7 @@
     /* homepage*/
     --height-content-main:350px;
     --distance-part:100px;
-    --height-product:350px;
+    --height-product:340px;
     --color-product:#eee;
     /* color */
     --primary1-color: #fff;
@@ -98,10 +98,11 @@ body {
     background-color: var(--white-color);
     cursor: pointer;
     margin:0 5px;
+    font-size: 14px;
    
 }
 .BTN:hover{
- background-color: rgba(0,0,0,0.04);
+ background-color: rgba(46, 44, 44, 0.04);
 }
 .BTN.btn--primary
 {
@@ -114,6 +115,7 @@ body {
 {
     margin-top: var(--height-header);
     padding:0 30px 0 30px ;
+    min-height: 60vh;
 }
 
 
