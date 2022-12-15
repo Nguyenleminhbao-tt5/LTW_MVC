@@ -199,9 +199,12 @@
                     <i class="header__account-mail fa-regular fa-envelope"></i>
                     <i class="header__account-avatar fa-regular fa-user"></i>
                     <span class="header__account-name">Minh Bảo</span>
-                    <a href="./index.php?url=Login" class="header__account-leave">
-                        <i class="header__account-leaveIcon fa-solid fa-arrow-right-from-bracket"></i>
-                    </a>
+                    <form method="post" action="./index.php?url=AdminPrimary/logout">
+                        <button class='exit' onclick="return confirm('Bạn có muốn đăng xuất ?')">Đăng xuất</button>
+                    </form>
+                    <!-- <a href='./index.php?url=Login' class='header__account-leave'>
+                        <i class='header__account-leaveIcon fa-solid fa-arrow-right-from-bracket'></i>
+                    </a> -->
                 </div>
             </header>
 
