@@ -17,6 +17,11 @@ class ProfileProductModel extends BaseModel
   {
     $this->INSERT('comment', $data);
   }
+  public function getCategory()
+  {
+    $sql="SELECT Type FROM `product` GROUP BY Type ASC";
+    return $this->QUERYOTHER($sql);
+  }
 }
 
 ?>

@@ -7,19 +7,25 @@
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+   
 }
 .path1
 {
     margin: 10px;
     margin-left:30px;
+    text-decoration: none;
+    color: var(--primary2-color);
 }
 .home-icon
 {
-    
+    color: var(--primary2-color);
 }
 .path2
 {
     margin: 10px;
+    text-decoration: none;
+    color: var(--primary2-color);
+
 }
 .path3{
     margin: 10px;

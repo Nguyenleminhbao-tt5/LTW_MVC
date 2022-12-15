@@ -44,7 +44,7 @@ if (isset($_GET['error'])) {
                     <div class="form-group l-3 m-6 c-12">
                         <label for="exampleSelect1" class="control-label">Danh mục</label>
                         <select class="form-control" id="exampleSelect1" name='Type'>
-                            <option value='0'>-- Chọn danh mục --</option>
+                            <option value='0'>-- Hãng --</option>
                         <?php
                         
                             $listCategory=$data['listCategory'];

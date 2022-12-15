@@ -10,9 +10,11 @@ class ProfileProductController extends BaseController
     }
     public function show($id)
     {
+        $listCategory=$this->profileProduct->getCategory();
         $detailProduct = $this->profileProduct->getFind('ProductID', $id);
         $comments = $this->profileProduct->getComment($id);
-        $data = ['page' => 'ProfileProduct', 'detailProduct' => $detailProduct, 'Comments' => $comments];
+        $data = ['page' => 'ProfileProduct', 'detailProduct' => $detailProduct, 'Comments' => $comments,
+        'listCategory'=>$listCategory];
         $this->view($data);
     }
     public function comment()

@@ -86,10 +86,10 @@ else $currentPage=1;
                                         /<?php echo $data['numPage'] ?>
                                     </div>
                                     <div class="home-filter__controls">
-                                        <a class="home-filter__back home-filter__btn--disabled" href="">
+                                        <a class="home-filter__back home-filter__btn--disabled" href="#">
                                             <i class="icon-back fa-solid fa-angle-left"></i>
                                         </a>
-                                        <a class="home-filter__next " href=""> 
+                                        <a class="home-filter__next " href="#"> 
                                             <i class="icon-next fa-solid fa-angle-right"></i>
                                         </a>
         
@@ -128,7 +128,7 @@ else $currentPage=1;
                             <div class="pagination ">
                                 <ul class="pagination__item-list">
                                     <li class="pagination__item">
-                                        <a href="" class="pagination__item-icon">
+                                        <a href="#" class="pagination__item-icon">
                                             <i class="fa-solid fa-angle-left"></i>
                                         </a>
                                     </li>
@@ -157,7 +157,7 @@ else $currentPage=1;
 
                                     ?>
                                     <li class="pagination__item">
-                                        <a href="" class="pagination__item-icon">
+                                        <a href="#" class="pagination__item-icon">
                                             <i class="fa-solid fa-angle-right"></i>
                                         </a>
                                     </li>

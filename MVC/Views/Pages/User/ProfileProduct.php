@@ -15,18 +15,26 @@ if (isset($_SESSION['error'])) {
         echo "<script> alert('Comment không được quá 100 ký tự')</script>";
     }
 }
+
+$listCategory=$data['listCategory'];
+$index=0;
+for($i=0;$i<count($listCategory);$i++)
+{
+    if($listCategory[$i]['Type']==$type) $index=$i;
+}
 ?>
 
 <div class="ProfileProduct">
     <div class="pathUrl">
-        <span class="path1">
+        <a href="./index.php" class="path1">
             <i class=" home-icon fa-solid fa-house-chimney"></i>
             Trang chủ
-        </span>
+        </a>
         <span>|</span>
-        <span class="path2">
-            <?php echo $type ?>
-        </span>
+        <a href="./index.php?url=CategoryProduct/select/<?php echo $index ?>" class="path2">
+            <?php
+            echo $type ?>
+        </a>
     </div>
     <div class="contentProduct">
         <div class="grid">
