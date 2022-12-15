@@ -21,11 +21,9 @@ class App
         $arr = $this->UrlProcess();
 
         // Controller !empty($arr[0]) &&
-        if (isset($arr[0])) {
-            if (file_exists("./MVC/Controllers/" . $arr[0] . "Controller.php")) {
-                $this->controller = $arr[0] . 'Controller';
-                unset($arr[0]);
-            }
+        if( !empty($arr[0]) && file_exists("./MVC/Controllers/".$arr[0]."Controller.php") ){
+            $this->controller = $arr[0].'Controller';
+            unset($arr[0]);
         }
         require_once "./MVC/Controllers/" . $this->controller . ".php";
         $this->obj = new $this->controller;

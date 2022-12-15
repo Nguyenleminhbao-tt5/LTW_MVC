@@ -8,7 +8,8 @@
     transition: top ease 0.1s ;
     text-decoration: none;
     box-shadow: 0 0.0625rem 0.125rem 0 rgb(0 0 0 / 20%);
-    margin: 15px 0;
+    margin: 15px 10px;
+    max-width: 350px;
 }
 .Product:hover
 {
@@ -81,6 +82,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 20px;
 }
 .price-new
 {
@@ -146,3 +148,18 @@
     color: var(--primary1-color);
     font-size: 13px;
 }
+@media only screen and (max-width: 740px){
+    .Product{
+        min-width: 280px;
+        
+    }
+    
+ }
+ 
+ @media only screen and (min-width: 740px) and (max-width: 1030px){
+    .Product{
+        max-width: 330px;
+        min-width: 300px;
+    }
+ }
+ 

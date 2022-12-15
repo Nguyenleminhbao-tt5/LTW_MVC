@@ -9,7 +9,7 @@ else $currentPage=1;
 <div class="CategoryProduct" >
                 <div class="grid">
                     <div class="grid__row CategoryProduct-row">
-                        <div class="grid__column-1667">
+                        <div class="grid__column-1667 m-2">
                             <nav class="category">
                                 <h3 class="category__heading">
                                     <i class="category__heading-icon fa-solid fa-list-ul"></i>
@@ -60,12 +60,12 @@ else $currentPage=1;
                                 </ul>
                             </nav>
                         </div>
-                        <div class="grid__column-8333">
+                        <div class="grid__column-8333 m-10">
                             <div class="home-filter">
                                 <span class="home-filter__label"> Sắp xếp theo</span>
                                 <button class="BTN btn--primary">Hãng</button>
-                                <button class="BTN ">Màu sắc</button>
-                                <button class="BTN ">Size</button>
+                                <button class="BTN filter-color">Màu sắc</button>
+                                <button class="BTN filter-size">Size</button>
                                 <form class="filter-form" method="POST" action='./index.php?url=CategoryProduct/filter'>
                                     <select class="select-input" name='selectPrice'>
                                         <option class="optionSelect" value='0'> Giá</option> 
@@ -114,7 +114,7 @@ else $currentPage=1;
                                             $Type=$listProduct[$i]['Type'];
 
                                             $props=$listProduct[$i];
-                                            echo "<div class='grid__column-25'>";
+                                            echo "<div class='l-3 m-6 c-12 center'>";
                                             Product($props);
                                             echo "</div>";
                                         }

@@ -31,21 +31,21 @@ if (isset($_SESSION['error'])) {
     <div class="contentProduct">
         <div class="grid">
             <form class="grid__row" action='./index.php?url=Cart/insert' method='POST'>
-                <div class="grid__column-60">
-                    <div class="product__listImg">
-                        <button class="left-btn" type='button'>
-                            <i class="left-icon fa-solid fa-angle-left"></i>
-                        </button>
-                        <img class="img img--active" src=" <?php echo $product['PrimaryImg'] ?>">
-                        <img class="img " src=" <?php echo $product['Img1'] ?>">
-                        <img class="img " src=" <?php echo $product['Img2'] ?>">
-                        <button class="right-btn" type='button'>
-                            <i class="right-icon fa-solid fa-angle-right"></i>
-                        </button>
-
+                <div class="grid__column-60 m-7 c-12">
+                    <div class="product__listImg">  
+                            <button class="left-btn" type='button'>
+                                <i class="left-icon fa-solid fa-angle-left"></i>
+                            </button>
+                            <img class="img img--active" src=" <?php echo $product['PrimaryImg'] ?>">
+                            <img class="img " src=" <?php echo $product['Img1'] ?>">
+                            <img class="img " src=" <?php echo $product['Img2'] ?>">
+                            <button class="right-btn" type='button'>
+                                <i class="right-icon fa-solid fa-angle-right"></i>
+                            </button>
+                       
                     </div>
                 </div>
-                <div class="grid__column-40">
+                <div class="grid__column-40 m-5 c-12">
                     <div class="product__detail">
                         <div class="product__detail-name">
                             <span class="title">
@@ -82,7 +82,7 @@ if (isset($_SESSION['error'])) {
                                     <button type='button' class="size-bottom_list-item">42</button>
                                     <button type='button' class="size-bottom_list-item">43</button>
                                 </div>
-                                <input style="display:none" class="size" value="37" name='Size'>
+                                <input   class="size" value="37" name='Size'>
                             </div>
                             <div class="product__detail-amount">
                                 <span class="amount-heading">SỐ LƯỢNG</span>

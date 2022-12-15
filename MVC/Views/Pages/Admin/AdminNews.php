@@ -29,7 +29,7 @@
         <div class="manageNews__content-content">
             <div class="grid">
                 <div class="row">
-                    <div class="l-3">
+                    <div class="l-3 m-3 c-12">
                         <div class="content__display">
                             <span>Hiện</span>
                             <select class="content__display-select">
@@ -41,7 +41,7 @@
                             <span>Tin Tức</span>
                         </div>
                     </div>
-                    <div class="l-o-4">
+                    <div class="l-o-4 m-o-2">
                        <div class="content__display-search">
                             <span class="search-title">Tìm Kiếm : </span>
                             <input class="search-input" placeholder="Nhập tin tức cần tìm">
@@ -91,16 +91,19 @@
                                                 <a style=' text-decoration: none;' class='product-edit' href='./index.php?url=AdminNews/edit/$NewsID'>
                                                     <i class='edit-icon fa-solid fa-pen'></i>
                                                 </a>
-                                                <a style=' text-decoration: none;' class='product-delete' href='./index.php?url=AdminNews/delete/$NewsID'>
+                                            "?>
+                                            
+                                                <a style=' text-decoration: none;' class='product-delete' href='./index.php?url=AdminNews/delete/<?php echo $NewsID?>'
+                                                onclick="return confirm('Bạn có chắc muốn xóa tin này không?')">
                                                     <i class='delete-icon fa-solid fa-trash'></i>
                                                 </a>                           
                                             </th>
                                         </tr>
                                     
-                                    ";
+                                    
 
 
-                                }
+                                <?php }
                                 
                                 ?>
                                

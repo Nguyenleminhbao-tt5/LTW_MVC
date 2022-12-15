@@ -7,7 +7,7 @@
             <div class="grid">
                 <div class="row">
             <div class="l-2 m-3 c-6">
-                <a class="btn btn-add btn-sm" href="./index.php?url=AdminOrder/add" title="Thêm">
+                <a class="btn btn-add btn-sm" href="#" title="Thêm">
                     <i class="fas fa-plus"></i>
                  Tạo mới đơn hàng</a>
             </div>
@@ -29,7 +29,7 @@
         <div class="manageOrder__content-content">
             <div class="grid">
                 <div class="row">
-                    <div class="l-3">
+                    <div class="l-3 m-3 c-12">
                         <div class="content__display">
                             <span>Hiện</span>
                             <select class="content__display-select">
@@ -41,7 +41,7 @@
                             <span>Đơn Hàng</span>
                         </div>
                     </div>
-                    <div class="l-o-4">
+                    <div class="l-o-4 m-o-2">
                        <div class="content__display-search">
                             <span class="search-title">Tìm Kiếm : </span>
                             <input class="search-input" placeholder="Nhập đơn hàng">
@@ -61,33 +61,79 @@
                                 <th class="ID">ID</th>
                                 <th class="User">Khách hàng</th>
                                 <th class="Order">Đơn hàng</th>
-                                <th class="Amount">Số lượng</th>
+                                <th class="Amount">Địa chỉ</th>
+                                <th class="Amount">Số điện thoại</th>
                                 <th class="Price">Tổng tiền</th>
                                 <th class="Status">Tình Trạng</th>      
                                 <th class="Feature">Tính năng</th>
                             </thead>
                             <tbody>
+
+                            <?php 
+                            $listCustomer=$data['listCustomer'];
+                            $listOrder=$data['listOrder'];
+
+                            for($i=0;$i<count($listCustomer);$i++)
+                            {
+                                $orderID=$listCustomer[$i]['orderID'];
+                                $name=$listCustomer[$i]['fullname'];
+                                $address='';
+                                $orders='';
+                                $phone='';
+                                $totalPrice=0;
+                                $oderState='';
+                                for($j=0;$j<count($listOrder);$j++)
+                                {
+                                    if($listOrder[$j]['customerid']==$listCustomer[$i]['customerid'])
+                                    {
+                                        $address=$listOrder[$j]['address'];
+                                        $orders=$orders.$listOrder[$j]['ProductName'].' -- SL:'.$listOrder[$j]['number'].'<br> ';
+                                    
+                                        $phone=$listOrder[$j]['phonenumber'];
+                                        $totalPrice=$totalPrice+$listOrder[$j]['number']*$listOrder[$j]['Price'];
+                                        $orderState=$listOrder[$j]['orderstate'];
+                                    }
+                                   
+                                }
+                                echo "
+                                        
                                 <tr>
-                                    <th>01</th>
-                                    <th>Nguyễn Lê Minh Bảo</th>
-                                    <th>Giày Nike, giày thượng đình</th>
-                                    <th>2</th>
-                                    <th>100.000đ</th>
-                                    <th>
-                                        <span class="badge bg-success">Hoàn thành</span>
+                                    <th class='order'>$orderID</th>
+                                    <th class='order'>$name</th>
+                                    <th class='order'>$orders</th>
+                                    <th class='order'>$address</th>
+                                    <th class='order'>$phone</th>
+                                    <th class='order'>";
+                                    if($totalPrice/1000000>=1) {
+                                        $a=$totalPrice/1000000;
+                                        echo $a;   
+                                    }
+                                    else echo $totalPrice/1000;
+                                echo".000đ
                                     </th>
                                     <th>
-                                        <button style=' text-decoration: none;' class="order-edit" href='#'>
+                                        <button class='status-order badge bg-info'>$orderState</button>
+                                    </th>
+                                    <th>
+                                        <button style=' text-decoration: none;' class='order-edit'>
                                             <i class='edit-icon fa-solid fa-pen'></i>
                                         </button>
-                                        <button style=' text-decoration: none;' class='order-delete' href='#'>
+                                      "
+                                    ?>  
+                                        <a style=' text-decoration: none;' class='order-delete' href='./index.php?url=AdminOrder/delete/<?php echo $orderID ?>'
+                                        onclick="return confirm('Bạn có chắc muốn xóa đơn hàng này')">
                                             <i class='delete-icon fa-solid fa-trash'></i>
-                                        </button>                           
+                                        </a>                           
                                     </th>
                                 </tr>
-                          
+
                                 
 
+
+
+                            <?php }?>
+                                                        
+                            
                                    
                             </tbody>  
                             </table>

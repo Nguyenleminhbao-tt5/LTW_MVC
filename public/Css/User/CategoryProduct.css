@@ -226,3 +226,52 @@
 {
     display: none;
 }
+@media only screen and (max-width: 450px){
+    
+    
+}
+@media only screen and (max-width: 740px){
+    
+    .home-filter__page{
+        display: none;
+    }
+    .category__heading {
+        font-size: 16px;
+    }
+    .category__heading-icon {
+        font-size: 16px;
+    }
+    .filter-color{
+        display: none;
+    }
+    .filter-size{
+        display: none;
+    }
+    .center{
+        display: flex;
+        justify-content: center;
+    }
+
+}
+ 
+@media only screen and (min-width: 740px) and (max-width: 1030px){
+    .home-filter__page{
+        display: none;
+    }
+    .category__heading{
+        font-size: 16px;
+    }
+    .home-filter__label{
+        font-size: 14px;
+    }
+    .BTN {
+        min-width: 95px !important;
+    }
+    .select-input {
+        margin-left: -5px;
+    }
+    .center{
+        display: flex;
+        justify-content: center;
+    }
+}

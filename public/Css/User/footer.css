@@ -76,3 +76,28 @@
     color: var(--primary1-color);
     font-size: 12px;
 }
+@media only screen and (max-width: 740px){
+   
+
+    .footer{
+        font-size: 10px;
+    }
+    .footer__list-item_link {
+
+        font-size: 8px !important;
+    }
+    .footer__wrap{
+        display: none !important;
+    }
+ }
+ 
+ @media only screen and (min-width: 740px) and (max-width: 1030px){
+
+    .footer{
+        font-size: 12px;
+    }
+    .footer__list-item_link {
+
+        font-size: 11px !important;
+    }
+ }

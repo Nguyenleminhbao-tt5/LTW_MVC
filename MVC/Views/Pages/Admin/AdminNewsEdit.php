@@ -7,6 +7,20 @@
     $Type=$news[0]['Type'];
     $Description=$news[0]['Description'];
 
+
+
+    if (isset($_GET['error'])) {
+    $error = $_GET['error'];
+    if ($error == "4")
+        echo "<script> alert('Bạn cần phải nhập tên')</script>";
+    if ($error == "5")
+    echo "<script> alert('Bạn chưa chèn ảnh')</script>";
+    if ($error == "6")
+    echo "<script> alert('Bạn chưa nhập nội dung tên tức')</script>";
+    }
+  
+   
+
 ?>
 
 <div class="modal-modified">

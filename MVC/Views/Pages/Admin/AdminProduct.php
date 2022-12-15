@@ -29,7 +29,7 @@
         <div class="manageProduct__content-content">
             <div class="grid">
                 <div class="row">
-                    <div class="l-3">
+                    <div class="l-3 m-3 c-12">
                         <div class="content__display">
                             <span>Hiện</span>
                             <select class="content__display-select">
@@ -41,7 +41,7 @@
                             <span>Sản Phẩm</span>
                         </div>
                     </div>
-                    <div class="l-o-4">
+                    <div class="l-o-4 m-o-2">
                        <div class="content__display-search">
                             <span class="search-title">Tìm Kiếm : </span>
                             <input class="search-input" placeholder="Nhập sản phẩm">
@@ -77,7 +77,7 @@
                                         $id=$listShoes[$i]['ProductID'];
                                         $Type=$listShoes[$i]['Type'];
                                         $ProductName=$listShoes[$i]['ProductName'];
-                                        $Price=$listShoes[$i]['Price']/1000;
+                                        $Price=$listShoes[$i]['Price'];
                                         $PrimaryImg=$listShoes[$i]['PrimaryImg'];
                                        
                                         echo"
@@ -89,22 +89,33 @@
                                         <th>
                                             <span class='badge bg-success'>Còn hàng</span>
                                         </th>
-                                        <th>$Price.000đ</th>
+                                        <th>";
+                                     
+                                        if($Price/1000000>=1) {
+                                            $a=$Price/1000000;
+                                            echo $a;   
+                                        }
+                                        else echo $Price/1000;
+                    
+                                        echo".000đ</th>
                                         <th>$Type</th>
                                         <th>
                                             
                                             <a style=' text-decoration: none;' class='product-edit' href='./index.php?url=AdminProduct/edit/$id' >
                                                 <i class='edit-icon fa-solid fa-pen'></i>
                                             </a>
-                                            <a style=' text-decoration: none;' class='product-delete' href='./index.php?url=AdminProduct/delete/$id'>
+                                        "?>
+
+                                            <a style=' text-decoration: none;' class='product-delete' href='./index.php?url=AdminProduct/delete/<?php echo $id?>' 
+                                            onclick="return confirm('bạn có chắc muốn xóa sản phẩm này không')">
                                                 <i class='delete-icon fa-solid fa-trash'></i>
                                             </a>
                                                                
                                         </th>
                                     </tr>
                                                                      
-                                        ";
-                                    }
+                                        
+                                    <?php }
                                 ?>
                                 
                             </tbody>  

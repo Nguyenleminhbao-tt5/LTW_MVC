@@ -1,3 +1,31 @@
+<?php
+ if (isset($_GET['error'])) {
+    $error = $_GET['error'];
+    if ($error == "1")
+        echo "<script> alert('ID này đã tồn tại')</script>";
+    if ($error == "2")
+        echo "<script> alert('Sản phẩm này đã tồn tại')</script>";
+    if ($error == "3")
+        echo "<script> alert('Số lượng phải là số lơn hơn 0')</script>";
+    if ($error == "4")
+        echo "<script> alert('Giá tiền phải là số lơn hơn 0')</script>";
+    if ($error == "5" || $error == "6" || $error == "7")
+        echo "<script> alert('Bạn cần phải chèn ảnh')</script>";
+    if ($error == "8")
+    echo "<script> alert('Bạn chưa nhập ID')</script>";
+    if ($error == "9")
+    echo "<script> alert('Bạn chưa nhập tên sản phẩm')</script>";
+    if ($error == "10")
+    echo "<script> alert('Bạn chưa nhập số lượng')</script>";
+    if ($error == "11")
+    echo "<script> alert('Bạn chưa nhập giá')</script>";
+    
+}
+
+
+
+
+?>
 <div class="insertProduct">
     <div class="insertProduct__title">
         <h4 class="insertProduct__title-text"> Quản Lý Sản Phẩm / Thêm sản phẩm</h4>
@@ -9,17 +37,17 @@
                 <form class="row" method='POST' action="./index.php?url=AdminProduct/insert">
                     <div class="form-group l-3 m-6 c-12">
                         <label class="control-label">Mã sản phẩm </label>
-                        <input class="form-control" type="text" name='ProductID' value='<?php echo $data['error1'] ?>'>
+                        <input class="form-control" type="text" name='ProductID'>
                     </div>
                     <div class="form-group l-3 m-6 c-12">
                         <label class="control-label">Tên sản phẩm</label>
-                        <input class="form-control" type="text" name='ProductName' value='<?php echo $data['error2'] ?>'>
+                        <input class="form-control" type="text" name='ProductName'>
                     </div>
 
 
                     <div class="form-group  l-3 m-6 c-12">
                         <label class="control-label">Số lượng</label>
-                        <input class="form-control" type="number">
+                        <input class="form-control" type="number" name='Amount'>
                     </div>
                     <div class="form-group l-3 m-6 c-12 ">
                         <label for="exampleSelect1" class="control-label">Tình trạng</label>
