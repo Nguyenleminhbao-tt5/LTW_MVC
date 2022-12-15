@@ -44,7 +44,7 @@
             cursor: pointer;
         }
     </style>
-    <title>E-BOOKSTORE</title>
+    <title>LOGO</title>
 </head>
 
 <body>
@@ -200,7 +200,9 @@
                     <i class="header__account-avatar fa-regular fa-user"></i>
                     <span class="header__account-name">Minh Bảo</span>
                     <form method="post" action="./index.php?url=AdminPrimary/logout">
-                        <button class='exit' onclick="return confirm('Bạn có muốn đăng xuất ?')">Đăng xuất</button>
+                        <button class='exit' onclick="return confirm('Bạn có muốn đăng xuất ?')">
+                            <i class='header__account-leaveIcon fa-solid fa-arrow-right-from-bracket'></i>
+                        </button>
                     </form>
                     <!-- <a href='./index.php?url=Login' class='header__account-leave'>
                         <i class='header__account-leaveIcon fa-solid fa-arrow-right-from-bracket'></i>

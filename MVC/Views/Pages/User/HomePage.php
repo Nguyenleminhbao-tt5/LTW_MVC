@@ -44,10 +44,11 @@ $listImg = [
                         for ($i=0;$i<4;$i++)
                           { 
                             $props=$listProduct[$i];
-                            echo "<div class='l-3 m-6 c-12 center>";
+        
+                            echo "<div class='l-3 m-6 c-12 center'>";
                             Product($props);  
                             echo "</div>";
-                        }
+                          } 
                         ?>
                     </div>
                 </div>

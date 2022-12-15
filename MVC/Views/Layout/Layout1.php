@@ -19,7 +19,7 @@
         font-family: Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
       }
     </style>
-    <title>E-BOOKSTORE</title>
+   <title>LOGO</title>
   </head>
   <body>
     <div id="root">

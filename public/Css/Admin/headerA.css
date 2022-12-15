@@ -70,6 +70,10 @@
     background-color: rgba(0, 0, 0,0.3);
     display: none;
 }
-
-
-
+.exit
+{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
