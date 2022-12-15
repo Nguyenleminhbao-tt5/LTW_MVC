@@ -1,0 +1,14 @@
+.feedback-box {
+    margin: 20px;
+    padding-bottom: 20px;
+    padding: 30px;
+    border: 1px solid green;
+    border-left: 6px solid green;
+    box-shadow: 2px 2px 10px 0px rgba(50, 50, 50, 0.5);
+}
+.feedback-title {
+    font-weight: 600;
+}
+.feedback-content {
+    font-weight: 600;
+}

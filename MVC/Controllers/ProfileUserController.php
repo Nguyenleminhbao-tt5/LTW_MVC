@@ -93,9 +93,8 @@ class ProfileUserController extends BaseController
         if ($check) {
             $data = ['Password' => $newpass];
             $this->profileuser->modified($data, $this->customerid);
-            header('Location:./index.php?url=ProfileUser');
+            header('Location:./index.php?url=ProfileUser&success=1');
         }
-        var_dump($check);
     }
     public function logout()
     {

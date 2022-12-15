@@ -1,13 +1,13 @@
-<?php 
+<?php
 
-$listImg=[
+$listImg = [
     'https://bucket.nhanh.vn/04f7ff-92233/bn/20221117_DhsyxB9AnDmC0zvuV8gY9gXs.jpg',
     'https://bucket.nhanh.vn/04f7ff-92233/bn/20221207_Kqn2WzHQ2ZmxpIuw.jpg',
     'https://bucket.nhanh.vn/04f7ff-92233/bn/20221110_Qk9cp0UBpawQBpCUt0aScKyz.jpg',
     'https://bucket.nhanh.vn/04f7ff-92233/bn/20221024_kActgMi0qrzceMWAOfrbwkTo.jpg'
 ]
 
-?>
+    ?>
 
 <div class="HomePage">
             <div class="content-main">
@@ -37,17 +37,17 @@ $listImg=[
             <div class="content-product">
                 <div class="grid">
                     <div class="product__heading">SẢN PHẨM NỔI BẬT</div>
-                    <div class="grid__row ">
+                    <div class="grid__row">
                         <?php
                         require "./MVC/Views/Module/Product.php";
                         $listProduct=$data['listProduct'];
                         for ($i=0;$i<4;$i++)
                           { 
                             $props=$listProduct[$i];
-                            echo "<div class='l-3 m-6 c-12 center'>";
+                            echo "<div class='l-3 m-6 c-12 center>";
                             Product($props);  
                             echo "</div>";
-                          } 
+                        }
                         ?>
                     </div>
                 </div>

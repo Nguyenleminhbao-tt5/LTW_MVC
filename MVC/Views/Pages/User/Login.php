@@ -7,6 +7,12 @@
 // unset($_SESSION['AccountName']);
 // if (isset($_SESSION['AccountName'])){
 // 	$_SESSION['AccountName'];
+if (isset($_GET['success'])) {
+	$success = $_GET['success'];
+	if ($success == "1") {
+		echo "<script> alert('Đăng ký tài khoản thành công')</script>";
+	}
+}
 if (isset($_GET['error'])) {
 	$error = $_GET['error'];
 	if ($error == '1')

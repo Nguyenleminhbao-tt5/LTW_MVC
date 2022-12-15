@@ -1,20 +1,24 @@
-<?php 
-$product=$data['detailProduct'][0];
-$name=$product['ProductName'];
-$type=$product['Type'];
-$price=$product['Price'];
-$code=$product['ProductID'];
-
-
-$des=$product['Description'];
+<?php
+$product = $data['detailProduct'][0];
+$name = $product['ProductName'];
+$type = $product['Type'];
+$price = $product['Price'];
+$code = $product['ProductID'];
+$des = $product['Description'];
 $des = str_replace('-', '<br>', $des);
 
-$listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
-
+$listImg = [$product['PrimaryImg'], $product['PrimaryImg'], $product['PrimaryImg']];
+if (isset($_SESSION['error'])) {
+    $error = $_SESSION['error'];
+    if ($error == "1") {
+        unset($_SESSION['error']);
+        echo "<script> alert('Comment không được quá 100 ký tự')</script>";
+    }
+}
 ?>
 
 <div class="ProfileProduct">
-    <div class="pathUrl"> 
+    <div class="pathUrl">
         <span class="path1">
             <i class=" home-icon fa-solid fa-house-chimney"></i>
             Trang chủ
@@ -44,21 +48,29 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
                 <div class="grid__column-40 m-5 c-12">
                     <div class="product__detail">
                         <div class="product__detail-name">
-                            <span class="title"> <?php echo $name ?></span>
+                            <span class="title">
+                                <?php echo $name ?>
+                            </span>
                             <div class="product-code">
                                 <span class="code">Mã sản phẩm:</span>
-                                <input class="id"  name='ProductID' value=' <?php echo $code ?>' readonly>
+                                <span>
+                                    <?php echo " " . $code; ?>
+                                </span>
+                                <input type="text" name="ProductID" style="display:none;"
+                                    value="<?php echo " " . $code; ?>">
                             </div>
                         </div>
-                        <div class="product__detail-price"> <?php if($price/1000000>=1) {
-                        $a=$price/1000000;
-                        echo $a;   
-                    }
-                    else echo $price/1000 ?>.000đ</div>
+                        <div class="product__detail-price">
+                            <?php if ($price / 1000000 >= 1) {
+                                $a = $price / 1000000;
+                                echo $a;
+                            } else
+                                echo $price / 1000 ?>.000đ
+                        </div>
                         <div class="product__detail-size">
                             <div class="size-heading">
                                 <span class="size-heading__title1">KÍCH THƯỚC</span>
-                                <a href="" class="size-heading__title2">HƯỚNG DẪN CHỌN KÍCH THƯỚC</a>
+                                <!-- <a href="" class="size-heading__title2">HƯỚNG DẪN CHỌN KÍCH THƯỚC</a> -->
                             </div>
                             <div class="size-bottom">
                                 <div class="size-bottom_list">
@@ -70,7 +82,7 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
                                     <button type='button' class="size-bottom_list-item">42</button>
                                     <button type='button' class="size-bottom_list-item">43</button>
                                 </div>
-                                <input style='display:none'   class="size" value="37" name='Size'>
+                                <input   class="size" value="37" name='Size'>
                             </div>
                             <div class="product__detail-amount">
                                 <span class="amount-heading">SỐ LƯỢNG</span>
@@ -87,14 +99,14 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
                                 </ul>
                             </div>
                             <div class="product__detail-submit">
-                                <button  class="cart-btn">Thêm vào giỏ hàng</button>
-                                <button class="buy-btn">Mua ngay</button>
+                                <button class="cart-btn">Thêm vào giỏ hàng</button>
+                                <!-- <button class="buy-btn">Mua ngay</button> -->
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
-             </form>
+            </form>
         </div>
 
     </div>
@@ -107,30 +119,19 @@ $listImg=[$product['PrimaryImg'],$product['PrimaryImg'],$product['PrimaryImg']];
     <div class="comment">
         <span class="comment-heading">Bình luận</span>
         <div class="comment-add">
-            <button class="comment-btn">Bình luận</button>
+            <form id="formcomment" method='POST' action="./index.php?url=ProfileProduct/comment" style="margin-bottom: 20px;">
+                <input type="text" name="ProductID" style="display:none;" value="<?php echo " " . $code; ?>">
+                <textarea style="width:100%; padding:20px;" name="Comment" id="" cols="30" rows="10"></textarea>
+                <button form="formcomment" class="comment-btn" type="submit">Bình luận</button>
+            </form>
         </div>
-        <div class="comment_detail">
-            <div class="comment_detail-user-info">
-                <div class="user-avatar">
-                    <img src="/LTW_MVC/public/Assets/atm_logo.PNG" alt="user-avatar"> 
-                </div>
-                <div class="user-info">
-                    <p class="user-info-name">NguyenLeMinhBao</p>
-                    <p class="user-info-day-comment">Dec 13 2022</p>
-                </div>
-            </div>
-            <div class="comment_detai-user-comment">
-                <div class="comment-text">
-                    Mặt hàng này tốt quá, xin cảm ơn
-                </div>
-                <div class="comment-image">
-                    <img class="comment-image-child" src="/LTW_MVC/public/Assets/cash_logo.JPG" alt="comment-image-child">
-                    <img class="comment-image-child" src="/LTW_MVC/public/Assets/cash_logo.JPG" alt="comment-image-child">
-                    <img class="comment-image-child" src="/LTW_MVC/public/Assets/cash_logo.JPG" alt="comment-image-child">
-                    <img class="comment-image-child" src="/LTW_MVC/public/Assets/cash_logo.JPG" alt="comment-image-child">
-                </div>
-            </div>
-        </div>
-    </div> 
+        <?php
+        $comments = $data['Comments'];
+        require "./MVC/Views/Module/Comment.php";
+        for ($i = 0; $i < count($comments); $i++) {
+            $comment = $comments[$i];
+            Comment($comment);
+        }
+        ?>
+    </div>
 </div>
-

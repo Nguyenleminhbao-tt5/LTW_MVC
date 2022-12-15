@@ -13,9 +13,10 @@ class ProfileUserModel extends BaseModel
     }
     public function getoldpass($customer_id)
     {
-        $sql = "SELECT 'Password' FROM `user` WHERE user.ID=$customer_id";
+        $sql = "SELECT * FROM `user` WHERE user.ID=$customer_id";
         $temp = $this->QUERYOTHER($sql);
         return $temp[0]['Password'];
+        //return $temp[0]['Password'];
     }
 }
 

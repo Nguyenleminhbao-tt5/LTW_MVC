@@ -7,6 +7,12 @@ $gender = $profile["Gender"];
 $phonenumber = $profile["PhoneNumber"];
 $email = $profile["Email"];
 $address = $profile["Address"];
+if (isset($_GET['success'])){
+    $success = $_GET['success'];
+    if ($success=="1"){
+        echo "<script> alert('Đổi mật khẩu thành công')</script>";
+    }
+}
 if (isset($_GET['error'])) {
     $error = $_GET['error'];
     if ($error == "1")
