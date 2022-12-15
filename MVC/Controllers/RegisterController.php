@@ -16,7 +16,7 @@ class RegisterController extends BaseController
     }
     public function up()
     {
-        // $check = true;
+        $check = true;
         $accountname = $_POST['AccountName'];
         $password = $_POST['Password'];
         $again = $_POST['AgainPassword'];
@@ -27,7 +27,7 @@ class RegisterController extends BaseController
             echo "<script language='javascript'>window.location = 'index.php?url=Register&error=1';</script>";
             $check = false;
         }
-        if (count($this->register->getAccount($accountname))>0) {
+        if (count($this->register->getAccount($accountname)) > 0) {
             echo "<script language='javascript'>window.location = 'index.php?url=Register&error=2';</script>";
             $check = false;
         }
@@ -47,16 +47,16 @@ class RegisterController extends BaseController
             echo "<script language='javascript'>window.location = 'index.php?url=Register&error=6';</script>";
             $check = false;
         }
-        // if ($check) {
-        //     $data = [
-        //         'AccountName' => $accountname,
-        //         'Password' => $password,
-        //         'FirstName' => $fname,
-        //         'LastName' => $lname
-        //     ];
-        //     $this->register->upAccount($data);
-        //     header('Location: ./index.php?url=Login');
-        // }
+        if ($check) {
+            $data = [
+                'AccountName' => $accountname,
+                'Password' => $password,
+                'FirstName' => $fname,
+                'LastName' => $lname
+            ];
+            $this->register->upAccount($data);
+            header('Location: ./index.php?url=Login&success=1');
+        }
     }
 
 }
