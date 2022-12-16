@@ -1,7 +1,7 @@
 .payment-wrapper {
     display: flex;
     flex-direction: column;
-    font-family: 'Montserrat';
+    /* font-family: 'Montserrat'; */
     margin-bottom: 100px;
 }
 .pay-wrap {
@@ -9,7 +9,7 @@
     height: 100%;
     width: 100%;
     background-color: #FFFFFF;
-    font-family: 'Montserrat';
+    /* font-family: 'Montserrat'; */
     display: flex;
     flex-direction: row;
 }
@@ -93,7 +93,7 @@
     padding: 20px 10px 10px 30px;
 }
 .orderbutton {
-    font-family: 'Montserrat';
+    /* font-family: 'Montserrat'; */
     width: 50%;
     display: inline-block;
     border-radius: 4px;

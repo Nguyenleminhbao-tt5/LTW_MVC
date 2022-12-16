@@ -39,12 +39,10 @@ class CartModel extends BaseModel
         $sql = "UPDATE `cart` SET Amount=Amount-1 WHERE CartID=$cartid AND CustomerID=$customerid AND ProductID=$productid";
         mysqli_query($this->connect, $sql);
     }
-    public function deleteproduct($data)
+    public function deleteproduct($CartID,$ProductID)
     {
-        $cartid = $data['CartID'];
-        $customerid = $data['CustomerID'];
-        $productid = $data['ProductID'];
-        $sql = "DELETE FROM `cart` WHERE CartID=$cartid AND CustomerID=$customerid AND ProductID=$productid";
+      
+        $sql = "DELETE FROM `cart` WHERE CartID=$CartID AND ProductID=$ProductID";
         $this->QUERYVOID($sql);
     }
     public function getProductByCart($CartID, $ProductID)

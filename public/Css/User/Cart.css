@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: row;
     padding: 30px 20px 30px 20px;
-    font-family: 'Montserrat';
+    /* font-family: 'Montserrat'; */
 }
 .cart {
     width: 60%;
@@ -34,7 +34,7 @@
 }
 .buycart {
     cursor: pointer;
-    font-family: 'Montserrat';
+    /* font-family: 'Montserrat'; */
     padding: 10px 30px;
     position: relative;
     width: 100%;
@@ -68,7 +68,7 @@
     border: none;
     font-weight: 700;
     font-size: 16px;
-    font-family: 'Montserrat';
+    /* font-family: 'Montserrat'; */
     text-align: right;
     width: 100%;
 }
