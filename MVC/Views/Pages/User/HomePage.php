@@ -1,10 +1,10 @@
 <?php
 
 $listImg = [
-    'https://bucket.nhanh.vn/04f7ff-92233/bn/20221117_DhsyxB9AnDmC0zvuV8gY9gXs.jpg',
-    'https://bucket.nhanh.vn/04f7ff-92233/bn/20221207_Kqn2WzHQ2ZmxpIuw.jpg',
-    'https://bucket.nhanh.vn/04f7ff-92233/bn/20221110_Qk9cp0UBpawQBpCUt0aScKyz.jpg',
-    'https://bucket.nhanh.vn/04f7ff-92233/bn/20221024_kActgMi0qrzceMWAOfrbwkTo.jpg'
+    'https://pos.nvncdn.net/04f7ff-92233/bn/20230816_qqK3SA74.jpeg',
+    'https://pos.nvncdn.net/04f7ff-92233/bn/20231116_J5VX4exA.jpeg',
+    'https://pos.nvncdn.net/04f7ff-92233/bn/20231030_IUpeFw82.jpeg',
+    'https://pos.nvncdn.net/04f7ff-92233/bn/20230911_YgTb5V3j.jpeg'
 ]
 
     ?>
@@ -24,10 +24,10 @@ $listImg = [
                         <div class="grid__column-35">
                             <div class="main__beside">
                                 <div class="main__beside-1">
-                                    <img class="beside-1-img" src='https://bucket.nhanh.vn/04f7ff-92233/bn/20221208_LSyzLXiH2IqpYJJY.jpg'>
+                                    <img class="beside-1-img" src='https://i.pinimg.com/564x/54/bb/b5/54bbb5dc42afe72d2665fd6d1f34629e.jpg'>
                                 </div>
                                 <div class="main__beside-2">
-                                    <img class="beside-2-img" src='https://bucket.nhanh.vn/04f7ff-92233/bn/20221117_DhsyxB9AnDmC0zvuV8gY9gXs.jpg'>
+                                    <img class="beside-2-img" src='https://scontent.fsgn19-1.fna.fbcdn.net/v/t1.15752-9/403405553_329848546418898_5905287164394627695_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=z9fh6yxarvsAX8W9IvI&_nc_ht=scontent.fsgn19-1.fna&oh=03_AdS_jiMRRWo5FdGK2rPjrFnwiMn3Up28TygN-EGEOtUZrg&oe=657E97E8'>
                                 </div>
                             </div>
                         </div>

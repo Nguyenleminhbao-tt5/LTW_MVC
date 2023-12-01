@@ -1,12 +1,18 @@
 <?php
+header('Content-type: text/html; charset=utf-8');
 if (!isset($_SESSION)) {
     session_start();
 }
+
+
 class PayController extends BaseController
 {
     private $pay;
     private $order;
     private $customerid;
+    const PAY_WITH_ATM = "payWithATM";
+    const PAY_WITH_QR  = "captureWallet";
+
     public function __construct()
     {
         $this->loadModel('PayModel.php');
@@ -14,11 +20,86 @@ class PayController extends BaseController
         $this->customerid = $_SESSION['CustomerID'];
         $this->order = $this->pay->order($this->customerid);
     }
+
     public function show()
     {
         $data = ['page' => 'Pay', 'order' => $this->order];
         $this->view($data);
     }
+
+
+    private function execPostRequest($url, $data)
+    {
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                'Content-Type: application/json',
+                'Content-Length: ' . strlen($data))
+        );
+        curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+        //execute post
+        $result = curl_exec($ch);
+        //close connection
+        curl_close($ch);
+        return $result;
+    }
+
+    private function payMomo($requestType,$orderInfo)
+    {
+        $endpoint = "https://test-payment.momo.vn/v2/gateway/api/create";
+
+
+        $partnerCode = 'MOMOBKUN20180529';
+        $accessKey = 'klm05TvNBzhg7h7j';
+        $secretKey = 'at67qH6mk8w5Y1nAyMoYKMWACiEi2bsa';
+        $amount = $_SESSION['orderfee'];
+        $orderId = time() ."";
+        $redirectUrl = "http://localhost/LTW_MVC/index.php?url=StatusOrder";
+        $ipnUrl = "http://localhost/LTW_MVC/index.php?url=StatusOrder";
+        $extraData = "";
+
+
+        $partnerCode =$partnerCode ;
+        $accessKey = $accessKey;
+        $serectkey = $secretKey;
+        $orderId = $orderId; // Mã đơn hàng
+        $orderInfo = $orderInfo;
+        $amount = $amount;
+        $ipnUrl = $ipnUrl;
+        $redirectUrl = $redirectUrl;
+        $extraData = $extraData;
+
+        $requestId = time() . "";
+        $requestType = $requestType; // payWithATM - captureWallet
+        $extraData = ($_POST["extraData"] ? $_POST["extraData"] : "");
+        //before sign HMAC SHA256 signature
+        $rawHash = "accessKey=" . $accessKey . "&amount=" . $amount . "&extraData=" . $extraData . "&ipnUrl=" . $ipnUrl . "&orderId=" . $orderId . "&orderInfo=" . $orderInfo . "&partnerCode=" . $partnerCode . "&redirectUrl=" . $redirectUrl . "&requestId=" . $requestId . "&requestType=" . $requestType;
+        $signature = hash_hmac("sha256", $rawHash, $serectkey);
+        $data = array('partnerCode' => $partnerCode,
+            'partnerName' => "Test",
+            "storeId" => "MomoTestStore",
+            'requestId' => $requestId,
+            'amount' => $amount,
+            'orderId' => $orderId,
+            'orderInfo' => $orderInfo,
+            'redirectUrl' => $redirectUrl,
+            'ipnUrl' => $ipnUrl,
+            'lang' => 'vi',
+            'extraData' => $extraData,
+            'requestType' => $requestType,
+            'signature' => $signature);
+        $result = $this->execPostRequest($endpoint, json_encode($data));
+        $jsonResult = json_decode($result, true);  // decode json
+
+        //Just a example, please check more in there
+
+        header('Location: ' . $jsonResult['payUrl']);
+    }
+    
+    
     public function insert()
     {
         $fullname = "";
@@ -133,14 +214,41 @@ class PayController extends BaseController
             ];
             //Check data 
             //check fullname
-            $data1 = ['page' => 'Pay', 'data' => $data];
-            $this->pay->insertdata($data1);
-            $orderid = $this->pay->getorderid();
-            $data2 = ['customerid' => $this->customerid, 'products' => $_SESSION['products'], 'orderid' => $orderid];
-            $this->pay->insertproduct($data2);
-            $this->pay->deletecart($this->customerid);
-            header('Location:./index.php?url=StatusOrder');
+            if ($data['paytype']=='Cash')
+            {
+                $data1 = ['page' => 'Pay', 'data' => $data];
+                $this->pay->insertdata($data1);
+                $orderid = $this->pay->getorderid();
+                $data2 = ['customerid' => $this->customerid, 'products' => $_SESSION['products'], 'orderid' => $orderid];
+                $this->pay->insertproduct($data2);
+                $this->pay->deletecart($this->customerid);
+                header('Location:./index.php?url=StatusOrder');
+            }
+            else if ($data['paytype']=='momoATM')
+            {
+                $data1 = ['page' => 'Pay', 'data' => $data];
+                $this->pay->insertdata($data1);
+                $orderid = $this->pay->getorderid();
+                $data2 = ['customerid' => $this->customerid, 'products' => $_SESSION['products'], 'orderid' => $orderid];
+                $this->pay->insertproduct($data2);
+                $this->pay->deletecart($this->customerid);
+                $this->payMomo(self::PAY_WITH_ATM,"Thanh toán MoMo qua ATM");
+               
+            }
+            else if ($data['paytype']=='momoQR')
+            {
+                $data1 = ['page' => 'Pay', 'data' => $data];
+                $this->pay->insertdata($data1);
+                $orderid = $this->pay->getorderid();
+                $data2 = ['customerid' => $this->customerid, 'products' => $_SESSION['products'], 'orderid' => $orderid];
+                $this->pay->insertproduct($data2);
+                $this->pay->deletecart($this->customerid);
+                $this->payMomo(self::PAY_WITH_QR,"Thanh toán MoMo qua QR");
+            }
+            
         }
+            
+        
     }
 }
 

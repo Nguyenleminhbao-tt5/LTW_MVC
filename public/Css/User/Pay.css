@@ -63,7 +63,8 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding: 10px 10px 5px 20px;
+    padding: 15px 10px 15px 20px;
+
 }
 .customer-radio2 {
     border-top: 1px solid #d9d9d9;
@@ -71,7 +72,7 @@
 .radio-title {
     padding-left: 10px; 
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
 }
 .customer-pay {
     box-shadow: 0 0 0 1px #d9d9d9;

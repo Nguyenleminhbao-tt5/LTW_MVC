@@ -93,19 +93,17 @@
                         <div class='customer-radio2'>
                             <div class='cus-radio2'>
                                 <div class='radio-input' id='radio2'>
-                                    <input class='radio2' type='radio' name='paytype' value='ATM'></input>
+                                    <input class='radio2' type='radio' name='paytype' value='momoATM'></input>
                                 </div>
-                                <div class='radio-title'>ATM Card/ Internet Banking</div>
+                                <div class='radio-title'>Thanh toán momo qua ATM</div>
                             </div>
-                            <div class='ATM-infor'>
-                                <div class='ATM'>
-                                    <h2><strong>CHUYỂN KHOẢN ĐỂ THANH TOÁN ĐƠN HÀNG</strong></h2>
-                                    <h3>Tên tài khoản: <strong>CÔNG TY TNHH SHAT</strong></h3>
-                                    <h3>Số tài khoản:&nbsp;<strong>4994 9666 6868</strong></h3>
-                                    <h3>Ngân hàng: <strong>MB BANK - HCM</strong></h3>
-                                    <h3><strong>Ghi chú: </strong>Thanh toán &lt;Mã ĐH&gt; - SĐT</h3>
-                                    <h3><strong>Hotline: </strong>1900 0270</h3>
+                        </div>
+                        <div class='customer-radio2'>
+                            <div class='cus-radio2'>
+                                <div class='radio-input' id='radio2'>
+                                    <input class='radio2' type='radio' name='paytype' value='momoQR'></input>
                                 </div>
+                                <div class='radio-title'>Thanh toán momo qua QR</div>
                             </div>
                         </div>
                     </div>
